@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech News - MediaHub</title>
+
+<meta name="description" content="MediaHub Tech News - Latest technology, AI, smartphones, software, gaming and internet news.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070b14;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    background:#0d1322;
+    border-bottom:1px solid #202a40;
+    padding:16px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#00d9ff;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#00d9ff;
+}
+
+.menu{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.hero{
+    padding:65px 5%;
+    text-align:center;
+    background:linear-gradient(135deg,#0b1222,#101b35);
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#00d9ff;
+}
+
+.hero p{
+    color:#aeb8ca;
+    max-width:700px;
+    margin:auto;
+}
+
+.search{
+    display:flex;
+    max-width:600px;
+    margin:25px auto 0;
+    gap:8px;
+}
+
+.search input{
+    flex:1;
+    padding:14px;
+    border:0;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+.search button{
+    padding:14px 22px;
+    border:0;
+    border-radius:8px;
+    background:#00d9ff;
+    color:#001018;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.title{
+    font-size:28px;
+    margin-bottom:22px;
+}
+
+.title span{
+    color:#00d9ff;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.news-card{
+    background:#0e1627;
+    border:1px solid #202c43;
+    border-radius:14px;
+    padding:24px;
+    transition:.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+    border-color:#00d9ff;
+}
+
+.news-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.news-card h3{
+    margin-bottom:10px;
+}
+
+.news-card p{
+    color:#aab4c5;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.meta{
+    color:#7f8ca3;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+.btn{
+    display:inline-block;
+    padding:9px 15px;
+    background:#00d9ff;
+    color:#001018;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:45px;
+}
+
+.category{
+    background:#0e1627;
+    border:1px solid #202c43;
+    padding:24px 12px;
+    text-align:center;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category:hover{
+    border-color:#00d9ff;
+    transform:translateY(-3px);
+}
+
+.category .icon{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.breaking{
+    margin-top:50px;
+}
+
+.breaking-box{
+    background:#0e1627;
+    border:1px solid #202c43;
+    border-radius:10px;
+    padding:18px;
+    margin-bottom:12px;
+}
+
+.breaking-box strong{
+    color:#00d9ff;
+}
+
+footer{
+    margin-top:60px;
+    padding:30px 5%;
+    text-align:center;
+    background:#0d1322;
+    border-top:1px solid #202a40;
+    color:#8995a9;
+}
+
+footer b{
+    color:#00d9ff;
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+        position:absolute;
+        top:67px;
+        left:0;
+        right:0;
+        background:#0d1322;
+        flex-direction:column;
+        padding:20px 5%;
+        border-bottom:1px solid #202a40;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:450px){
+
+    .search{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Media<span>Hub</span>
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="movies.html">Movies</a>
+<a href="software.html">Software</a>
+<a href="apps.html">Apps</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="tech-news.html">Tech News</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>📰 <span>MediaHub</span> Tech News</h1>
+
+<p>
+Stay updated with technology, artificial intelligence,
+smartphones, software, gaming and internet news.
+</p>
+
+<div class="search">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search tech news..."
+>
+
+<button onclick="searchNews()">
+Search
+</button>
+
+</div>
+
+<p id="result" style="margin-top:15px;"></p>
+
+</section>
+
+
+<main class="container">
+
+<h2 class="title">
+🔥 Featured <span>Tech News</span>
+</h2>
+
+
+<div class="news-grid">
+
+
+<div class="news-card">
+
+<div class="news-icon">
+🤖
+</div>
+
+<h3>Artificial Intelligence</h3>
+
+<p>
+Latest developments, tools and important
+updates from the world of AI.
+</p>
+
+<div class="meta">
+Technology • AI
+</div>
+
+<a href="#" class="btn"
+onclick="showMessage('AI News')">
+Read More
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-icon">
+📱
+</div>
+
+<h3>Smartphones</h3>
+
+<p>
+Discover smartphone launches, features,
+Android updates and mobile technology.
+</p>
+
+<div class="meta">
+Mobile • Technology
+</div>
+
+<a href="#" class="btn"
+onclick="showMessage('Smartphone News')">
+Read More
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-icon">
+💻
+</div>
+
+<h3>Software</h3>
+
+<p>
+Software updates, new applications,
+computer tools and digital services.
+</p>
+
+<div class="meta">
+Software • PC
+</div>
+
+<a href="#" class="btn"
+onclick="showMessage('Software News')">
+Read More
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-icon">
+🎮
+</div>
+
+<h3>Gaming</h3>
+
+<p>
+Gaming news, new releases, updates,
+hardware and gaming technology.
+</p>
+
+<div class="meta">
+Games • Gaming
+</div>
+
+<a href="#" class="btn"
+onclick="showMessage('Gaming News')">
+Read More
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-icon">
+🌐
+</div>
+
+<h3>Internet</h3>
+
+<p>
+Internet platforms, websites, online
+services and digital trends.
+</p>
+
+<div class="meta">
+Internet • Digital
+</div>
+
+<a href="#" class="btn"
+onclick="showMessage('Internet News')">
+Read More
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-icon">
+🔐
+</div>
+
+<h3>Cyber Security</h3>
+
+<p>
+Learn about cybersecurity, privacy,
+online safety and security technology.
+</p>
+
+<div class="meta">
+Security • Privacy
+</div>
+
+<a href="#" class="btn"
+onclick="showMessage('Cyber Security News')">
+Read More
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="title" style="margin-top:55px;">
+📂 News <span>Categories</span>
+</h2>
+
+
+<div class="categories">
+
+<div class="category"
+onclick="showMessage('AI News')">
+
+<div class="icon">🤖</div>
+<h3>AI</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Mobile News')">
+
+<div class="icon">📱</div>
+<h3>Mobile</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Computer News')">
+
+<div class="icon">💻</div>
+<h3>Computers</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Gaming News')">
+
+<div class="icon">🎮</div>
+<h3>Gaming</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Internet News')">
+
+<div class="icon">🌐</div>
+<h3>Internet</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Security News')">
+
+<div class="icon">🔒</div>
+<h3>Security</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Gadgets News')">
+
+<div class="icon">⌚</div>
+<h3>Gadgets</h3>
+
+</div>
+
+
+<div class="category"
+onclick="showMessage('Science News')">
+
+<div class="icon">🔬</div>
+<h3>Science</h3>
+
+</div>
+
+</div>
+
+
+<section class="breaking">
+
+<h2 class="title">
+⚡ Latest <span>Updates</span>
+</h2>
+
+<div class="breaking-box">
+<strong>🚀 Technology:</strong>
+New technology stories will be published on MediaHub.
+</div>
+
+<div class="breaking-box">
+<strong>🤖 Artificial Intelligence:</strong>
+AI tools and developments will be featured here.
+</div>
+
+<div class="breaking-box">
+<strong>📱 Mobile:</strong>
+Smartphone and mobile technology updates will appear here.
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 <b>MediaHub</b> — Tech News
+</p>
+
+<p>
+Technology • AI • Gaming • Mobile • Internet
+</p>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("nav")
+.classList
+.toggle("show");
+
+}
+
+
+function searchNews(){
+
+let value =
+document
+.getElementById("searchInput")
+.value
+.trim();
+
+let result =
+document
+.getElementById("result");
+
+if(value === ""){
+
+result.innerHTML =
+"⚠️ Please enter a topic.";
+
+return;
+
+}
+
+result.innerHTML =
+"🔎 Searching MediaHub Tech News for: <strong>"
++ value +
+"</strong>";
+
+}
+
+
+function showMessage(category){
+
+alert(
+"MediaHub: " +
+category +
+" section will be available soon!"
+);
+
+}
+
+</script>
+
+</body>
+</html>
