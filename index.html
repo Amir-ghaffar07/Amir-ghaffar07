@@ -3,28 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Advance Systems PK - Games, Software, Apps, Movies, Technology and Digital Resources.">
-<meta name="theme-color" content="#0b1020">
-<title>Advance Systems PK | Games • Software • Apps • Tech</title>
+
+<meta name="description" content="MediaHub - Games, Movies, Software, Apps, AI Tools, Technology and Digital Resources.">
+
+<meta name="theme-color" content="#080d18">
+
+<title>MediaHub | Games • Movies • Software • Apps • Tech</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
   background:#080d18;
   color:#fff;
   line-height:1.6
 }
-a{text-decoration:none;color:inherit}
-.container{width:92%;max-width:1250px;margin:auto}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+.container{
+  width:92%;
+  max-width:1250px;
+  margin:auto
+}
 
 /* HEADER */
+
 header{
-  position:sticky;top:0;z-index:1000;
-  background:rgba(8,13,24,.95);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(8,13,24,.96);
   border-bottom:1px solid #202a3d;
   backdrop-filter:blur(12px)
 }
+
 .nav{
   min-height:70px;
   display:flex;
@@ -32,32 +57,57 @@ header{
   justify-content:space-between;
   gap:20px
 }
+
 .logo{
-  font-size:24px;font-weight:800;
+  font-size:25px;
+  font-weight:900;
   white-space:nowrap
 }
-.logo span{color:#35c9ff}
-nav{display:flex;gap:24px;align-items:center}
-nav a{color:#cbd5e1;font-weight:600}
-nav a:hover{color:#35c9ff}
-.menu{display:none;font-size:28px;cursor:pointer}
+
+.logo span{
+  color:#35c9ff
+}
+
+nav{
+  display:flex;
+  gap:24px;
+  align-items:center
+}
+
+nav a{
+  color:#cbd5e1;
+  font-weight:600
+}
+
+nav a:hover{
+  color:#35c9ff
+}
+
+.menu{
+  display:none;
+  font-size:28px;
+  cursor:pointer
+}
 
 /* HERO */
+
 .hero{
-  padding:80px 0 70px;
+  padding:85px 0 75px;
   background:
   radial-gradient(circle at 20% 20%,rgba(0,190,255,.20),transparent 35%),
   radial-gradient(circle at 80% 30%,rgba(110,60,255,.18),transparent 35%)
 }
+
 .hero-grid{
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:45px;
   align-items:center
 }
+
 .badge{
   display:inline-block;
-  padding:7px 13px;
+  padding:7px 14px;
   border:1px solid #24405c;
   background:#101a2c;
   color:#54d6ff;
@@ -65,23 +115,32 @@ nav a:hover{color:#35c9ff}
   margin-bottom:18px;
   font-size:14px
 }
+
 h1{
   font-size:clamp(40px,6vw,70px);
   line-height:1.05;
   margin-bottom:20px
 }
+
 .gradient{
   background:linear-gradient(90deg,#38d5ff,#8b7cff,#d66bff);
   -webkit-background-clip:text;
   color:transparent
 }
+
 .hero p{
   color:#aab7ca;
   font-size:18px;
   max-width:680px;
   margin-bottom:28px
 }
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+
 .btn{
   display:inline-block;
   padding:13px 22px;
@@ -90,14 +149,19 @@ h1{
   border:1px solid #2b3a52;
   background:#121b2c
 }
+
 .btn.primary{
   background:#20bce9;
   color:#03101a;
   border-color:#20bce9
 }
-.btn:hover{transform:translateY(-2px)}
+
+.btn:hover{
+  transform:translateY(-2px)
+}
 
 /* HERO CARD */
+
 .hero-card{
   background:linear-gradient(145deg,#111c30,#0c1322);
   border:1px solid #263550;
@@ -105,6 +169,7 @@ h1{
   padding:25px;
   box-shadow:0 20px 60px rgba(0,0,0,.35)
 }
+
 .screen{
   height:250px;
   border-radius:16px;
@@ -117,13 +182,18 @@ h1{
   text-align:center;
   border:1px solid #2c405e
 }
-.screen strong{font-size:30px}
+
+.screen strong{
+  font-size:38px
+}
+
 .stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:10px;
   margin-top:15px
 }
+
 .stat{
   background:#0a1220;
   border:1px solid #22314a;
@@ -131,11 +201,23 @@ h1{
   padding:12px;
   text-align:center
 }
-.stat b{display:block;color:#42d2ff;font-size:20px}
-.stat small{color:#8997aa}
+
+.stat b{
+  display:block;
+  color:#42d2ff;
+  font-size:20px
+}
+
+.stat small{
+  color:#8997aa
+}
 
 /* SECTIONS */
-section{padding:65px 0}
+
+section{
+  padding:65px 0
+}
+
 .section-head{
   display:flex;
   justify-content:space-between;
@@ -143,26 +225,38 @@ section{padding:65px 0}
   margin-bottom:25px;
   gap:20px
 }
-.section-head h2{font-size:32px}
-.section-head p{color:#8795aa}
+
+.section-head h2{
+  font-size:32px
+}
+
+.section-head p{
+  color:#8795aa
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px
 }
+
 .card{
   background:#0e1727;
   border:1px solid #202e45;
   border-radius:18px;
   padding:22px;
-  transition:.25s
+  transition:.25s;
+  cursor:pointer
 }
+
 .card:hover{
   transform:translateY(-5px);
   border-color:#32c9f4
 }
+
 .icon{
-  width:52px;height:52px;
+  width:52px;
+  height:52px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -171,15 +265,28 @@ section{padding:65px 0}
   font-size:26px;
   margin-bottom:15px
 }
-.card h3{margin-bottom:8px}
-.card p{color:#8997aa;font-size:14px}
+
+.card h3{
+  margin-bottom:8px
+}
+
+.card p{
+  color:#8997aa;
+  font-size:14px
+}
 
 /* SEARCH */
+
+.search-section{
+  background:#0a101d
+}
+
 .search-box{
   display:flex;
   gap:10px;
   margin-bottom:25px
 }
+
 .search-box input{
   flex:1;
   padding:15px;
@@ -187,22 +294,31 @@ section{padding:65px 0}
   border:1px solid #2a3a54;
   background:#0d1625;
   color:#fff;
-  outline:none
+  outline:none;
+  font-size:16px
 }
+
 .search-box button{
-  padding:0 22px;
+  padding:0 25px;
   border:0;
   border-radius:10px;
   background:#20bce9;
-  font-weight:700
+  font-weight:700;
+  cursor:pointer
+}
+
+#searchResult{
+  color:#8fa0b6
 }
 
 /* TRENDING */
+
 .trending{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px
 }
+
 .trend{
   min-height:170px;
   padding:22px;
@@ -210,14 +326,17 @@ section{padding:65px 0}
   background:linear-gradient(135deg,#101c31,#0c1321);
   border:1px solid #23334c
 }
+
 .tag{
   display:inline-block;
   font-size:12px;
   color:#48d1ff;
-  margin-bottom:12px
+  margin-bottom:12px;
+  font-weight:bold
 }
 
-/* NEWSLETTER */
+/* ABOUT */
+
 .newsletter{
   text-align:center;
   padding:50px 25px;
@@ -225,38 +344,92 @@ section{padding:65px 0}
   background:linear-gradient(135deg,#101e34,#15112d);
   border:1px solid #293957
 }
-.newsletter p{color:#96a4b8;margin:10px auto 25px;max-width:600px}
+
+.newsletter p{
+  color:#96a4b8;
+  margin:10px auto 25px;
+  max-width:650px
+}
 
 /* FOOTER */
+
 footer{
   border-top:1px solid #202c40;
   padding:35px 0;
   color:#7f8ca0
 }
+
 .footer-grid{
   display:flex;
   justify-content:space-between;
   gap:25px;
   flex-wrap:wrap
 }
-.footer-links{display:flex;gap:18px;flex-wrap:wrap}
-.footer-links a:hover{color:#35c9ff}
+
+.footer-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap
+}
+
+.footer-links a:hover{
+  color:#35c9ff
+}
 
 /* MOBILE */
+
 @media(max-width:850px){
-  nav{display:none}
-  .menu{display:block}
-  .hero-grid{grid-template-columns:1fr}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .trending{grid-template-columns:1fr}
+
+  nav{
+    display:none
+  }
+
+  .menu{
+    display:block
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .trending{
+    grid-template-columns:1fr
+  }
 }
+
 @media(max-width:550px){
-  .hero{padding:55px 0}
-  section{padding:45px 0}
-  .grid{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr}
-  .search-box{flex-direction:column}
-  .search-box button{padding:13px}
+
+  .hero{
+    padding:55px 0
+  }
+
+  section{
+    padding:45px 0
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
+  .stats{
+    grid-template-columns:1fr
+  }
+
+  .search-box{
+    flex-direction:column
+  }
+
+  .search-box button{
+    padding:13px
+  }
+
+  .screen strong{
+    font-size:30px
+  }
 }
 </style>
 </head>
@@ -264,264 +437,527 @@ footer{
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#" class="logo">Advance <span>Systems PK</span></a>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#trending">Trending</a>
-      <a href="#about">About</a>
-    </nav>
+<div class="container nav">
 
-    <div class="menu">☰</div>
-  </div>
+<a href="#home" class="logo">
+Media<span>Hub</span>
+</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#trending">Trending</a>
+<a href="#search">Search</a>
+<a href="#about">About</a>
+</nav>
+
+<div class="menu">☰</div>
+
+</div>
+
 </header>
+
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
-  <div class="container hero-grid">
 
-    <div>
-      <div class="badge">🚀 Pakistan's Digital Hub</div>
+<div class="container hero-grid">
 
-      <h1>
-        Discover the
-        <span class="gradient">Digital World</span>
-      </h1>
+<div>
 
-      <p>
-        Explore the latest games, software, apps, movies, technology,
-        AI tools and digital resources — all in one modern platform.
-      </p>
+<div class="badge">
+🚀 Welcome to MediaHub
+</div>
 
-      <div class="buttons">
-        <a class="btn primary" href="#categories">Explore Now</a>
-        <a class="btn" href="#trending">Trending</a>
-      </div>
-    </div>
+<h1>
+Your Gateway to the
+<span class="gradient">Digital World</span>
+</h1>
 
-    <div class="hero-card">
-      <div class="screen">
-        <div>
-          <strong>ADVANCE<br>SYSTEMS PK</strong>
-          <p style="margin:8px 0 0;color:#8fa0b6">
-            Your Digital World
-          </p>
-        </div>
-      </div>
+<p>
+Discover games, movies, software, apps, AI tools,
+technology news and digital resources — all in one modern platform.
+</p>
 
-      <div class="stats">
-        <div class="stat"><b>Games</b><small>Explore</small></div>
-        <div class="stat"><b>Apps</b><small>Discover</small></div>
-        <div class="stat"><b>Tech</b><small>Latest</small></div>
-      </div>
-    </div>
+<div class="buttons">
 
-  </div>
+<a class="btn primary" href="#categories">
+Explore MediaHub
+</a>
+
+<a class="btn" href="#trending">
+🔥 Trending
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="screen">
+
+<div>
+
+<strong>
+MEDIA<br>HUB
+</strong>
+
+<p style="margin:8px 0 0;color:#8fa0b6">
+Your Digital World
+</p>
+
+</div>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<b>🎮</b>
+<small>Games</small>
+</div>
+
+<div class="stat">
+<b>📱</b>
+<small>Apps</small>
+</div>
+
+<div class="stat">
+<b>💻</b>
+<small>Software</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- CATEGORIES -->
 
 <section id="categories">
-  <div class="container">
 
-    <div class="section-head">
-      <div>
-        <h2>Explore Categories</h2>
-        <p>Everything you need in one place.</p>
-      </div>
-    </div>
+<div class="container">
 
-    <div class="grid">
+<div class="section-head">
 
-      <a class="card" href="#">
-        <div class="icon">🎮</div>
-        <h3>Games</h3>
-        <p>Discover popular and upcoming games.</p>
-      </a>
+<div>
 
-      <a class="card" href="#">
-        <div class="icon">💻</div>
-        <h3>Software</h3>
-        <p>Useful software and desktop tools.</p>
-      </a>
+<h2>Explore Categories</h2>
 
-      <a class="card" href="#">
-        <div class="icon">📱</div>
-        <h3>Apps</h3>
-        <p>Android and useful mobile applications.</p>
-      </a>
+<p>
+Everything you need in one place.
+</p>
 
-      <a class="card" href="#">
-        <div class="icon">🎬</div>
-        <h3>Movies</h3>
-        <p>Entertainment, trailers and movie news.</p>
-      </a>
+</div>
 
-      <a class="card" href="#">
-        <div class="icon">🤖</div>
-        <h3>AI Tools</h3>
-        <p>Explore the latest artificial intelligence tools.</p>
-      </a>
+</div>
 
-      <a class="card" href="#">
-        <div class="icon">📰</div>
-        <h3>Tech News</h3>
-        <p>Latest technology updates and stories.</p>
-      </a>
 
-      <a class="card" href="#">
-        <div class="icon">📊</div>
-        <h3>Data Analysis</h3>
-        <p>Tools and resources for data analysis.</p>
-      </a>
+<div class="grid">
 
-      <a class="card" href="#">
-        <div class="icon">🔥</div>
-        <h3>Trending</h3>
-        <p>What's popular right now.</p>
-      </a>
 
-    </div>
-  </div>
+<a class="card" href="#trending">
+
+<div class="icon">🎮</div>
+
+<h3>Games</h3>
+
+<p>
+Latest games, gaming news and releases.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">🎬</div>
+
+<h3>Movies</h3>
+
+<p>
+Movie news, trailers and entertainment.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">💻</div>
+
+<h3>Software</h3>
+
+<p>
+Useful desktop software and tools.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">📱</div>
+
+<h3>Apps</h3>
+
+<p>
+Android apps and useful mobile tools.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">🤖</div>
+
+<h3>AI Tools</h3>
+
+<p>
+Discover the latest artificial intelligence tools.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">📰</div>
+
+<h3>Tech News</h3>
+
+<p>
+Technology updates and digital news.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">📊</div>
+
+<h3>Data Analysis</h3>
+
+<p>
+Data tools, resources and information.
+</p>
+
+</a>
+
+
+<a class="card" href="#trending">
+
+<div class="icon">🔥</div>
+
+<h3>Trending</h3>
+
+<p>
+See what's popular on MediaHub.
+</p>
+
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- TRENDING -->
 
 <section id="trending">
-  <div class="container">
 
-    <div class="section-head">
-      <div>
-        <h2>🔥 Trending Now</h2>
-        <p>Popular content on Advance Systems PK.</p>
-      </div>
-    </div>
+<div class="container">
 
-    <div class="trending">
+<div class="section-head">
 
-      <article class="trend">
-        <span class="tag">TECHNOLOGY</span>
-        <h3>Latest Technology</h3>
-        <p style="color:#8997aa;margin-top:8px">
-          Discover what's new in the technology world.
-        </p>
-      </article>
+<div>
 
-      <article class="trend">
-        <span class="tag">AI</span>
-        <h3>Artificial Intelligence</h3>
-        <p style="color:#8997aa;margin-top:8px">
-          Explore new AI tools and innovations.
-        </p>
-      </article>
+<h2>🔥 Trending Now</h2>
 
-      <article class="trend">
-        <span class="tag">GAMING</span>
-        <h3>Latest Games</h3>
-        <p style="color:#8997aa;margin-top:8px">
-          Find the latest gaming news and releases.
-        </p>
-      </article>
+<p>
+Popular digital topics on MediaHub.
+</p>
 
-    </div>
-  </div>
+</div>
+
+</div>
+
+
+<div class="trending">
+
+
+<article class="trend">
+
+<span class="tag">
+TECHNOLOGY
+</span>
+
+<h3>
+Latest Technology
+</h3>
+
+<p style="color:#8997aa;margin-top:8px">
+
+Explore new technology,
+gadgets and digital innovations.
+
+</p>
+
+</article>
+
+
+<article class="trend">
+
+<span class="tag">
+AI
+</span>
+
+<h3>
+Artificial Intelligence
+</h3>
+
+<p style="color:#8997aa;margin-top:8px">
+
+Discover new AI tools,
+apps and innovations.
+
+</p>
+
+</article>
+
+
+<article class="trend">
+
+<span class="tag">
+GAMING
+</span>
+
+<h3>
+Latest Games
+</h3>
+
+<p style="color:#8997aa;margin-top:8px">
+
+Find gaming news,
+new releases and updates.
+
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
 
-<section>
-  <div class="container">
 
-    <div class="section-head">
-      <div>
-        <h2>🔎 Search</h2>
-        <p>Search the Advance Systems PK platform.</p>
-      </div>
-    </div>
+<!-- SEARCH -->
 
-    <div class="search-box">
-      <input id="searchInput" type="search"
-             placeholder="Search games, apps, software, AI...">
-      <button onclick="searchSite()">Search</button>
-    </div>
+<section class="search-section" id="search">
 
-    <p id="searchResult" style="color:#8fa0b6"></p>
+<div class="container">
 
-  </div>
+<div class="section-head">
+
+<div>
+
+<h2>🔎 Search MediaHub</h2>
+
+<p>
+Find games, apps, software, AI and more.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+id="searchInput"
+type="search"
+placeholder="Search MediaHub..."
+>
+
+<button onclick="searchSite()">
+Search
+</button>
+
+</div>
+
+
+<p id="searchResult"></p>
+
+</div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
-  <div class="container">
 
-    <div class="newsletter">
-      <h2>Stay Updated 🚀</h2>
-      <p>
-        Advance Systems PK is being developed as a modern Pakistani
-        digital platform for games, software, apps, technology and more.
-      </p>
+<div class="container">
 
-      <a class="btn primary" href="#home">Back to Top</a>
-    </div>
+<div class="newsletter">
 
-  </div>
+<h2>
+Welcome to MediaHub 🚀
+</h2>
+
+<p>
+
+MediaHub is a modern digital platform designed
+to bring games, movies, software, apps,
+AI tools, technology and digital resources together
+in one place.
+
+</p>
+
+<a class="btn primary" href="#home">
+Back to Top
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <div class="container footer-grid">
 
-    <div>
-      <strong style="color:#fff">
-        Advance Systems PK
-      </strong>
-      <div>© <span id="year"></span> All Rights Reserved.</div>
-    </div>
+<div class="container footer-grid">
 
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#trending">Trending</a>
-      <a href="#about">About</a>
-    </div>
+<div>
 
-  </div>
+<strong style="color:#fff">
+MediaHub
+</strong>
+
+<div>
+© <span id="year"></span> MediaHub. All Rights Reserved.
+</div>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+
+<a href="#categories">
+Categories
+</a>
+
+<a href="#trending">
+Trending
+</a>
+
+<a href="#search">
+Search
+</a>
+
+<a href="#about">
+About
+</a>
+
+</div>
+
+</div>
+
 </footer>
 
+
 <script>
+
 document.getElementById("year").textContent =
-  new Date().getFullYear();
+new Date().getFullYear();
+
 
 function searchSite(){
-  const value =
-    document.getElementById("searchInput").value.trim();
 
-  const result =
-    document.getElementById("searchResult");
+const value =
+document.getElementById("searchInput").value.trim();
 
-  if(!value){
-    result.textContent =
-      "Please enter something to search.";
-    return;
-  }
+const result =
+document.getElementById("searchResult");
 
-  result.textContent =
-    'Search system ready. You searched for: "' + value + '"';
+
+if(!value){
+
+result.textContent =
+"Please enter something to search.";
+
+return;
+
 }
 
-document.querySelector(".menu").onclick = function(){
-  const nav = document.querySelector("nav");
 
-  if(nav.style.display === "flex"){
-    nav.style.display = "none";
-  }else{
-    nav.style.display = "flex";
-    nav.style.flexDirection = "column";
-    nav.style.position = "absolute";
-    nav.style.top = "70px";
-    nav.style.right = "4%";
-    nav.style.background = "#0d1625";
-    nav.style.padding = "20px";
-    nav.style.borderRadius = "12px";
-  }
+result.textContent =
+'MediaHub search: "' +
+value +
+'" — search system is ready.';
+
+
+}
+
+
+document.querySelector(".menu").onclick =
+function(){
+
+const nav =
+document.querySelector("nav");
+
+
+if(nav.style.display === "flex"){
+
+nav.style.display = "none";
+
+}else{
+
+nav.style.display = "flex";
+
+nav.style.flexDirection = "column";
+
+nav.style.position = "absolute";
+
+nav.style.top = "70px";
+
+nav.style.right = "4%";
+
+nav.style.background = "#0d1625";
+
+nav.style.padding = "20px";
+
+nav.style.borderRadius = "12px";
+
+}
+
 };
+
 </script>
 
 </body>
