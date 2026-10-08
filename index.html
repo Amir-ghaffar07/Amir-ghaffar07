@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="MediaHub - Games, Movies, Software, Apps, AI Tools and Technology.">
+<title>MediaHub | Digital World</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,sans-serif;
+background:#070b14;
+color:#fff;
+line-height:1.6
+}
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#0b1120;
+border-bottom:1px solid #273249
+}
+.nav{
+max-width:1150px;
+margin:auto;
+padding:16px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+.logo{font-size:28px;font-weight:800}
+.logo span{color:#00d9ff}
+nav{display:flex;gap:22px}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+nav a:hover{color:#00d9ff}
+.menu{display:none;font-size:28px;cursor:pointer}
+
+.hero{
+text-align:center;
+padding:100px 20px;
+background:radial-gradient(circle at top,#172b4a,#070b14 65%)
+}
+.hero h1{font-size:clamp(40px,7vw,72px);line-height:1.1}
+.hero h1 span{color:#00d9ff}
+.hero p{
+max-width:720px;
+margin:20px auto;
+color:#aeb8ca;
+font-size:19px
+}
+.btn{
+display:inline-block;
+padding:13px 23px;
+margin:8px;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold
+}
+.primary{background:#00d9ff;color:#061018}
+.secondary{border:1px solid #52617b;color:#fff}
+
+.container{max-width:1150px;margin:auto;padding:70px 20px}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:35px}
+.title p{color:#98a3b7;margin-top:8px}
+
+.search{
+max-width:750px;
+margin:0 auto 45px;
+display:flex;
+gap:10px
+}
+.search input{
+flex:1;
+padding:15px;
+border-radius:9px;
+border:1px solid #303b52;
+background:#101827;
+color:white;
+font-size:16px
+}
+.search button{
+padding:15px 24px;
+border:0;
+border-radius:9px;
+background:#00d9ff;
+font-weight:bold
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px
+}
+.card{
+background:#101827;
+border:1px solid #273249;
+border-radius:15px;
+padding:25px 15px;
+text-align:center;
+cursor:pointer;
+transition:.25s
+}
+.card:hover{
+transform:translateY(-5px);
+border-color:#00d9ff
+}
+.icon{font-size:40px}
+.card h3{margin-top:10px}
+.card p{color:#929caf;font-size:14px}
+
+#results{
+margin-top:30px;
+text-align:center;
+color:#00d9ff;
+min-height:25px
+}
+
+.trending{background:#0c1220}
+.items{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+.item{
+background:#121b2c;
+border:1px solid #29364e;
+border-radius:15px;
+padding:25px
+}
+.item .tag{
+display:inline-block;
+font-size:12px;
+color:#00d9ff;
+margin-bottom:8px
+}
+.item h3{margin-bottom:8px}
+.item p{color:#9da7b9}
+
+.about{text-align:center}
+.about p{
+max-width:780px;
+margin:auto;
+color:#aab4c5;
+font-size:17px
+}
+
+footer{
+text-align:center;
+padding:35px 20px;
+border-top:1px solid #273249;
+color:#7f899c
+}
+.footer-logo{font-size:24px;font-weight:bold;color:white}
+.footer-logo span{color:#00d9ff}
+
+@media(max-width:800px){
+.categories{grid-template-columns:repeat(2,1fr)}
+.items{grid-template-columns:1fr}
+.menu{display:block}
+nav{
+display:none;
+position:absolute;
+top:65px;
+left:0;
+right:0;
+background:#0b1120;
+padding:20px;
+flex-direction:column;
+text-align:center
+}
+nav.show{display:flex}
+}
+
+@media(max-width:500px){
+.categories{grid-template-columns:1fr}
+.search{flex-direction:column}
+.hero{padding:75px 20px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">Media<span>Hub</span></div>
+
+<div class="menu" onclick="menu()">☰</div>
+
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#trending">Trending</a>
+<a href="#about">About</a>
+</nav>
+
+</div>
+</header>
+
+
+<section class="hero" id="home">
+
+<h1>Welcome to <span>MediaHub</span></h1>
+
+<p>
+Your gateway to Games, Movies, Software, Apps,
+AI Tools, Technology and the digital world.
+</p>
+
+<a href="#categories" class="btn primary">Explore Now</a>
+<a href="#trending" class="btn secondary">Trending</a>
+
+</section>
+
+
+<section class="container" id="categories">
+
+<div class="title">
+<h2>Explore Categories</h2>
+<p>Choose a category or search MediaHub.</p>
+</div>
+
+<div class="search">
+<input id="searchInput" type="text"
+placeholder="Search Games, Movies, Apps...">
+<button onclick="searchContent()">Search</button>
+</div>
+
+<div class="categories">
+
+<div class="card" onclick="showCategory('Games')">
+<div class="icon">🎮</div>
+<h3>Games</h3>
+<p>Gaming news and releases.</p>
+</div>
+
+<div class="card" onclick="showCategory('Movies')">
+<div class="icon">🎬</div>
+<h3>Movies</h3>
+<p>Movies and entertainment.</p>
+</div>
+
+<div class="card" onclick="showCategory('Software')">
+<div class="icon">💻</div>
+<h3>Software</h3>
+<p>Useful computer software.</p>
+</div>
+
+<div class="card" onclick="showCategory('Apps')">
+<div class="icon">📱</div>
+<h3>Apps</h3>
+<p>Useful mobile applications.</p>
+</div>
+
+<div class="card" onclick="showCategory('AI Tools')">
+<div class="icon">🤖</div>
+<h3>AI Tools</h3>
+<p>Artificial intelligence tools.</p>
+</div>
+
+<div class="card" onclick="showCategory('Tech News')">
+<div class="icon">📰</div>
+<h3>Tech News</h3>
+<p>Latest technology updates.</p>
+</div>
+
+<div class="card" onclick="showCategory('Data Analysis')">
+<div class="icon">📊</div>
+<h3>Data Analysis</h3>
+<p>Digital data and information.</p>
+</div>
+
+<div class="card" onclick="showCategory('Trending')">
+<div class="icon">🔥</div>
+<h3>Trending</h3>
+<p>Popular digital content.</p>
+</div>
+
+</div>
+
+<div id="results"></div>
+
+</section>
+
+
+<section class="trending" id="trending">
+
+<div class="container">
+
+<div class="title">
+<h2>🔥 Trending on MediaHub</h2>
+<p>Popular sections on the platform.</p>
+</div>
+
+<div class="items">
+
+<div class="item">
+<div class="tag">AI</div>
+<h3>🤖 Artificial Intelligence</h3>
+<p>Discover the world of modern AI tools.</p>
+</div>
+
+<div class="item">
+<div class="tag">GAMING</div>
+<h3>🎮 Gaming World</h3>
+<p>Explore games and gaming trends.</p>
+</div>
+
+<div class="item">
+<div class="tag">TECH</div>
+<h3>📱 Technology</h3>
+<p>Explore apps, software and technology.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="container" id="about">
+
+<div class="about">
+
+<div class="title">
+<h2>About MediaHub</h2>
+</div>
+
+<p>
+MediaHub is a modern digital platform bringing
+games, movies, software, apps, AI tools and
+technology together in one place.
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-logo">Media<span>Hub</span></div>
+
+<p>© 2026 MediaHub. All Rights Reserved.</p>
+
+</footer>
+
+
+<script>
+
+function menu(){
+document.getElementById("nav").classList.toggle("show");
+}
+
+function showCategory(category){
+document.getElementById("results").innerHTML=
+"✅ You selected: <strong>"+category+"</strong>";
+}
+
+function searchContent(){
+
+let value=document.getElementById("searchInput").value.trim();
+
+if(value===""){
+document.getElementById("results").innerHTML=
+"⚠️ Please enter something to search.";
+return;
+}
+
+document.getElementById("results").innerHTML=
+"🔎 Searching MediaHub for: <strong>"+value+"</strong>";
+}
+
+</script>
+
+</body>
+</html>
