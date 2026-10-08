@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analysis - MediaHub</title>
+<meta name="description" content="MediaHub Data Analysis tools, guides and resources.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Arial,sans-serif;
+background:#070b14;
+color:white;
+}
+
+header{
+background:#0d1424;
+border-bottom:1px solid #202b40;
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:27px;
+font-weight:bold;
+color:#4da3ff;
+}
+
+nav{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+color:#dce6f5;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{color:#4da3ff}
+
+.hero{
+max-width:1000px;
+margin:auto;
+text-align:center;
+padding:70px 20px 45px;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.hero h1 span{color:#4da3ff}
+
+.hero p{
+color:#aebbd0;
+line-height:1.7;
+}
+
+.section{
+max-width:1200px;
+margin:auto;
+padding:30px 20px 60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:#101827;
+border:1px solid #202d43;
+border-radius:14px;
+padding:25px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#4da3ff;
+}
+
+.icon{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.card h2{
+margin-bottom:10px;
+}
+
+.card p{
+color:#9eacc0;
+line-height:1.6;
+font-size:14px;
+}
+
+.card a{
+display:inline-block;
+margin-top:18px;
+color:#4da3ff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.info{
+background:#0d1424;
+border-top:1px solid #202b40;
+border-bottom:1px solid #202b40;
+padding:45px 20px;
+}
+
+.info-inner{
+max-width:1000px;
+margin:auto;
+}
+
+.info p{
+color:#aebbd0;
+line-height:1.8;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#7f8da3;
+}
+
+@media(max-width:800px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.hero h1{font-size:35px}
+}
+
+@media(max-width:500px){
+.grid{grid-template-columns:1fr}
+.navbar{align-items:flex-start}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+
+<div class="logo">MediaHub</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="movies.html">Movies</a>
+<a href="software.html">Software</a>
+<a href="apps.html">Apps</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="tech-news.html">Tech News</a>
+<a href="data-analysis.html">Data</a>
+<a href="trending.html">Trending</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<h1><span>Data</span> Analysis</h1>
+<p>
+Explore data analysis concepts, tools, dashboards,
+statistics and useful resources.
+</p>
+</section>
+
+<section class="section">
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📊</div>
+<h2>Data Visualization</h2>
+<p>Create clear charts, graphs and dashboards to understand data.</p>
+<a href="#">Explore →</a>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h2>Statistics</h2>
+<p>Learn about statistics, trends, averages and data interpretation.</p>
+<a href="#">Explore →</a>
+</div>
+
+<div class="card">
+<div class="icon">🐍</div>
+<h2>Python Analysis</h2>
+<p>Discover Python-based techniques for working with datasets.</p>
+<a href="#">Explore →</a>
+</div>
+
+<div class="card">
+<div class="icon">🗃️</div>
+<h2>Data Processing</h2>
+<p>Learn how data can be organized, cleaned and prepared.</p>
+<a href="#">Explore →</a>
+</div>
+
+<div class="card">
+<div class="icon">🤖</div>
+<h2>AI & Data</h2>
+<p>Explore how artificial intelligence can help analyze information.</p>
+<a href="ai-tools.html">Explore →</a>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h2>Business Data</h2>
+<p>Explore useful concepts for business reports and decision making.</p>
+<a href="#">Explore →</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="info">
+<div class="info-inner">
+<h2>MediaHub Data Center</h2>
+<br>
+<p>
+MediaHub will gradually add practical data analysis resources,
+interactive tools and useful technology information.
+</p>
+</div>
+</section>
+
+<footer>
+© 2026 MediaHub — All Rights Reserved
+</footer>
+
+</body>
+</html>
