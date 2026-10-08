@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MediaHub | Games, Movies, Software, Apps & AI Tools</title>
+
+<meta name="description"
+content="MediaHub is a digital platform for games, movies, software, apps, AI tools, technology news and data analysis.">
+
+<meta name="keywords"
+content="MediaHub, games, movies, software, apps, AI tools, technology news, data analysis">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="MediaHub">
+
+<link rel="canonical"
+href="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#070b14;
+color:#ffffff;
+line-height:1.6;
+}
+
+header{
+background:#0d1424;
+border-bottom:1px solid #202b40;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+padding:17px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#4da3ff;
+}
+
+nav{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+color:#dce6f5;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#4da3ff;
+}
+
+.hero{
+max-width:1100px;
+margin:auto;
+padding:85px 20px 65px;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#4da3ff;
+}
+
+.hero p{
+max-width:750px;
+margin:auto;
+color:#aebbd0;
+font-size:17px;
+}
+
+.search{
+max-width:650px;
+margin:30px auto 0;
+display:flex;
+gap:10px;
+}
+
+.search input{
+flex:1;
+padding:16px;
+border-radius:8px;
+border:1px solid #29364d;
+background:#111a2c;
+color:white;
+font-size:15px;
+outline:none;
+}
+
+.search button{
+padding:16px 25px;
+border:0;
+border-radius:8px;
+background:#4da3ff;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.section{
+max-width:1200px;
+margin:auto;
+padding:35px 20px 65px;
+}
+
+.title{
+font-size:30px;
+margin-bottom:25px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.category{
+display:block;
+text-decoration:none;
+background:#101827;
+border:1px solid #202d43;
+border-radius:14px;
+padding:27px 20px;
+transition:.25s;
+}
+
+.category:hover{
+transform:translateY(-5px);
+border-color:#4da3ff;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:13px;
+}
+
+.category h2{
+font-size:20px;
+color:white;
+margin-bottom:7px;
+}
+
+.category p{
+color:#9eacc0;
+font-size:14px;
+}
+
+.featured{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:#101827;
+border:1px solid #202d43;
+border-radius:14px;
+padding:25px;
+}
+
+.tag{
+font-size:12px;
+font-weight:bold;
+color:#4da3ff;
+}
+
+.card h2{
+margin:12px 0;
+}
+
+.card p{
+color:#9eacc0;
+font-size:14px;
+}
+
+.card a{
+display:inline-block;
+margin-top:17px;
+color:#4da3ff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.about{
+background:#0d1424;
+border-top:1px solid #202b40;
+border-bottom:1px solid #202b40;
+}
+
+.about-inner{
+max-width:1000px;
+margin:auto;
+padding:55px 20px;
+}
+
+.about p{
+color:#aebbd0;
+max-width:850px;
+}
+
+footer{
+text-align:center;
+padding:30px 20px;
+color:#7f8da3;
+font-size:14px;
+}
+
+@media(max-width:850px){
+
+.categories{
+grid-template-columns:repeat(2,1fr);
+}
+
+.featured{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
+@media(max-width:550px){
+
+.navbar{
+align-items:flex-start;
+gap:15px;
+}
+
+.logo{
+font-size:23px;
+}
+
+nav{
+gap:10px;
+}
+
+nav a{
+font-size:12px;
+}
+
+.categories{
+grid-template-columns:1fr;
+}
+
+.search{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+MediaHub
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="games.html">Games</a>
+
+<a href="movies.html">Movies</a>
+
+<a href="software.html">Software</a>
+
+<a href="apps.html">Apps</a>
+
+<a href="ai-tools.html">AI Tools</a>
+
+<a href="tech-news.html">Tech News</a>
+
+<a href="data-analysis.html">Data</a>
+
+<a href="trending.html">Trending</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<h1>
+Welcome to <span>MediaHub</span>
+</h1>
+
+<p>
+Discover games, movies, software, apps, AI tools,
+technology news and data resources — all in one place.
+</p>
+
+<div class="search">
+
+<input
+id="searchInput"
+type="search"
+placeholder="Search MediaHub..."
+aria-label="Search MediaHub">
+
+<button onclick="searchMediaHub()">
+Search
+</button>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="title">
+Explore MediaHub
+</h2>
+
+<div class="categories">
+
+
+<a class="category" href="games.html">
+
+<div class="icon">🎮</div>
+
+<h2>Games</h2>
+
+<p>
+Explore gaming content, categories and updates.
+</p>
+
+</a>
+
+
+<a class="category" href="movies.html">
+
+<div class="icon">🎬</div>
+
+<h2>Movies</h2>
+
+<p>
+Discover movies, genres and entertainment content.
+</p>
+
+</a>
+
+
+<a class="category" href="software.html">
+
+<div class="icon">💻</div>
+
+<h2>Software</h2>
+
+<p>
+Explore useful software and digital tools.
+</p>
+
+</a>
+
+
+<a class="category" href="apps.html">
+
+<div class="icon">📱</div>
+
+<h2>Apps</h2>
+
+<p>
+Discover mobile applications and useful apps.
+</p>
+
+</a>
+
+
+<a class="category" href="ai-tools.html">
+
+<div class="icon">🤖</div>
+
+<h2>AI Tools</h2>
+
+<p>
+Explore artificial intelligence tools and resources.
+</p>
+
+</a>
+
+
+<a class="category" href="tech-news.html">
+
+<div class="icon">📰</div>
+
+<h2>Tech News</h2>
+
+<p>
+Follow technology news and digital developments.
+</p>
+
+</a>
+
+
+<a class="category" href="data-analysis.html">
+
+<div class="icon">📊</div>
+
+<h2>Data Analysis</h2>
+
+<p>
+Explore data, statistics and analysis resources.
+</p>
+
+</a>
+
+
+<a class="category" href="trending.html">
+
+<div class="icon">🔥</div>
+
+<h2>Trending</h2>
+
+<p>
+Discover popular topics across MediaHub.
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="title">
+Featured on MediaHub
+</h2>
+
+<div class="featured">
+
+
+<div class="card">
+
+<div class="tag">
+AI TOOLS
+</div>
+
+<h2>
+AI Technology
+</h2>
+
+<p>
+Explore modern AI tools for writing, images,
+video, coding and productivity.
+</p>
+
+<a href="ai-tools.html">
+Explore AI →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="tag">
+TECHNOLOGY
+</div>
+
+<h2>
+Latest Tech Topics
+</h2>
+
+<p>
+Explore mobile, software, gaming,
+AI and cybersecurity topics.
+</p>
+
+<a href="tech-news.html">
+Explore Tech →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="tag">
+TRENDING
+</div>
+
+<h2>
+What's Trending?
+</h2>
+
+<p>
+Discover popular categories and topics
+across the MediaHub platform.
+</p>
+
+<a href="trending.html">
+View Trending →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about">
+
+<div class="about-inner">
+
+<h2 class="title">
+About MediaHub
+</h2>
+
+<p>
+MediaHub is a growing digital platform bringing
+games, movies, software, apps, AI tools,
+technology news and data resources together
+in one modern website.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+© 2026 MediaHub — All Rights Reserved
+
+</footer>
+
+
+<script>
+
+function searchMediaHub(){
+
+let query =
+document.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
+
+if(query === ""){
+alert("Please enter something to search.");
+return;
+}
+
+if(
+query.includes("game") ||
+query.includes("gaming")
+){
+window.location.href="games.html";
+}
+
+else if(
+query.includes("movie") ||
+query.includes("film")
+){
+window.location.href="movies.html";
+}
+
+else if(
+query.includes("software") ||
+query.includes("program")
+){
+window.location.href="software.html";
+}
+
+else if(
+query.includes("app") ||
+query.includes("android")
+){
+window.location.href="apps.html";
+}
+
+else if(
+query.includes("ai") ||
+query.includes("artificial intelligence")
+){
+window.location.href="ai-tools.html";
+}
+
+else if(
+query.includes("news") ||
+query.includes("technology") ||
+query.includes("tech")
+){
+window.location.href="tech-news.html";
+}
+
+else if(
+query.includes("data") ||
+query.includes("statistics") ||
+query.includes("analysis")
+){
+window.location.href="data-analysis.html";
+}
+
+else if(
+query.includes("trending") ||
+query.includes("popular")
+){
+window.location.href="trending.html";
+}
+
+else{
+alert(
+"No matching category found yet. MediaHub search will be expanded soon."
+);
+}
+
+}
+
+</script>
+
+</body>
+</html>
