@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>100+ Apps | MediaHub</title>
+<meta name="description" content="Explore Android apps, AI tools, photo editors, games and productivity apps on MediaHub.">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#0b1120;
+ color:#fff;
+}
+
+header{
+ background:linear-gradient(135deg,#101d3b,#075e65);
+ padding:25px 15px;
+ text-align:center;
+}
+
+header h1{
+ color:#38f5ce;
+ font-size:35px;
+ margin:5px;
+}
+
+header p{color:#e0f7f3}
+
+nav{
+ background:#131d30;
+ padding:15px 5px;
+ text-align:center;
+}
+
+nav a{
+ color:white;
+ text-decoration:none;
+ margin:7px;
+ display:inline-block;
+}
+
+.container{
+ max-width:1100px;
+ margin:auto;
+ padding:18px;
+}
+
+h2{color:#38f5ce}
+
+.search{
+ width:100%;
+ padding:15px;
+ border:1px solid #34445d;
+ border-radius:10px;
+ background:#17243a;
+ color:white;
+ font-size:16px;
+ margin:10px 0;
+}
+
+.filters{
+ display:flex;
+ flex-wrap:wrap;
+ gap:8px;
+ margin:12px 0 20px;
+}
+
+.filters button{
+ border:0;
+ background:#233650;
+ color:white;
+ padding:10px 13px;
+ border-radius:8px;
+ cursor:pointer;
+}
+
+.filters button.active,
+.filters button:hover{
+ background:#19cbaa;
+ color:#06151b;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:14px;
+}
+
+.card{
+ background:#17243a;
+ padding:17px;
+ border-radius:12px;
+ border:1px solid #263952;
+ display:flex;
+ flex-direction:column;
+}
+
+.icon{
+ font-size:35px;
+}
+
+.card h3{
+ margin:10px 0;
+ color:#fff;
+}
+
+.card p{
+ color:#c5d1df;
+ line-height:1.5;
+ font-size:14px;
+ flex-grow:1;
+}
+
+.category{
+ color:#38f5ce;
+ font-size:12px;
+}
+
+.btn{
+ display:block;
+ text-align:center;
+ text-decoration:none;
+ background:#19cbaa;
+ color:#07151b;
+ padding:11px;
+ border-radius:7px;
+ font-weight:bold;
+ margin-top:10px;
+}
+
+.btn:hover{background:#7affdf}
+
+#count{
+ color:#38f5ce;
+ margin:15px 0;
+}
+
+footer{
+ background:#131d30;
+ text-align:center;
+ padding:25px;
+ margin-top:30px;
+ color:#bac6d5;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>MediaHub</h1>
+<p>Discover Apps. Explore Technology.</p>
+<p>📱 100 Apps Directory</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="movies.html">Movies</a>
+<a href="software.html">Software</a>
+<a href="apps.html">Apps</a>
+<a href="ai-tools.html">AI Tools</a>
+<a href="tech-news.html">Tech News</a>
+</nav>
+
+<div class="container">
+
+<h2>📲 Explore Apps</h2>
+
+<p>
+Find popular apps by name or category.
+Use the buttons to explore the Google Play Store.
+</p>
+
+<input
+ id="search"
+ class="search"
+ type="search"
+ placeholder="🔍 Search apps..."
+ aria-label="Search apps"
+>
+
+<div class="filters" id="filters">
+<button class="active" data-category="All">All Apps</button>
+<button data-category="Social">Social</button>
+<button data-category="AI">AI Tools</button>
+<button data-category="Photo">Photo Editing</button>
+<button data-category="Video">Video Editing</button>
+<button data-category="Education">Education</button>
+<button data-category="Music">Music</button>
+<button data-category="Productivity">Productivity</button>
+<button data-category="Security">Security</button>
+<button data-category="Utility">Utilities</button>
+</div>
+
+<div id="count">Loading apps...</div>
+
+<div class="grid" id="apps"></div>
+
+<p id="empty" style="display:none">
+No apps found. Try another search.
+</p>
+
+</div>
+
+<footer>
+<h3>MediaHub</h3>
+<p>Your gateway to apps and technology.</p>
+<p>App names and trademarks belong to their respective owners.</p>
+<p>© 2026 MediaHub</p>
+</footer>
+
+<script>
+const rawApps = [
+["WhatsApp","Social","Messaging and voice/video calls","💬"],
+["Facebook","Social","Social networking and sharing","📘"],
+["Instagram","Social","Photos, reels and stories","📸"],
+["Messenger","Social","Chat and calls with friends","💭"],
+["Telegram","Social","Messaging and channels","✈️"],
+["Snapchat","Social","Photos, videos and chat","👻"],
+["TikTok","Social","Short videos and entertainment","🎵"],
+["Pinterest","Social","Ideas, images and inspiration","📌"],
+["Reddit","Social","Communities and discussions","🗨️"],
+["LinkedIn","Social","Professional networking","💼"],
+
+["ChatGPT","AI","AI assistant for questions and writing","🤖"],
+["Google Gemini","AI","Google's AI assistant","✨"],
+["Microsoft Copilot","AI","AI assistance and productivity","🧠"],
+["Claude","AI","AI assistant for writing and analysis","💡"],
+["Perplexity","AI","AI-powered search and answers","🔎"],
+["Canva","AI","Designs, graphics and AI features","🎨"],
+["Adobe Express","AI","Graphic design and creative tools","🖌️"],
+["Remini","AI","AI photo enhancement","🌟"],
+["Photomath","AI","Math problem explanations","➗"],
+["Microsoft Translator","AI","Translation and language tools","🌐"],
+
+["Snapseed","Photo","Photo editing tools","📷"],
+["Adobe Lightroom","Photo","Professional photo editing","🌄"],
+["Picsart","Photo","Photo editing and creative design","🖼️"],
+["Photoshop Express","Photo","Photo enhancement and effects","🎭"],
+["PhotoRoom","Photo","Background removal and product photos","✂️"],
+["VSCO","Photo","Photo filters and editing","🌈"],
+["Pixlr","Photo","Online-style photo editing tools","🪄"],
+["B612","Photo","Selfies and camera effects","🤳"],
+["YouCam Makeup","Photo","Makeup and portrait editing","💄"],
+["Google Photos","Photo","Photo storage and organization","🌅"],
+
+["CapCut","Video","Video editing and effects","🎬"],
+["VN Video Editor","Video","Video editing for creators","🎞️"],
+["InShot","Video","Edit videos and social clips","📹"],
+["KineMaster","Video","Video editing and layers","🎥"],
+["PowerDirector","Video","Video editing and effects","🎦"],
+["Filmora","Video","Video editing tools","🎬"],
+["Alight Motion","Video","Motion graphics and animation","✨"],
+["YouCut","Video","Video trimming and editing","✂️"],
+["VivaVideo","Video","Video creation and effects","📽️"],
+["GoPro Quik","Video","Video editing and highlights","🏄"],
+
+["Duolingo","Education","Learn languages","🦉"],
+["Khan Academy","Education","Free learning resources","📚"],
+["Coursera","Education","Online courses and learning","🎓"],
+["Udemy","Education","Learn skills through courses","🧑‍🎓"],
+["Quizlet","Education","Flashcards and study tools","📝"],
+["Google Classroom","Education","Learning and class management","🏫"],
+["Mimo","Education","Learn coding","💻"],
+["SoloLearn","Education","Programming lessons","👨‍💻"],
+["Google Translate","Education","Translate words and sentences","🌍"],
+["Wikipedia","Education","Explore encyclopedia articles","📖"],
+
+["Spotify","Music","Music and podcasts","🎧"],
+["YouTube Music","Music","Music streaming","🎵"],
+["SoundCloud","Music","Discover music and artists","🎼"],
+["Shazam","Music","Identify songs playing nearby","🎤"],
+["Audiomack","Music","Discover music and mixtapes","🎶"],
+["Deezer","Music","Music streaming and playlists","🎹"],
+["Amazon Music","Music","Music and podcasts","🎸"],
+["TuneIn Radio","Music","Radio stations and audio","📻"],
+["Musixmatch","Music","Lyrics and music discovery","🎙️"],
+["VLC","Music","Play audio and video files","▶️"],
+
+["Google Drive","Productivity","Cloud file storage","☁️"],
+["Microsoft OneDrive","Productivity","Cloud storage and file sharing","📂"],
+["Dropbox","Productivity","File storage and synchronization","📦"],
+["Notion","Productivity","Notes, tasks and workspace","📒"],
+["Evernote","Productivity","Notes and organization","📓"],
+["Google Keep","Productivity","Notes and reminders","📋"],
+["Microsoft Word","Productivity","Create and edit documents","📄"],
+["Microsoft Excel","Productivity","Spreadsheets and calculations","📊"],
+["Microsoft PowerPoint","Productivity","Create presentations","📽️"],
+["Google Calendar","Productivity","Manage events and schedules","🗓️"],
+
+["Bitdefender","Security","Security products and protection","🛡️"],
+["Avast Antivirus","Security","Mobile security tools","🔐"],
+["Malwarebytes","Security","Security and malware protection","🔎"],
+["Microsoft Authenticator","Security","Sign-in verification","🔑"],
+["Google Authenticator","Security","Two-step verification codes","🔒"],
+["Proton VPN","Security","VPN service and privacy tools","🌐"],
+["Windscribe VPN","Security","VPN and privacy service","🛡️"],
+["Bitwarden","Security","Password manager","🗝️"],
+["Proton Pass","Security","Password management","🔑"],
+["DuckDuckGo Browser","Security","Privacy-focused browsing","🦆"],
+
+["Google Chrome","Utility","Web browser","🌐"],
+["Firefox","Utility","Web browser","🦊"],
+["Opera Browser","Utility","Web browsing tools","🔴"],
+["Files by Google","Utility","Manage files and storage","📁"],
+["Google Home","Utility","Manage compatible smart devices","🏠"],
+["Google Maps","Utility","Maps and navigation","🗺️"],
+["Google Meet","Utility","Video meetings and calls","📞"],
+["Zoom Workplace","Utility","Video meetings and collaboration","🎦"],
+["Gboard","Utility","Keyboard and typing tools","⌨️"],
+["Google Lens","Utility","Visual search and recognition","🔍"]
+];
+
+const apps = document.getElementById("apps");
+const search = document.getElementById("search");
+const count = document.getElementById("count");
+const empty = document.getElementById("empty");
+const buttons = document.querySelectorAll("#filters button");
+
+let selectedCategory = "All";
+
+function renderApps(){
+ const term = search.value.trim().toLowerCase();
+
+ const filtered = rawApps.filter(app => {
+  const matchesSearch =
+   app[0].toLowerCase().includes(term) ||
+   app[1].toLowerCase().includes(term) ||
+   app[2].toLowerCase().includes(term);
+
+  const matchesCategory =
+   selectedCategory === "All" ||
+   app[1] === selectedCategory;
+
+  return matchesSearch && matchesCategory;
+ });
+
+ count.textContent =
+  "Showing " + filtered.length + " of " + rawApps.length + " apps";
+
+ apps.innerHTML = filtered.map(app => {
+  const storeLink =
+   "https://play.google.com/store/search?q=" +
+   encodeURIComponent(app[0]) +
+   "&c=apps";
+
+  return `
+   <article class="card">
+    <div class="icon">${app[3]}</div>
+    <h3>${app[0]}</h3>
+    <span class="category">${app[1]}</span>
+    <p>${app[2]}</p>
+    <a class="btn"
+       href="${storeLink}"
+       target="_blank"
+       rel="noopener noreferrer">
+       Find on Google Play
+    </a>
+   </article>
+  `;
+ }).join("");
+
+ empty.style.display = filtered.length ? "none" : "block";
+}
+
+search.addEventListener("input", renderApps);
+
+buttons.forEach(button => {
+ button.addEventListener("click", () => {
+  selectedCategory = button.dataset.category;
+
+  buttons.forEach(item => item.classList.remove("active"));
+  button.classList.add("active");
+
+  renderApps();
+ });
+});
+
+renderApps();
+</script>
+
+</body>
+</html>
