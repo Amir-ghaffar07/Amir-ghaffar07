@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movies Hub | MediaHub</title>
+<meta name="description" content="Explore popular movies, Hollywood, Bollywood, animated films and movie trailers on MediaHub.">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:25px 12px;background:linear-gradient(135deg,#20103d,#791e40)}
+header h1{color:#ffca65;font-size:34px;margin:5px}
+nav{text-align:center;padding:14px;background:#151d30}
+nav a{color:white;text-decoration:none;margin:7px;display:inline-block}
+main{max-width:1100px;margin:auto;padding:18px}
+h2{color:#ffca65}
+input{width:100%;padding:14px;border-radius:9px;border:1px solid #39445c;background:#182239;color:white;font-size:16px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
+button{background:#27334c;color:white;border:0;padding:10px 13px;border-radius:7px;cursor:pointer}
+button.active,button:hover{background:#ffca65;color:#181020}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#182239;padding:18px;border-radius:12px;border:1px solid #303b54}
+.poster{font-size:45px}
+.card h3{margin:10px 0}
+.card p{color:#cbd3e2;line-height:1.5}
+.tag{color:#ffca65;font-size:13px}
+.btn{display:block;text-align:center;background:#ffca65;color:#20152b;text-decoration:none;padding:11px;border-radius:7px;font-weight:bold;margin-top:12px}
+footer{text-align:center;padding:25px;background:#151d30;color:#cbd3e2;margin-top:30px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎬 MediaHub Movies</h1>
+<p>Discover Movies • Explore Trailers • Find Your Next Film</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="movies.html">Movies</a>
+<a href="software.html">Software</a>
+<a href="apps.html">Apps</a>
+<a href="ai-tools.html">AI Tools</a>
+</nav>
+
+<main>
+<h2>🍿 Explore Movies</h2>
+<p>Search movies and discover their trailers.</p>
+
+<input id="search" type="search" placeholder="🔎 Search movies...">
+
+<div class="filters">
+<button class="active" data-cat="All">All Movies</button>
+<button data-cat="Hollywood">Hollywood</button>
+<button data-cat="Bollywood">Bollywood</button>
+<button data-cat="Animation">Animation</button>
+<button data-cat="Sci-Fi">Sci-Fi</button>
+<button data-cat="Action">Action</button>
+</div>
+
+<p id="count"></p>
+<div class="grid" id="movies"></div>
+<p id="empty" style="display:none">No movies found. Try another search.</p>
+</main>
+
+<footer>
+<h3>MediaHub</h3>
+<p>Movie information and trailer discovery.</p>
+<p>© 2026 MediaHub</p>
+</footer>
+
+<script>
+const data = [
+["Inception","Hollywood","Sci-Fi","🌀","2010"],
+["Interstellar","Hollywood","Sci-Fi","🚀","2014"],
+["The Matrix","Hollywood","Sci-Fi","💻","1999"],
+["Avatar","Hollywood","Sci-Fi","🌌","2009"],
+["Dune","Hollywood","Sci-Fi","🏜️","2021"],
+["The Martian","Hollywood","Sci-Fi","🔴","2015"],
+["Avengers: Endgame","Hollywood","Action","🦸","2019"],
+["Iron Man","Hollywood","Action","🤖","2008"],
+["The Dark Knight","Hollywood","Action","🦇","2008"],
+["Gladiator","Hollywood","Action","⚔️","2000"],
+["Top Gun: Maverick","Hollywood","Action","✈️","2022"],
+["Mission: Impossible","Hollywood","Action","🕵️","1996"],
+["Jurassic Park","Hollywood","Adventure","🦖","1993"],
+["Titanic","Hollywood","Romance","🚢","1997"],
+["Forrest Gump","Hollywood","Drama","🏃","1994"],
+["The Lion King","Animation","Animation","🦁","1994"],
+["Toy Story","Animation","Animation","🤠","1995"],
+["Finding Nemo","Animation","Animation","🐠","2003"],
+["Frozen","Animation","Animation","❄️","2013"],
+["Spider-Man: Into the Spider-Verse","Animation","Animation","🕸️","2018"],
+["Coco","Animation","Animation","🎸","2017"],
+["Inside Out","Animation","Animation","😊","2015"],
+["3 Idiots","Bollywood","Drama","🎓","2009"],
+["Dangal","Bollywood","Drama","🤼","2016"],
+["PK","Bollywood","Comedy","👽","2014"],
+["Sholay","Bollywood","Action","🔥","1975"],
+["Lagaan","Bollywood","Drama","🏏","2001"],
+["Chennai Express","Bollywood","Comedy","🚂","2013"],
+["Bajrangi Bhaijaan","Bollywood","Drama","❤️","2015"],
+["Jawan","Bollywood","Action","💥","2023"],
+["Pathaan","Bollywood","Action","🕶️","2023"],
+["RRR","Bollywood","Action","🐎","2022"],
+["Baahubali: The Beginning","Bollywood","Action","👑","2015"],
+["Krrish","Bollywood","Sci-Fi","🦸","2006"],
+["Don","Bollywood","Action","🎭","2006"],
+["War","Bollywood","Action","💣","2019"]
+];
+
+let category = "All";
+
+function render(){
+ const q = document.getElementById("search").value.toLowerCase().trim();
+ const results = data.filter(m =>
+   (category === "All" || m[1] === category || m[2] === category) &&
+   (m[0].toLowerCase().includes(q) ||
+    m[1].toLowerCase().includes(q) ||
+    m[2].toLowerCase().includes(q) ||
+    m[4].includes(q))
+ );
+
+ document.getElementById("count").textContent =
+   "Showing " + results.length + " of " + data.length + " movies";
+
+ document.getElementById("empty").style.display =
+   results.length ? "none" : "block";
+
+ document.getElementById("movies").innerHTML = results.map(m => `
+  <article class="card">
+   <div class="poster">${m[3]}</div>
+   <h3>${m[0]}</h3>
+   <div class="tag">${m[1]} • ${m[2]} • ${m[4]}</div>
+   <p>Explore information and watch the official trailer for this movie.</p>
+   <a class="btn" target="_blank" rel="noopener"
+      href="https://www.youtube.com/results?search_query=${encodeURIComponent(m[0]+' official trailer')}">
+      ▶ Find Trailer
+   </a>
+  </article>
+ `).join("");
+}
+
+document.getElementById("search").addEventListener("input",render);
+
+document.querySelectorAll(".filters button").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  category=btn.dataset.cat;
+  document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  render();
+ });
+});
+
+render();
+</script>
+
+</body>
+</html>
