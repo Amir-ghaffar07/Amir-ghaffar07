@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amir-ghaffar07.github.io/Amir-ghaffar07/sitemap.xml
