@@ -3,190 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Free PC & Mobile Games | MediaHub</title>
-<meta name="description" content="Discover popular PC and mobile games on MediaHub. Explore action, racing, adventure, sports and strategy games with official download links.">
-
+<title>Free Games for PC and Android | MediaHub</title>
+<meta name="description" content="Discover PC and mobile games on MediaHub. Explore action, racing, adventure, sports and puzzle games with official game links.">
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/games.html">
-
-<meta name="theme-color" content="#101827">
-
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+body{margin:0;background:#f4f6fa;color:#182230;font-family:Arial,sans-serif;line-height:1.6}
+header{background:#101827;padding:16px}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.logo{font-size:26px;font-weight:bold;color:#56a8ff;margin-right:auto}
+nav a{color:white;text-decoration:none}
+.hero{text-align:center;padding:45px 18px;background:linear-gradient(120deg,#101827,#183d68);color:white}
+.hero h1{font-size:34px;margin:0 0 10px}
+.hero p{color:#d5e2f2}
+.search{width:100%;max-width:550px;padding:14px;border:0;border-radius:7px;font-size:16px}
+.container{max-width:1100px;margin:auto;padding:25px 18px}
+h2{font-size:24px}
+.categories{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:25px}
+.category{padding:10px 15px;background:white;border:1px solid #ddd;border-radius:6px;cursor:pointer}
+.category.active,.category:hover{background:#0879e8;color:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:white;border:1px solid #e1e6ee;border-radius:10px;overflow:hidden}
+.cover{height:115px;background:linear-gradient(135deg,#19385f,#347ac4);display:flex;align-items:center;justify-content:center;font-size:48px}
+.info{padding:18px}
+.info h3{margin:0 0 8px;font-size:20px}
+.info p{color:#687385;font-size:14px}
+.tag{color:#0879e8;font-size:12px}
+.download{display:inline-block;padding:10px 14px;background:#0879e8;color:white;border-radius:6px;text-decoration:none;font-size:14px}
+.about{margin-top:30px;padding:20px;background:white;border-radius:8px}
+footer{margin-top:30px;background:#101827;color:white;text-align:center;padding:25px}
+footer a{color:#75b9ff}
+#noResults{display:none;padding:20px;background:white}
+@media(max-width:750px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.grid{grid-template-columns:1fr}.hero h1{font-size:27px}.logo{width:100%}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="index.html">MediaHub</a>
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="movies.html">Movies</a>
+<a href="software.html">Software</a>
+<a href="apps.html">Apps</a>
+<a href="ai-tools.html">AI Tools</a>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<h1>🎮 MediaHub Games</h1>
+<p>Discover popular PC and mobile games and visit their official websites.</p>
+<input class="search" id="search" type="search" placeholder="Search games..." aria-label="Search games">
+</section>
+
+<div class="container">
+<h2>Browse Categories</h2>
+<div class="categories">
+<button class="category active" data-category="all">All Games</button>
+<button class="category" data-category="action">Action</button>
+<button class="category" data-category="adventure">Adventure</button>
+<button class="category" data-category="racing">Racing</button>
+<button class="category" data-category="sports">Sports</button>
+<button class="category" data-category="mobile">Mobile</button>
+<button class="category" data-category="sandbox">Sandbox</button>
+</div>
+
+<h2>Popular Games</h2>
+<div class="grid" id="games">
+
+<article class="card" data-category="sandbox adventure">
+<div class="cover">⛏️</div><div class="info">
+<span class="tag">Sandbox · Adventure</span>
+<h3>Minecraft</h3>
+<p>Build, explore and create in a world made of blocks.</p>
+<a class="download" href="https://www.minecraft.net/" target="_blank" rel="noopener">Official Website ↗</a>
+</div></article>
+
+<article class="card" data-category="action adventure">
+<div class="cover">🚗</div><div class="info">
+<span class="tag">Action · Adventure</span>
+<h3>Grand Theft Auto V</h3>
+<p>Explore the open-world action game and its official store options.</p>
+<a class="download" href="https://www.rockstargames.com/" target="_blank" rel="noopener">Rockstar Games ↗</a>
+</div></article>
+
+<article class="card" data-category="action mobile">
+<div class="cover">🎯</div><div class="info">
+<span class="tag">Action · Mobile</span>
+<h3>PUBG MOBILE</h3>
+<p>Explore the mobile battle royale game and official updates.</p>
+<a class="download" href="https://www.pubgmobile.com/" target="_blank" rel="noopener">Official Website ↗</a>
+</div></article>
+
+<article class="card" data-category="action">
+<div class="cover">🪂</div><div class="info">
+<span class="tag">Action · Battle Royale</span>
+<h3>Fortnite</h3>
+<p>Find official game information and supported downloads.</p>
+<a class="download" href="https://www.fortnite.com/" target="_blank" rel="noopener">Official Website ↗</a>
+</div></article>
+
+<article class="card" data-category="racing">
+<div class="cover">🏎️</div><div class="info">
+<span class="tag">Racing</span>
+<h3>Forza Horizon 5</h3>
+<p>Discover an open-world racing game and official store options.</p>
+<a class="download" href="https://forza.net/" target="_blank" rel="noopener">Forza Website ↗</a>
+</div></article>
+
+<article class="card" data-category="sports">
+<div class="cover">⚽</div><div class="info">
+<span class="tag">Sports · Football</span>
+<h3>EA SPORTS FC</h3>
+<p>Discover football gaming and official platform information.</p>
+<a class="download" href="https://www.ea.com/games/ea-sports-fc" target="_blank" rel="noopener">EA Official Website ↗</a>
+</div></article>
+
+<article class="card" data-category="adventure">
+<div class="cover">🧙</div><div class="info">
+<span class="tag">Adventure · RPG</span>
+<h3>Genshin Impact</h3>
+<p>Explore a fantasy adventure and its official downloads.</p>
+<a class="download" href="https://genshin.hoyoverse.com/" target="_blank" rel="noopener">Official Website ↗</a>
+</div></article>
+
+<article class="card" data-category="mobile action">
+<div class="cover">📱</div><div class="info">
+<span class="tag">Mobile · Action</span>
+<h3>Call of Duty: Mobile</h3>
+<p>Discover mobile multiplayer and battle royale modes.</p>
+<a class="download" href="https://www.callofduty.com/mobile" target="_blank" rel="noopener">Official Website ↗</a>
+</div></article>
+
+<article class="card" data-category="sandbox adventure">
+<div class="cover">🧱</div><div class="info">
+<span class="tag">Sandbox · Adventure</span>
+<h3>Roblox</h3>
+<p>Discover user-created games and experiences.</p>
+<a class="download" href="https://www.roblox.com/" target="_blank" rel="noopener">Official Website ↗</a>
+</div></article>
+
+</div>
+
+<p id="noResults">No games found. Try another search or category.</p>
+
+<section class="about">
+<h2>About MediaHub Games</h2>
+<p>Explore popular PC and mobile games through MediaHub. Availability, age ratings, system requirements and prices may vary by region and platform.</p>
+<p>MediaHub is an independent website and is not affiliated with the game publishers listed here. All trademarks belong to their respective owners.</p>
+</section>
+</div>
+</main>
+
+<footer>
+<p>© 2026 MediaHub — All Rights Reserved</p>
+<p>Game links lead to their respective official websites.</p>
+<a href="index.html">Home</a> |
+<a href="contact.html">Contact</a>
+</footer>
+
+<script>
+const search = document.getElementById('search');
+const cards = Array.from(document.querySelectorAll('.card'));
+const buttons = document.querySelectorAll('.category');
+let selected = 'all';
+
+function filterGames(){
+ const query = search.value.toLowerCase().trim();
+ let count = 0;
+
+ cards.forEach(card=>{
+  const matchesText = card.innerText.toLowerCase().includes(query);
+  const categories = card.dataset.category.split(' ');
+  const matchesCategory = selected === 'all' || categories.includes(selected);
+  const show = matchesText && matchesCategory;
+  card.style.display = show ? '' : 'none';
+  if(show) count++;
+ });
+
+ document.getElementById('noResults').style.display = count ? 'none' : 'block';
 }
 
-:root {
-    --bg: #f4f6fa;
-    --card: #ffffff;
-    --text: #182230;
-    --muted: #687385;
-    --blue: #0879e8;
-    --border: #e1e6ee;
-}
+search.addEventListener('input',filterGames);
 
-body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-}
-
-header {
-    background: #101827;
-    color: white;
-    padding: 15px 4%;
-}
-
-.nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.logo {
-    color: #56a8ff;
-    font-size: 27px;
-    font-weight: bold;
-    margin-right: auto;
-}
-
-.nav a {
-    color: white;
-    font-size: 14px;
-}
-
-.nav a:hover {
-    color: #56a8ff;
-}
-
-.hero {
-    background: linear-gradient(120deg, #101827, #183d68);
-    color: white;
-    padding: 45px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin: 0 0 10px;
-}
-
-.hero p {
-    color: #d5e2f2;
-    max-width: 650px;
-    margin: 0 auto 22px;
-}
-
-.search-box {
-    display: flex;
-    max-width: 600px;
-    margin: 25px auto 0;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.search-box input {
-    flex: 1;
-    min-width: 0;
-    padding: 15px;
-    border: 0;
-    outline: none;
-    font-size: 16px;
-}
-
-.search-box button {
-    border: 0;
-    background: var(--blue);
-    color: white;
-    padding: 0 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.container {
-    max-width: 1200px;
-    padding: 25px 18px;
-    margin: auto;
-}
-
-.breadcrumb {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.section-title {
-    font-size: 25px;
-    margin: 10px 0 18px;
-}
-
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.category {
-    background: white;
-    color: #24344b;
-    padding: 10px 15px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.category:hover,
-.category.active {
-    background: var(--blue);
-    border-color: var(--blue);
-    color: white;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform .2s, box-shadow .2s;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 24px #15223812;
-}
-
-.game-cover {
-    min-height: 115px;
-    background: linear-gradient(135deg, #19385f, #347ac4);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-}
-
-.game-info {
-    padding: 18px;
-}
-
-.game-info h3 {
-    font-size: 19px;
-    margin: 0 0 7px;
+buttons.forEach(button=>{
+ button.addEventListener('click',()=>{
+  selected = button.dataset.category;
+  buttons.forEach(item=>item.classList.toggle('active',item===button));
+  filterGames();
+ });
+});
+</script>
+</body>
+</html>
