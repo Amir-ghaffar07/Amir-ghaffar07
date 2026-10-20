@@ -2,197 +2,191 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Games for PC & Android | MediaHub</title>
-<meta name="description" content="Discover free PC and Android games on MediaHub, including racing, action, adventure and strategy games. Explore gaming guides, popular titles and new games.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Free PC & Mobile Games | MediaHub</title>
+<meta name="description" content="Discover popular PC and mobile games on MediaHub. Explore action, racing, adventure, sports and strategy games with official download links.">
+
+<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/games.html">
+
+<meta name="theme-color" content="#101827">
 
 <style>
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --bg: #f4f6fa;
+    --card: #ffffff;
+    --text: #182230;
+    --muted: #687385;
+    --blue: #0879e8;
+    --border: #e1e6ee;
+}
+
 body {
     margin: 0;
-    background: #070b14;
-    color: white;
+    background: var(--bg);
+    color: var(--text);
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-header {
-    padding: 18px;
-    background: #0d1424;
-    border-bottom: 1px solid #26334a;
+a {
+    text-decoration: none;
 }
 
-nav {
-    max-width: 1000px;
+header {
+    background: #101827;
+    color: white;
+    padding: 15px 4%;
+}
+
+.nav {
+    max-width: 1200px;
     margin: auto;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 18px;
-    align-items: center;
 }
 
 .logo {
-    color: #4da3ff;
-    font-size: 26px;
+    color: #56a8ff;
+    font-size: 27px;
     font-weight: bold;
     margin-right: auto;
 }
 
-nav a {
+.nav a {
     color: white;
-    text-decoration: none;
+    font-size: 14px;
 }
 
-nav a:hover {
-    color: #4da3ff;
+.nav a:hover {
+    color: #56a8ff;
 }
 
 .hero {
+    background: linear-gradient(120deg, #101827, #183d68);
+    color: white;
+    padding: 45px 20px;
     text-align: center;
-    padding: 55px 20px;
 }
 
-h1 {
-    font-size: 40px;
-    color: #4da3ff;
+.hero h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
 }
 
 .hero p {
-    color: #b5c1d4;
+    color: #d5e2f2;
+    max-width: 650px;
+    margin: 0 auto 22px;
+}
+
+.search-box {
+    display: flex;
+    max-width: 600px;
+    margin: 25px auto 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box button {
+    border: 0;
+    background: var(--blue);
+    color: white;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
+    padding: 25px 18px;
     margin: auto;
-    padding: 20px;
+}
+
+.breadcrumb {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 25px;
+    margin: 10px 0 18px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.category {
+    background: white;
+    color: #24344b;
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.category:hover,
+.category.active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: white;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
 .card {
-    background: #101827;
-    border: 1px solid #26334a;
-    border-radius: 12px;
-    padding: 25px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .2s, box-shadow .2s;
 }
 
-.icon {
-    font-size: 38px;
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 24px #15223812;
 }
 
-.card p {
-    color: #b5c1d4;
+.game-cover {
+    min-height: 115px;
+    background: linear-gradient(135deg, #19385f, #347ac4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
 }
 
-.card a {
-    display: inline-block;
-    color: #4da3ff;
-    margin-top: 10px;
+.game-info {
+    padding: 18px;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 25px;
-    text-align: center;
-    background: #0d1424;
-    color: #b5c1d4;
-}
-
-@media (max-width: 700px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<nav>
-<div class="logo">MediaHub</div>
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-</nav>
-</header>
-
-<main>
-
-<section class="hero">
-<h1>🎮 MediaHub Games</h1>
-<p>Explore gaming categories and discover official game websites.</p>
-</section>
-
-<section class="container">
-<div class="grid">
-
-<div class="card">
-<div class="icon">🏎️</div>
-<h2>Racing Games</h2>
-<p>Discover racing games for PC and mobile devices.</p>
-<a href="https://store.steampowered.com/" target="_blank" rel="noopener">Explore PC Games →</a>
-</div>
-
-<div class="card">
-<div class="icon">⚔️</div>
-<h2>Action Games</h2>
-<p>Explore action, adventure and fighting game categories.</p>
-<a href="https://store.steampowered.com/" target="_blank" rel="noopener">Explore Games →</a>
-</div>
-
-<div class="card">
-<div class="icon">📱</div>
-<h2>Mobile Games</h2>
-<p>Find games for Android and other mobile devices.</p>
-<a href="https://play.google.com/store/games" target="_blank" rel="noopener">Google Play Games →</a>
-</div>
-
-<div class="card">
-<div class="icon">🧠</div>
-<h2>Puzzle Games</h2>
-<p>Explore puzzle, logic and brain-training games.</p>
-<a href="https://store.steampowered.com/" target="_blank" rel="noopener">Discover Games →</a>
-</div>
-
-<div class="card">
-<div class="icon">🏆</div>
-<h2>Sports Games</h2>
-<p>Discover sports, football and competition games.</p>
-<a href="https://store.steampowered.com/" target="_blank" rel="noopener">Explore Sports Games →</a>
-</div>
-
-<div class="card">
-<div class="icon">🖥️</div>
-<h2>PC Games</h2>
-<p>Explore computer games and gaming platforms.</p>
-<a href="https://store.steampowered.com/" target="_blank" rel="noopener">Visit Steam →</a>
-</div>
-
-</div>
-</section>
-
-</main>
-
-<footer>
-<p>© 2026 MediaHub — All Rights Reserved</p>
-<p>Game links lead to external platforms.</p>
-</footer>
-
-</body>
-</html>
+.game-info h3 {
+    font-size: 19px;
+    margin: 0 0 7px;
