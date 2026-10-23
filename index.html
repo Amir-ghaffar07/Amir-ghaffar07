@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MediaHub - Free Games, Software, Apps, AI Tools & Tech News</title>
+<title>MediaHub - Games, Movies, Software, Apps & AI Tools</title>
 
-<meta name="description" content="Explore MediaHub for games, software, apps, AI tools, technology news and digital resources. Discover useful digital tools and trending topics.">
-
+<meta name="description" content="Explore MediaHub for games, movies, software, apps, AI tools, technology news and digital resources.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="MediaHub">
 <meta name="theme-color" content="#ffffff">
@@ -15,413 +14,426 @@
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
 
 <style>
+:root {
+    --green: #269b45;
+    --green-dark: #197a33;
+    --text: #252a30;
+    --muted: #68717c;
+    --border: #e2e6ea;
+    --background: #f5f6f7;
+    --white: #ffffff;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #333333;
-  line-height: 1.6;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
 }
 
 a {
-  transition: color 0.2s, background 0.2s;
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--green-dark);
+}
+
+.container {
+    width: 100%;
+    max-width: 1160px;
+    margin: auto;
+    padding: 0 18px;
 }
 
 /* HEADER */
 
 header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .logo {
-  font-size: 29px;
-  font-weight: bold;
-  color: #269b45;
-  text-decoration: none;
-  white-space: nowrap;
+    color: var(--green);
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--text);
 }
 
 nav {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 17px;
 }
 
 nav a {
-  color: #333333;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
+    color: #303840;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 nav a:hover {
-  color: #269b45;
+    color: var(--green);
 }
 
 /* HERO */
 
 .hero {
-  max-width: 1100px;
-  margin: auto;
-  padding: 65px 20px 55px;
-  text-align: center;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0 42px;
+    text-align: center;
 }
 
 .hero h1 {
-  font-size: 44px;
-  line-height: 1.25;
-  margin-bottom: 18px;
-  color: #222222;
+    font-size: clamp(29px, 5vw, 43px);
+    line-height: 1.2;
+    margin: 0 0 15px;
+    color: #20262d;
 }
 
 .hero h1 span {
-  color: #269b45;
+    color: var(--green);
 }
 
 .hero p {
-  max-width: 750px;
-  margin: auto;
-  color: #666666;
-  font-size: 17px;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: var(--muted);
+    font-size: 16px;
 }
 
-/* SEARCH */
-
-.search {
-  max-width: 650px;
-  margin: 28px auto 0;
-  display: flex;
-  gap: 10px;
+.search-form {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    gap: 8px;
 }
 
-.search input {
-  flex: 1;
-  min-width: 0;
-  padding: 14px;
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  background: #ffffff;
-  color: #333333;
-  font-size: 15px;
+.search-form input {
+    min-width: 0;
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #cfd5db;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
 }
 
-.search input:focus {
-  outline: 2px solid #269b45;
-  border-color: #269b45;
+.search-form input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px #269b4520;
 }
 
-.search button {
-  padding: 13px 24px;
-  border: none;
-  border-radius: 5px;
-  background: #269b45;
-  color: #ffffff;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 15px;
+.search-form button,
+.button {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
 }
 
-.search button:hover {
-  background: #1d7e37;
+.search-form button:hover,
+.button:hover {
+    background: var(--green-dark);
+    color: white;
 }
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 .section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 20px 45px;
+    padding: 35px 0;
 }
 
-.title {
-  font-size: 28px;
-  margin-bottom: 23px;
-  color: #252525;
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    margin: 0;
+    color: #252a30;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin: 5px 0 0;
+    font-size: 14px;
 }
 
 /* CATEGORY CARDS */
 
-.categories {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.category {
-  display: block;
-  text-decoration: none;
-  background: #ffffff;
-  border: 1px solid #e2e5e9;
-  border-radius: 8px;
-  padding: 23px 19px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.035);
-  transition: 0.2s;
-}
-
-.category:hover {
-  transform: translateY(-3px);
-  border-color: #269b45;
-  box-shadow: 0 5px 14px rgba(0,0,0,0.08);
-}
-
-.icon {
-  font-size: 35px;
-  margin-bottom: 10px;
-}
-
-.category h2 {
-  font-size: 19px;
-  color: #269b45;
-  margin-bottom: 7px;
-}
-
-.category p {
-  color: #666666;
-  font-size: 14px;
-}
-
-/* FEATURED CARDS */
-
-.featured {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #e2e5e9;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.035);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 21px 18px;
+    transition: border-color .2s, transform .2s;
+    min-width: 0;
 }
 
-.tag {
-  font-size: 12px;
-  font-weight: bold;
-  color: #269b45;
-  letter-spacing: 0.5px;
+.card:hover {
+    border-color: var(--green);
+    transform: translateY(-3px);
 }
 
-.card h2 {
-  margin: 12px 0;
-  color: #292929;
-  font-size: 21px;
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #eaf6ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin: 0 0 8px;
+    color: #252a30;
 }
 
 .card p {
-  color: #666666;
-  font-size: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 15px;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 16px;
-  color: #269b45;
-  text-decoration: none;
-  font-weight: bold;
+.card-link {
+    font-size: 13px;
+    font-weight: 700;
 }
 
-.card a:hover {
-  text-decoration: underline;
+/* FEATURED */
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
 }
 
-/* BUTTONS */
-
-.button {
-  display: inline-block;
-  background: #269b45;
-  color: #ffffff;
-  padding: 11px 18px;
-  margin: 8px 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
+.featured-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 23px;
 }
 
-.button:hover {
-  background: #1d7e37;
-  color: #ffffff;
+.featured-card h3 {
+    margin: 0 0 9px;
+    font-size: 19px;
 }
 
-/* PAKISTAN NEWS */
-
-.news {
-  background: #f7f8f9;
-  border: 1px solid #e2e5e9;
-  border-radius: 8px;
-  padding: 28px 20px;
-  text-align: center;
+.featured-card p {
+    margin: 0 0 17px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
-.news p {
-  color: #555555;
-  margin: 12px 0;
+/* NEWS */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
 }
 
-.news-live {
-  background: #269b45;
+.news-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 22px;
+}
+
+.news-card h3 {
+    margin: 0 0 8px;
+}
+
+.news-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.news-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 /* ABOUT */
 
-.about {
-  background: #f5f6f7;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+.about-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 25px;
 }
 
-.about-inner {
-  max-width: 1000px;
-  margin: auto;
-  padding: 45px 20px;
+.about-box h2 {
+    margin-top: 0;
 }
 
-.about p {
-  color: #555555;
-  max-width: 850px;
+.about-box p {
+    color: var(--muted);
+    font-size: 15px;
 }
 
 /* FOOTER */
 
 footer {
-  background: #ffffff;
-  border-top: 1px solid #e0e0e0;
-  text-align: center;
-  padding: 30px 15px;
-  margin-top: 20px;
-  color: #555555;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    padding: 28px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    max-width: 380px;
+}
+
+.footer-brand strong {
+    color: var(--green);
+    font-size: 22px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: var(--muted);
 }
 
 .footer-links {
-  margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .footer-links a {
-  display: inline-block;
-  color: #269b45;
-  text-decoration: none;
-  margin: 5px 8px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-footer p {
-  margin: 8px 0;
-}
-
-footer .email {
-  color: #269b45;
-  text-decoration: none;
-}
-
-.small {
-  color: #777777;
-  font-size: 13px;
-  margin-top: 15px;
-}
-
-/* MOBILE RESPONSIVE */
-
-@media (max-width: 900px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    justify-content: flex-start;
-  }
-
-  .categories {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .featured {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 550px) {
-  .navbar {
-    padding: 13px 15px;
-  }
-
-  .logo {
-    font-size: 27px;
-  }
-
-  nav {
-    gap: 10px 14px;
-  }
-
-  nav a {
     font-size: 13px;
-  }
+}
 
-  .hero {
-    padding: 45px 16px 35px;
-  }
+.copyright {
+    border-top: 1px solid var(--border);
+    margin-top: 22px;
+    padding-top: 17px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
 
-  .hero h1 {
-    font-size: 32px;
-  }
+/* MOBILE */
 
-  .hero p {
-    font-size: 15px;
-  }
+@media (max-width: 850px) {
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  .categories {
-    grid-template-columns: 1fr;
-  }
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .search {
-    flex-direction: column;
-  }
+    .header-inner {
+        justify-content: center;
+    }
 
-  .search button {
-    width: 100%;
-  }
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+}
 
-  .title {
-    font-size: 24px;
-  }
+@media (max-width: 500px) {
+    .container {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
 
-  .section {
-    padding: 25px 15px 35px;
-  }
+    .hero {
+        padding: 35px 0;
+    }
 
-  .category {
-    padding: 20px;
-  }
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+    .card-grid {
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px 12px;
+    }
+
+    .card h3 {
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -429,330 +441,310 @@ footer .email {
 <body>
 
 <header>
-  <div class="navbar">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">Media<span>Hub</span></a>
 
-    <a class="logo" href="index.html">MediaHub</a>
-
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="games.html">Games</a>
-      <a href="movies.html">Movies</a>
-      <a href="software.html">Software</a>
-      <a href="apps.html">Apps</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="tech-news.html">Tech News</a>
-      <a href="data-analysis.html">Data</a>
-      <a href="trending.html">Trending</a>
-    </nav>
-
-  </div>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="movies.html">Movies</a>
+            <a href="software.html">Software</a>
+            <a href="apps.html">Apps</a>
+            <a href="ai-tools.html">AI Tools</a>
+            <a href="tech-news.html">Tech News</a>
+        </nav>
+    </div>
 </header>
 
 <main>
 
-<!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to <span>MediaHub</span></h1>
 
-<section class="hero">
+            <p>
+                Discover games, movies, software, mobile apps, AI tools
+                and the latest technology news — all in one place.
+            </p>
 
-  <h1>Welcome to <span>MediaHub</span></h1>
+            <form class="search-form" id="siteSearch">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search games, software, apps, AI tools..."
+                    aria-label="Search MediaHub categories"
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
 
-  <p>
-    Discover games, movies, software, apps, AI tools,
-    technology news and digital resources — all in one place.
-  </p>
+    <section class="section">
+        <div class="container">
 
-  <form class="search" id="searchForm">
+            <div class="section-heading">
+                <div>
+                    <h2>Explore MediaHub</h2>
+                    <p>Browse our categories and discover digital resources.</p>
+                </div>
+            </div>
 
-    <input
-      id="searchInput"
-      type="search"
-      placeholder="Search games, software, apps and more..."
-      aria-label="Search MediaHub">
+            <div class="card-grid">
 
-    <button type="submit">Search</button>
+                <article class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Games</h3>
+                    <p>Explore PC games, mobile games, racing, action and adventure.</p>
+                    <a class="card-link" href="games.html">Explore Games →</a>
+                </article>
 
-  </form>
+                <article class="card">
+                    <div class="card-icon">🎬</div>
+                    <h3>Movies</h3>
+                    <p>Discover movie information, entertainment and film updates.</p>
+                    <a class="card-link" href="movies.html">Explore Movies →</a>
+                </article>
 
-</section>
+                <article class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Software</h3>
+                    <p>Find useful computer software and productivity tools.</p>
+                    <a class="card-link" href="software.html">Explore Software →</a>
+                </article>
 
-<!-- EXPLORE CATEGORIES -->
+                <article class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile Apps</h3>
+                    <p>Discover useful Android apps and mobile applications.</p>
+                    <a class="card-link" href="apps.html">Explore Apps →</a>
+                </article>
 
-<section class="section">
+                <article class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>AI Tools</h3>
+                    <p>Explore artificial intelligence tools for work and creativity.</p>
+                    <a class="card-link" href="ai-tools.html">Explore AI Tools →</a>
+                </article>
 
-  <h2 class="title">Explore MediaHub</h2>
+                <article class="card">
+                    <div class="card-icon">📰</div>
+                    <h3>Tech News</h3>
+                    <p>Read about technology, digital products and new developments.</p>
+                    <a class="card-link" href="tech-news.html">Read Tech News →</a>
+                </article>
 
-  <div class="categories">
+                <article class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Data & Guides</h3>
+                    <p>Explore digital guides, useful information and resources.</p>
+                    <a class="card-link" href="data-analysis.html">Explore Guides →</a>
+                </article>
 
-    <a class="category" href="games.html">
-      <div class="icon">🎮</div>
-      <h2>Games</h2>
-      <p>Explore PC and mobile games, gaming categories and updates.</p>
-    </a>
+                <article class="card">
+                    <div class="card-icon">🔥</div>
+                    <h3>Trending</h3>
+                    <p>Discover popular topics and interesting digital content.</p>
+                    <a class="card-link" href="trending.html">Explore Trending →</a>
+                </article>
 
-    <a class="category" href="movies.html">
-      <div class="icon">🎬</div>
-      <h2>Movies</h2>
-      <p>Discover movie genres, entertainment and film information.</p>
-    </a>
+            </div>
+        </div>
+    </section>
 
-    <a class="category" href="software.html">
-      <div class="icon">💻</div>
-      <h2>Software</h2>
-      <p>Find useful software, desktop tools and digital resources.</p>
-    </a>
+    <section class="section">
+        <div class="container">
 
-    <a class="category" href="apps.html">
-      <div class="icon">📱</div>
-      <h2>Apps</h2>
-      <p>Explore mobile applications and useful Android apps.</p>
-    </a>
+            <div class="section-heading">
+                <div>
+                    <h2>Featured Resources</h2>
+                    <p>Explore more topics from MediaHub.</p>
+                </div>
+            </div>
 
-    <a class="category" href="ai-tools.html">
-      <div class="icon">🤖</div>
-      <h2>AI Tools</h2>
-      <p>Discover AI tools for writing, images, video and productivity.</p>
-    </a>
+            <div class="featured-grid">
 
-    <a class="category" href="tech-news.html">
-      <div class="icon">📰</div>
-      <h2>Tech News</h2>
-      <p>Explore technology news, digital developments and updates.</p>
-    </a>
+                <article class="featured-card">
+                    <h3>🤖 Discover AI Tools</h3>
+                    <p>Find AI resources for writing, image creation, video and productivity.</p>
+                    <a class="button" href="ai-tools.html">View AI Tools</a>
+                </article>
 
-    <a class="category" href="data-analysis.html">
-      <div class="icon">📊</div>
-      <h2>Data Analysis</h2>
-      <p>Explore data, statistics, charts and analysis resources.</p>
-    </a>
+                <article class="featured-card">
+                    <h3>💡 Technology Topics</h3>
+                    <p>Explore technology updates, digital guides and useful information.</p>
+                    <a class="button" href="tech-news.html">Explore Topics</a>
+                </article>
 
-    <a class="category" href="trending.html">
-      <div class="icon">🔥</div>
-      <h2>Trending</h2>
-      <p>Discover popular topics and trending digital content.</p>
-    </a>
+                <article class="featured-card">
+                    <h3>🔥 What's Trending?</h3>
+                    <p>Browse popular subjects and discover new content.</p>
+                    <a class="button" href="trending.html">View Trending</a>
+                </article>
 
-  </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <section class="section">
+        <div class="container">
 
-<!-- FEATURED CONTENT -->
+            <div class="section-heading">
+                <div>
+                    <h2>Pakistan News & Live Updates</h2>
+                    <p>Visit news sources for current headlines and live coverage.</p>
+                </div>
+            </div>
 
-<section class="section">
+            <div class="news-grid">
 
-  <h2 class="title">Featured on MediaHub</h2>
+                <article class="news-card">
+                    <h3>🇵🇰 Pakistan News</h3>
+                    <p>Visit our Pakistan news section for news-related content and updates.</p>
+                    <a class="button" href="pakistan-news.html">Explore Pakistan News</a>
+                </article>
 
-  <div class="featured">
+                <article class="news-card">
+                    <h3>📺 Live News</h3>
+                    <p>Visit the official news websites for their latest coverage.</p>
 
-    <div class="card">
-      <div class="tag">AI TOOLS</div>
-      <h2>Explore AI Technology</h2>
-      <p>
-        Discover artificial intelligence tools for writing,
-        images, video, coding and productivity.
-      </p>
-      <a href="ai-tools.html">Explore AI Tools →</a>
-    </div>
+                    <div class="news-links">
+                        <a class="button" href="https://live.geo.tv/" target="_blank" rel="noopener noreferrer">Geo News Live</a>
+                        <a class="button" href="https://live.samaa.tv/" target="_blank" rel="noopener noreferrer">Samaa Live</a>
+                    </div>
+                </article>
 
-    <div class="card">
-      <div class="tag">TECHNOLOGY</div>
-      <h2>Latest Tech Topics</h2>
-      <p>
-        Explore mobile technology, software, gaming,
-        AI and cybersecurity topics.
-      </p>
-      <a href="tech-news.html">Explore Technology →</a>
-    </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <div class="tag">TRENDING</div>
-      <h2>What's Trending?</h2>
-      <p>
-        Discover popular categories and interesting
-        topics from across the digital world.
-      </p>
-      <a href="trending.html">View Trending →</a>
-    </div>
+    <section class="section">
+        <div class="container">
+            <div class="about-box">
+                <h2>About MediaHub</h2>
 
-  </div>
+                <p>
+                    MediaHub is a digital discovery website covering games,
+                    movies, software, mobile applications, AI tools,
+                    technology news and online resources.
+                </p>
 
-</section>
+                <p>
+                    Our goal is to help visitors explore useful information
+                    and find relevant resources in one convenient place.
+                    Always use official websites for software downloads
+                    and respect copyright when accessing movies and other media.
+                </p>
 
-<!-- PAKISTAN NEWS -->
-
-<section class="section" id="pakistan-news">
-
-  <div class="news">
-
-    <h2 class="title">🇵🇰 Pakistan News Live</h2>
-
-    <p>
-      Visit our Pakistan news page to explore news channels
-      and available news updates.
-    </p>
-
-    <a class="button news-live" href="pakistan-news.html">
-      📺 All News Channels
-    </a>
-
-    <p>
-      Live streams are provided by external broadcasters
-      and may change or become unavailable.
-    </p>
-
-    <a
-      class="button"
-      href="https://live.geo.tv/"
-      target="_blank"
-      rel="noopener noreferrer">
-      Geo News Live
-    </a>
-
-    <a
-      class="button"
-      href="https://live.samaa.tv/"
-      target="_blank"
-      rel="noopener noreferrer">
-      SAMAA TV Live
-    </a>
-
-  </div>
-
-</section>
-
-<!-- ABOUT MEDIAHUB -->
-
-<section class="about">
-
-  <div class="about-inner">
-
-    <h2 class="title">About MediaHub</h2>
-
-    <p>
-      MediaHub is a digital platform bringing games, movies,
-      software, apps, AI tools, technology news and data
-      resources together in one modern website. Our goal is
-      to help visitors explore useful digital resources in
-      a simple and organized way.
-    </p>
-
-  </div>
-
-</section>
+                <a class="button" href="about.html">Learn More</a>
+            </div>
+        </div>
+    </section>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer>
+    <div class="container">
 
-  <p>© 2026 MediaHub — All Rights Reserved</p>
+        <div class="footer-inner">
 
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
+            <div class="footer-brand">
+                <strong>MediaHub</strong>
+                <p>
+                    Your destination for games, software, apps, AI tools,
+                    entertainment and technology resources.
+                </p>
+            </div>
 
-  <p>
-    Email:
-    <a class="email" href="mailto:M.amir7300@gmail.com">
-      M.amir7300@gmail.com
-    </a>
-  </p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
 
-  <p>
-    <a
-      class="button"
-      href="https://wa.me/923014963043"
-      target="_blank"
-      rel="noopener noreferrer">
-      💬 Contact Us on WhatsApp
-    </a>
-  </p>
+            <div>
+                <p><strong>Contact Us</strong></p>
+                <p>
+                    <a href="mailto:M.amir7300@gmail.com">Email MediaHub</a>
+                </p>
+                <p>
+                    <a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                    </a>
+                </p>
+            </div>
 
-  <p class="small">
-    MediaHub — Games, Movies, Software, Apps, AI Tools and Technology.
-  </p>
+        </div>
 
+        <div class="copyright">
+            © <span id="year"></span> MediaHub. All rights reserved.
+        </div>
+
+    </div>
 </footer>
 
 <script>
-const searchForm = document.getElementById("searchForm");
-const searchInput = document.getElementById("searchInput");
+document.getElementById("year").textContent = new Date().getFullYear();
 
-searchForm.addEventListener("submit", function(event) {
-  event.preventDefault();
+document.getElementById("siteSearch").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-  const query = searchInput.value.toLowerCase().trim();
+    const query = document.getElementById("searchInput").value
+        .trim()
+        .toLowerCase();
 
-  if (!query) {
-    alert("Please enter something to search.");
-    searchInput.focus();
-    return;
-  }
+    if (!query) {
+        return;
+    }
 
-  if (
-    query.includes("game") ||
-    query.includes("gaming") ||
-    query.includes("racing") ||
-    query.includes("action game")
-  ) {
-    window.location.href = "games.html";
+    const categories = [
+        {
+            keywords: ["game", "games", "gaming", "racing", "action", "pubg", "minecraft"],
+            page: "games.html"
+        },
+        {
+            keywords: ["movie", "movies", "film", "films", "cinema", "drama"],
+            page: "movies.html"
+        },
+        {
+            keywords: ["software", "pc software", "computer program"],
+            page: "software.html"
+        },
+        {
+            keywords: ["app", "apps", "android", "mobile application"],
+            page: "apps.html"
+        },
+        {
+            keywords: ["ai", "artificial intelligence", "ai tools", "chatbot"],
+            page: "ai-tools.html"
+        },
+        {
+            keywords: ["tech news", "technology", "technology news"],
+            page: "tech-news.html"
+        },
+        {
+            keywords: ["data", "guide", "guides", "tutorial"],
+            page: "data-analysis.html"
+        },
+        {
+            keywords: ["trending", "popular", "latest trends"],
+            page: "trending.html"
+        },
+        {
+            keywords: ["pakistan news", "pakistan", "pakistani news"],
+            page: "pakistan-news.html"
+        }
+    ];
 
-  } else if (
-    query.includes("movie") ||
-    query.includes("film") ||
-    query.includes("cinema")
-  ) {
-    window.location.href = "movies.html";
+    for (const category of categories) {
+        if (category.keywords.some(keyword => query.includes(keyword))) {
+            window.location.href = category.page;
+            return;
+        }
+    }
 
-  } else if (
-    query.includes("software") ||
-    query.includes("program") ||
-    query.includes("pc tool")
-  ) {
-    window.location.href = "software.html";
-
-  } else if (
-    query.includes("app") ||
-    query.includes("android") ||
-    query.includes("mobile")
-  ) {
-    window.location.href = "apps.html";
-
-  } else if (
-    query.includes("ai") ||
-    query.includes("artificial intelligence") ||
-    query.includes("chatbot")
-  ) {
-    window.location.href = "ai-tools.html";
-
-  } else if (
-    query.includes("news") ||
-    query.includes("technology") ||
-    query.includes("tech")
-  ) {
-    window.location.href = "tech-news.html";
-
-  } else if (
-    query.includes("data") ||
-    query.includes("statistics") ||
-    query.includes("analysis")
-  ) {
-    window.location.href = "data-analysis.html";
-
-  } else if (
-    query.includes("trending") ||
-    query.includes("popular")
-  ) {
-    window.location.href = "trending.html";
-
-  } else {
-    alert(
-      "No exact category found. Please choose a category from the MediaHub menu."
-    );
-  }
+    alert("No matching category found. Try searching for Games, Movies, Software, Apps, AI Tools or Tech News.");
 });
 </script>
 
