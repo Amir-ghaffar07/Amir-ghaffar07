@@ -4,281 +4,216 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free AI Tools for Writing, Images & Productivity | MediaHub</title>
-<meta name="description" content="Discover AI tools on MediaHub for writing, image generation, video creation, coding, research and productivity. Explore useful AI tools for students, creators and professionals.">
+<title>Best Free AI Tools Online | MediaHub</title>
+<meta name="description" content="Explore popular AI tools on MediaHub, including ChatGPT, Gemini, Copilot, Claude, Canva AI and other artificial intelligence tools.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/ai-tools.html">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#070b14;
-    color:#fff;
-    line-height:1.6;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f7;
+    color: #252525;
+    line-height: 1.6;
 }
 
-header{
-    background:#0d1322;
-    border-bottom:1px solid #202a40;
-    padding:16px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:100;
+header {
+    background: #ffffff;
+    padding: 18px 5%;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.logo{
-    font-size:25px;
-    font-weight:bold;
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+    color: #269b45;
+    text-decoration: none;
 }
 
-.logo span{
-    color:#00d9ff;
+.tagline {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
 }
 
-nav{
-    display:flex;
-    gap:20px;
+nav {
+    background: #ffffff;
+    padding: 12px 5%;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
 }
 
-nav a{
-    color:#ddd;
-    text-decoration:none;
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-nav a:hover{
-    color:#00d9ff;
+nav a:hover {
+    color: #269b45;
 }
 
-.menu{
-    display:none;
-    font-size:25px;
-    cursor:pointer;
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 16px;
 }
 
-.hero{
-    text-align:center;
-    padding:70px 5%;
-    background:linear-gradient(135deg,#0b1222,#101b35);
+.hero {
+    background: #ffffff;
+    padding: 30px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    margin-bottom: 25px;
 }
 
-.hero h1{
-    font-size:42px;
-    margin-bottom:12px;
+.hero h1 {
+    margin-top: 0;
+    font-size: 30px;
 }
 
-.hero h1 span{
-    color:#00d9ff;
+.hero p {
+    color: #666;
 }
 
-.hero p{
-    color:#aeb8ca;
-    max-width:700px;
-    margin:auto;
+.search-box {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.search{
-    display:flex;
-    max-width:600px;
-    margin:25px auto 0;
-    gap:8px;
+h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
 }
 
-.search input{
-    flex:1;
-    padding:14px;
-    border:0;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
-.search button{
-    padding:14px 22px;
-    border:0;
-    border-radius:8px;
-    background:#00d9ff;
-    color:#001018;
-    font-weight:bold;
-    cursor:pointer;
+.categories button {
+    background: #ffffff;
+    border: 1px solid #d5d5d5;
+    padding: 9px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:40px auto;
+.categories button.active,
+.categories button:hover {
+    background: #269b45;
+    color: #ffffff;
+    border-color: #269b45;
 }
 
-.title{
-    font-size:28px;
-    margin-bottom:22px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
 }
 
-.title span{
-    color:#00d9ff;
+.card {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 7px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.ai-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
 }
 
-.card{
-    background:#0e1627;
-    border:1px solid #202c43;
-    border-radius:14px;
-    padding:25px;
-    transition:.3s;
+.card p {
+    color: #666;
+    font-size: 14px;
+    flex-grow: 1;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#00d9ff;
+.badge {
+    display: inline-block;
+    background: #e9f6ed;
+    color: #21863a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    align-self: flex-start;
 }
 
-.icon{
-    font-size:48px;
-    margin-bottom:15px;
+.btn {
+    display: inline-block;
+    background: #269b45;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.card h3{
-    margin-bottom:8px;
+.btn:hover {
+    background: #1d7d37;
 }
 
-.card p{
-    color:#aab4c5;
-    font-size:14px;
-    margin-bottom:15px;
+.info {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 7px;
+    padding: 22px;
+    margin-top: 25px;
 }
 
-.tags{
-    display:flex;
-    gap:7px;
-    flex-wrap:wrap;
-    margin-bottom:18px;
+footer {
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 25px;
+    font-size: 14px;
 }
 
-.tag{
-    background:#17243a;
-    color:#00d9ff;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:12px;
+footer a {
+    color: #269b45;
+    text-decoration: none;
+    margin: 5px;
 }
 
-.btn{
-    display:inline-block;
-    padding:9px 15px;
-    background:#00d9ff;
-    color:#001018;
-    text-decoration:none;
-    border-radius:7px;
-    font-weight:bold;
-    font-size:13px;
-}
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-top:45px;
-}
-
-.category{
-    background:#0e1627;
-    border:1px solid #202c43;
-    padding:24px 12px;
-    text-align:center;
-    border-radius:12px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.category:hover{
-    border-color:#00d9ff;
-    transform:translateY(-3px);
-}
-
-.category .icon{
-    font-size:34px;
-    margin-bottom:8px;
-}
-
-.info{
-    margin-top:50px;
-}
-
-.info-box{
-    background:#0e1627;
-    border:1px solid #202c43;
-    border-radius:10px;
-    padding:20px;
-    margin-bottom:12px;
-}
-
-.info-box strong{
-    color:#00d9ff;
-}
-
-footer{
-    margin-top:60px;
-    padding:30px 5%;
-    text-align:center;
-    background:#0d1322;
-    color:#8995a9;
-    border-top:1px solid #202a40;
-}
-
-footer b{
-    color:#00d9ff;
-}
-
-@media(max-width:800px){
-
-    nav{
-        display:none;
-        position:absolute;
-        top:67px;
-        left:0;
-        right:0;
-        background:#0d1322;
-        flex-direction:column;
-        padding:20px 5%;
-        border-bottom:1px solid #202a40;
-    }
-
-    nav.show{
-        display:flex;
-    }
-
-    .menu{
-        display:block;
-    }
-
-    .hero h1{
-        font-size:32px;
-    }
-
-    .ai-grid{
-        grid-template-columns:1fr;
-    }
-
-    .categories{
-        grid-template-columns:repeat(2,1fr);
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width:450px){
+@media (max-width: 520px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 
-    .search{
-        flex-direction:column;
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 12px;
     }
 }
 </style>
@@ -287,356 +222,194 @@ footer b{
 <body>
 
 <header>
-
-<div class="logo">
-Media<span>Hub</span>
-</div>
-
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-<nav id="nav">
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-</nav>
-
+    <a class="logo" href="index.html">MediaHub</a>
+    <p class="tagline">Discover useful digital tools and resources</p>
 </header>
 
-
-<section class="hero">
-
-<h1>🤖 <span>MediaHub</span> AI Tools</h1>
-
-<p>
-Discover artificial intelligence tools for writing,
-images, video, coding, research, productivity and creativity.
-</p>
-
-<div class="search">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search AI tools..."
->
-
-<button onclick="searchAI()">
-Search
-</button>
-
-</div>
-
-<p id="result" style="margin-top:15px;"></p>
-
-</section>
-
+<nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="movies.html">Movies</a>
+    <a href="software.html">Software</a>
+    <a href="apps.html">Apps</a>
+    <a href="ai-tools.html">AI Tools</a>
+    <a href="tech-news.html">Tech News</a>
+</nav>
 
 <main class="container">
 
-<h2 class="title">
-🔥 Featured <span>AI Tools</span>
-</h2>
-
-
-<div class="ai-grid">
-
-
-<div class="card">
-
-<div class="icon">✍️</div>
-
-<h3>AI Writing</h3>
-
-<p>
-AI tools for writing, rewriting,
-summaries, ideas and content creation.
-</p>
-
-<div class="tags">
-<span class="tag">Writing</span>
-<span class="tag">Text</span>
-</div>
-
-<a href="#" class="btn"
-onclick="showMessage('AI Writing')">
-Explore
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🎨</div>
-
-<h3>AI Image</h3>
-
-<p>
-Explore AI-powered image creation,
-editing and creative design tools.
-</p>
-
-<div class="tags">
-<span class="tag">Images</span>
-<span class="tag">Design</span>
-</div>
-
-<a href="#" class="btn"
-onclick="showMessage('AI Image Tools')">
-Explore
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🎬</div>
-
-<h3>AI Video</h3>
-
-<p>
-Discover tools for generating and
-editing videos using artificial intelligence.
-</p>
-
-<div class="tags">
-<span class="tag">Video</span>
-<span class="tag">Creator</span>
-</div>
-
-<a href="#" class="btn"
-onclick="showMessage('AI Video Tools')">
-Explore
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">💻</div>
-
-<h3>AI Coding</h3>
-
-<p>
-AI assistants and tools that help
-developers write and understand code.
-</p>
-
-<div class="tags">
-<span class="tag">Coding</span>
-<span class="tag">Developer</span>
-</div>
-
-<a href="#" class="btn"
-onclick="showMessage('AI Coding Tools')">
-Explore
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🔍</div>
-
-<h3>AI Research</h3>
-
-<p>
-Useful AI tools for research,
-information discovery and analysis.
-</p>
-
-<div class="tags">
-<span class="tag">Research</span>
-<span class="tag">Search</span>
-</div>
-
-<a href="#" class="btn"
-onclick="showMessage('AI Research Tools')">
-Explore
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🎙️</div>
-
-<h3>AI Audio</h3>
-
-<p>
-Explore AI voice, speech, music
-and audio creation tools.
-</p>
-
-<div class="tags">
-<span class="tag">Voice</span>
-<span class="tag">Audio</span>
-</div>
-
-<a href="#" class="btn"
-onclick="showMessage('AI Audio Tools')">
-Explore
-</a>
-
-</div>
-
-</div>
-
-
-<h2 class="title" style="margin-top:55px;">
-📂 AI <span>Categories</span>
-</h2>
-
-
-<div class="categories">
-
-<div class="category"
-onclick="showMessage('AI Chatbots')">
-<div class="icon">💬</div>
-<h3>Chatbots</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Writing')">
-<div class="icon">✍️</div>
-<h3>Writing</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Image')">
-<div class="icon">🖼️</div>
-<h3>Image</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Video')">
-<div class="icon">🎥</div>
-<h3>Video</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Coding')">
-<div class="icon">👨‍💻</div>
-<h3>Coding</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Voice')">
-<div class="icon">🎤</div>
-<h3>Voice</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Research')">
-<div class="icon">🔎</div>
-<h3>Research</h3>
-</div>
-
-<div class="category"
-onclick="showMessage('AI Productivity')">
-<div class="icon">⚡</div>
-<h3>Productivity</h3>
-</div>
-
-</div>
-
-
-<section class="info">
-
-<h2 class="title">
-🚀 <span>MediaHub</span> AI
-</h2>
-
-<div class="info-box">
-<strong>🤖 AI Directory:</strong>
-Useful AI tools will be organized by category.
-</div>
-
-<div class="info-box">
-<strong>⭐ Featured Tools:</strong>
-Popular and useful AI services can be highlighted here.
-</div>
-
-<div class="info-box">
-<strong>🔗 Official Websites:</strong>
-Future listings can connect users to official AI tool websites.
-</div>
-
-</section>
+    <section class="hero">
+        <h1>Best AI Tools Online</h1>
+        <p>
+            Discover popular artificial intelligence tools for writing,
+            research, image creation, productivity and everyday tasks.
+            Explore each tool through its official website.
+        </p>
+
+        <input
+            type="search"
+            id="search"
+            class="search-box"
+            placeholder="Search AI tools..."
+            aria-label="Search AI tools"
+        >
+    </section>
+
+    <h2>Explore AI Tools</h2>
+
+    <div class="categories">
+        <button class="active" data-filter="all">All Tools</button>
+        <button data-filter="chat">AI Chat</button>
+        <button data-filter="image">AI Images</button>
+        <button data-filter="writing">Writing</button>
+        <button data-filter="research">Research</button>
+        <button data-filter="audio">Audio & Video</button>
+    </div>
+
+    <section class="grid" id="toolGrid">
+
+        <article class="card" data-category="chat">
+            <span class="badge">AI Chat</span>
+            <h3>ChatGPT</h3>
+            <p>Get help with writing, learning, brainstorming, coding and everyday questions.</p>
+            <a class="btn" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="chat">
+            <span class="badge">AI Chat</span>
+            <h3>Google Gemini</h3>
+            <p>Explore Google's AI assistant for ideas, explanations and creative tasks.</p>
+            <a class="btn" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="chat">
+            <span class="badge">AI Chat</span>
+            <h3>Microsoft Copilot</h3>
+            <p>Use an AI assistant for questions, writing and productivity support.</p>
+            <a class="btn" href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="chat">
+            <span class="badge">AI Chat</span>
+            <h3>Claude</h3>
+            <p>Explore an AI assistant for writing, analysis, learning and problem-solving.</p>
+            <a class="btn" href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="image">
+            <span class="badge">AI Images</span>
+            <h3>Canva AI</h3>
+            <p>Create and design visual content using Canva's AI-powered creative features.</p>
+            <a class="btn" href="https://www.canva.com/ai/" target="_blank" rel="noopener noreferrer">Explore AI Features</a>
+        </article>
+
+        <article class="card" data-category="image">
+            <span class="badge">AI Images</span>
+            <h3>Adobe Firefly</h3>
+            <p>Explore AI-powered tools for generating and editing creative images.</p>
+            <a class="btn" href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="research">
+            <span class="badge">Research</span>
+            <h3>Perplexity</h3>
+            <p>Research questions and explore answers with links to supporting sources.</p>
+            <a class="btn" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="writing">
+            <span class="badge">Writing</span>
+            <h3>Grammarly</h3>
+            <p>Improve writing with grammar, clarity and writing-assistance features.</p>
+            <a class="btn" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+        <article class="card" data-category="audio">
+            <span class="badge">Audio & Video</span>
+            <h3>ElevenLabs</h3>
+            <p>Explore AI voice generation, text-to-speech and audio creation tools.</p>
+            <a class="btn" href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
+        </article>
+
+    </section>
+
+    <section class="info">
+        <h2>How to Choose an AI Tool</h2>
+        <p>
+            Choose a tool according to your needs, such as writing,
+            research, image creation or audio production. Some tools offer
+            free access with limits, while other features require payment.
+            Check each official website for current plans and conditions.
+        </p>
+        <p>
+            MediaHub provides links to third-party websites. These tools
+            have their own terms, privacy policies and availability rules.
+        </p>
+    </section>
 
 </main>
 
-
 <footer>
+    <p><strong>MediaHub</strong> — Your digital discovery hub.</p>
 
-<p>
-© 2026 <b>MediaHub</b> — AI Tools
-</p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
 
-<p>
-Discover the future of artificial intelligence.
-</p>
+    <p>
+        Contact:
+        <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a>
+    </p>
 
+    <p>
+        <a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">
+            WhatsApp
+        </a>
+    </p>
+
+    <p>© 2026 MediaHub. All rights reserved.</p>
 </footer>
 
-
 <script>
+const searchInput = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+const filterButtons = document.querySelectorAll(".categories button");
 
-function toggleMenu(){
+let selectedCategory = "all";
 
-document
-.getElementById("nav")
-.classList
-.toggle("show");
+function filterTools() {
+    const query = searchInput.value.toLowerCase().trim();
 
+    cards.forEach(function(card) {
+        const text = card.innerText.toLowerCase();
+        const category = card.dataset.category;
+
+        const matchesSearch = text.includes(query);
+        const matchesCategory =
+            selectedCategory === "all" ||
+            category === selectedCategory;
+
+        card.style.display =
+            matchesSearch && matchesCategory ? "flex" : "none";
+    });
 }
 
-function searchAI(){
+searchInput.addEventListener("input", filterTools);
 
-let value =
-document
-.getElementById("searchInput")
-.value
-.trim();
+filterButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        filterButtons.forEach(function(item) {
+            item.classList.remove("active");
+        });
 
-let result =
-document
-.getElementById("result");
-
-if(value === ""){
-
-result.innerHTML =
-"⚠️ Please enter an AI tool name.";
-
-return;
-
-}
-
-result.innerHTML =
-"🔎 Searching MediaHub AI Tools for: <strong>"
-+ value +
-"</strong>";
-
-}
-
-function showMessage(category){
-
-alert(
-"MediaHub: " +
-category +
-" section will be available soon!"
-);
-
-}
-
+        button.classList.add("active");
+        selectedCategory = button.dataset.filter;
+        filterTools();
+    });
+});
 </script>
 
 </body>
