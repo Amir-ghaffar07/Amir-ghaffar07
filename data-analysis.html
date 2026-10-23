@@ -3,161 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Analysis - MediaHub</title>
-<meta name="description" content="MediaHub Data Analysis tools, guides and resources.">
+
+<title>Data Analysis Tools & Guides | MediaHub</title>
+<meta name="description" content="Explore data analysis tools, spreadsheets, charts, statistics, data visualization and learning resources on MediaHub.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/data-analysis.html">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,sans-serif;
-background:#070b14;
-color:white;
-}
-
-header{
-background:#0d1424;
-border-bottom:1px solid #202b40;
-}
-
-.navbar{
-max-width:1200px;
-margin:auto;
-padding:18px 20px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo{
-font-size:27px;
-font-weight:bold;
-color:#4da3ff;
-}
-
-nav{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-justify-content:flex-end;
-}
-
-nav a{
-color:#dce6f5;
-text-decoration:none;
-font-size:14px;
-}
-
-nav a:hover{color:#4da3ff}
-
-.hero{
-max-width:1000px;
-margin:auto;
-text-align:center;
-padding:70px 20px 45px;
-}
-
-.hero h1{
-font-size:45px;
-margin-bottom:15px;
-}
-
-.hero h1 span{color:#4da3ff}
-
-.hero p{
-color:#aebbd0;
-line-height:1.7;
-}
-
-.section{
-max-width:1200px;
-margin:auto;
-padding:30px 20px 60px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.card{
-background:#101827;
-border:1px solid #202d43;
-border-radius:14px;
-padding:25px;
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-border-color:#4da3ff;
-}
-
-.icon{
-font-size:38px;
-margin-bottom:15px;
-}
-
-.card h2{
-margin-bottom:10px;
-}
-
-.card p{
-color:#9eacc0;
-line-height:1.6;
-font-size:14px;
-}
-
-.card a{
-display:inline-block;
-margin-top:18px;
-color:#4da3ff;
-text-decoration:none;
-font-weight:bold;
-}
-
-.info{
-background:#0d1424;
-border-top:1px solid #202b40;
-border-bottom:1px solid #202b40;
-padding:45px 20px;
-}
-
-.info-inner{
-max-width:1000px;
-margin:auto;
-}
-
-.info p{
-color:#aebbd0;
-line-height:1.8;
-}
-
-footer{
-text-align:center;
-padding:30px;
-color:#7f8da3;
-}
-
-@media(max-width:800px){
-.grid{grid-template-columns:repeat(2,1fr)}
-.hero h1{font-size:35px}
-}
-
-@media(max-width:500px){
-.grid{grid-template-columns:1fr}
-.navbar{align-items:flex-start}
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#252525;line-height:1.6}
+header{background:#fff;padding:18px 5%;border-bottom:1px solid #e5e5e5}
+.logo{font-size:29px;font-weight:bold;color:#269b45;text-decoration:none}
+.tagline{margin:0;color:#666;font-size:14px}
+nav{background:#fff;padding:12px 5%;border-bottom:1px solid #ddd;display:flex;flex-wrap:wrap;gap:17px}
+nav a{color:#333;text-decoration:none;font-size:14px;font-weight:bold}
+nav a:hover{color:#269b45}
+.container{max-width:1150px;margin:auto;padding:25px 16px}
+.hero,.card,.info{background:#fff;border:1px solid #e1e1e1;border-radius:7px}
+.hero{padding:28px 22px;margin-bottom:25px}
+.hero h1{margin-top:0;font-size:30px}
+.hero p,.card p,.info p{color:#666}
+.search{width:100%;padding:14px;border:1px solid #ccc;border-radius:5px;font-size:16px;margin-top:10px}
+h2{font-size:23px;margin-bottom:15px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{background:#fff;border:1px solid #ccc;padding:9px 14px;border-radius:4px;cursor:pointer}
+.filters button.active,.filters button:hover{background:#269b45;color:#fff;border-color:#269b45}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{padding:20px;display:flex;flex-direction:column}
+.card h3{margin:0 0 8px;font-size:19px}
+.card p{font-size:14px;flex-grow:1}
+.badge{display:inline-block;background:#e9f6ed;color:#21863a;padding:4px 8px;border-radius:4px;font-size:12px;margin-bottom:12px;align-self:flex-start}
+.btn{display:inline-block;background:#269b45;color:#fff;padding:10px 14px;text-decoration:none;border-radius:4px;text-align:center;font-weight:bold;font-size:14px}
+.btn:hover{background:#1d7d37}
+.info{padding:22px;margin-top:25px}
+footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:25px 15px;margin-top:25px;font-size:14px}
+footer a{color:#269b45;text-decoration:none;margin:5px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}nav{gap:12px}}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="navbar">
-
-<div class="logo">MediaHub</div>
+<a class="logo" href="index.html">MediaHub</a>
+<p class="tagline">Data Tools, Learning Resources and Digital Guides</p>
+</header>
 
 <nav>
 <a href="index.html">Home</a>
@@ -167,85 +58,157 @@ color:#7f8da3;
 <a href="apps.html">Apps</a>
 <a href="ai-tools.html">AI Tools</a>
 <a href="tech-news.html">Tech News</a>
-<a href="data-analysis.html">Data</a>
-<a href="trending.html">Trending</a>
 </nav>
 
-</div>
-</header>
+<main class="container">
 
 <section class="hero">
-<h1><span>Data</span> Analysis</h1>
-<p>
-Explore data analysis concepts, tools, dashboards,
-statistics and useful resources.
-</p>
+<h1>Data Analysis Tools & Guides</h1>
+<p>Discover useful tools for spreadsheets, data visualization, statistics, charts and data analysis. Find resources for beginners, students and professionals.</p>
+
+<input class="search" type="search" id="search" placeholder="Search data tools and guides..." aria-label="Search data tools">
 </section>
 
-<section class="section">
+<h2>Explore Data Resources</h2>
 
-<div class="grid">
-
-<div class="card">
-<div class="icon">📊</div>
-<h2>Data Visualization</h2>
-<p>Create clear charts, graphs and dashboards to understand data.</p>
-<a href="#">Explore →</a>
+<div class="filters">
+<button class="active" data-filter="all">All Resources</button>
+<button data-filter="spreadsheet">Spreadsheets</button>
+<button data-filter="visualization">Charts & Visualization</button>
+<button data-filter="programming">Programming</button>
+<button data-filter="learning">Learning</button>
 </div>
 
-<div class="card">
-<div class="icon">📈</div>
-<h2>Statistics</h2>
-<p>Learn about statistics, trends, averages and data interpretation.</p>
-<a href="#">Explore →</a>
-</div>
+<section class="grid">
 
-<div class="card">
-<div class="icon">🐍</div>
-<h2>Python Analysis</h2>
-<p>Discover Python-based techniques for working with datasets.</p>
-<a href="#">Explore →</a>
-</div>
+<article class="card" data-category="spreadsheet">
+<span class="badge">Spreadsheets</span>
+<h3>Google Sheets</h3>
+<p>Create spreadsheets, organize information, use formulas and collaborate online.</p>
+<a class="btn" href="https://sheets.google.com/" target="_blank" rel="noopener noreferrer">Open Google Sheets</a>
+</article>
 
-<div class="card">
-<div class="icon">🗃️</div>
-<h2>Data Processing</h2>
-<p>Learn how data can be organized, cleaned and prepared.</p>
-<a href="#">Explore →</a>
-</div>
+<article class="card" data-category="spreadsheet">
+<span class="badge">Spreadsheets</span>
+<h3>Microsoft Excel</h3>
+<p>Explore spreadsheet features for calculations, tables, reports and data analysis.</p>
+<a class="btn" href="https://www.microsoft.com/microsoft-365/excel" target="_blank" rel="noopener noreferrer">Explore Excel</a>
+</article>
 
-<div class="card">
-<div class="icon">🤖</div>
-<h2>AI & Data</h2>
-<p>Explore how artificial intelligence can help analyze information.</p>
-<a href="ai-tools.html">Explore →</a>
-</div>
+<article class="card" data-category="visualization">
+<span class="badge">Visualization</span>
+<h3>Looker Studio</h3>
+<p>Build interactive reports and dashboards using charts and connected data sources.</p>
+<a class="btn" href="https://lookerstudio.google.com/" target="_blank" rel="noopener noreferrer">Open Looker Studio</a>
+</article>
 
-<div class="card">
-<div class="icon">💼</div>
-<h2>Business Data</h2>
-<p>Explore useful concepts for business reports and decision making.</p>
-<a href="#">Explore →</a>
-</div>
+<article class="card" data-category="programming">
+<span class="badge">Programming</span>
+<h3>Python</h3>
+<p>Learn a popular programming language used in automation, statistics and data analysis.</p>
+<a class="btn" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Explore Python</a>
+</article>
 
-</div>
+<article class="card" data-category="programming">
+<span class="badge">Data Analysis</span>
+<h3>pandas</h3>
+<p>Explore Python tools for working with tables, cleaning datasets and analyzing information.</p>
+<a class="btn" href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">Visit pandas</a>
+</article>
+
+<article class="card" data-category="visualization">
+<span class="badge">Charts</span>
+<h3>Datawrapper</h3>
+<p>Create charts, maps and tables to present information visually.</p>
+<a class="btn" href="https://www.datawrapper.de/" target="_blank" rel="noopener noreferrer">Explore Datawrapper</a>
+</article>
+
+<article class="card" data-category="learning">
+<span class="badge">Learning</span>
+<h3>Khan Academy Statistics</h3>
+<p>Learn statistics, probability and other mathematical concepts through lessons.</p>
+<a class="btn" href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener noreferrer">Start Learning</a>
+</article>
+
+<article class="card" data-category="learning">
+<span class="badge">Learning</span>
+<h3>freeCodeCamp</h3>
+<p>Find free programming and data analysis learning materials and practical tutorials.</p>
+<a class="btn" href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Explore Tutorials</a>
+</article>
+
+<article class="card" data-category="visualization">
+<span class="badge">Visualization</span>
+<h3>Tableau</h3>
+<p>Discover data visualization software for charts, dashboards and interactive reports.</p>
+<a class="btn" href="https://www.tableau.com/" target="_blank" rel="noopener noreferrer">Explore Tableau</a>
+</article>
 
 </section>
 
 <section class="info">
-<div class="info-inner">
-<h2>MediaHub Data Center</h2>
-<br>
-<p>
-MediaHub will gradually add practical data analysis resources,
-interactive tools and useful technology information.
-</p>
-</div>
+<h2>Why Use Data Analysis Tools?</h2>
+<p>Data analysis tools help people organize information, identify patterns, create charts and communicate results. Beginners can start with spreadsheets before learning programming or advanced visualization.</p>
+
+<p>Some resources offer free features, while others require an account or paid subscription. Check each official website for current terms and pricing.</p>
 </section>
 
+</main>
+
 <footer>
-© 2026 MediaHub — All Rights Reserved
+<p><strong>MediaHub</strong> — Your digital discovery hub.</p>
+
+<p>
+<a href="index.html">Home</a> |
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy.html">Privacy Policy</a>
+</p>
+
+<p>Contact: <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a></p>
+
+<p>
+<a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</p>
+
+<p>© 2026 MediaHub. All rights reserved.</p>
 </footer>
+
+<script>
+const searchInput=document.getElementById("search");
+const cards=document.querySelectorAll(".card");
+const buttons=document.querySelectorAll(".filters button");
+let selectedCategory="all";
+
+function filterResources(){
+    const query=searchInput.value.toLowerCase().trim();
+
+    cards.forEach(function(card){
+        const text=card.innerText.toLowerCase();
+        const matchesSearch=text.includes(query);
+        const matchesCategory=
+            selectedCategory==="all" ||
+            card.dataset.category===selectedCategory;
+
+        card.style.display=
+            matchesSearch && matchesCategory ? "flex" : "none";
+    });
+}
+
+searchInput.addEventListener("input",filterResources);
+
+buttons.forEach(function(button){
+    button.addEventListener("click",function(){
+        buttons.forEach(function(item){
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        selectedCategory=button.dataset.filter;
+        filterResources();
+    });
+});
+</script>
 
 </body>
 </html>
