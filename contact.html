@@ -1,247 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact Us | MediaHub</title>
+<title>Contact Us | MediaHub</title>
 
-  <meta name="description" content="Contact MediaHub for questions, feedback, business inquiries and support.">
+<meta name="description" content="Contact MediaHub for questions, feedback, corrections and website-related inquiries.">
 
-  <meta name="theme-color" content="#080b14">
+<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/contact.html">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta name="theme-color" content="#ffffff">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #080b14;
-      color: #ffffff;
-      line-height: 1.8;
-    }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    header {
-      background: #111827;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #263449;
-    }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #303840;
+    line-height: 1.6;
+}
 
-    .logo {
-      color: #38bdf8;
-      font-size: 28px;
-      font-weight: bold;
-      text-decoration: none;
-    }
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e1e5e9;
+    padding: 18px 15px;
+}
 
-    nav {
-      margin-top: 12px;
-    }
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
 
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-    }
+.logo {
+    color: #278447;
+    font-size: 29px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+.tagline {
+    color: #68737d;
+    font-size: 13px;
+    margin: 2px 0 12px;
+}
 
-    main {
-      max-width: 850px;
-      margin: 35px auto;
-      padding: 20px;
-    }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
 
-    h1, h2 {
-      color: #38bdf8;
-    }
+nav a {
+    color: #333d46;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 4px;
+}
 
+nav a:hover {
+    background: #e8f4eb;
+    color: #278447;
+}
+
+main {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #263746;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+h2 {
+    color: #278447;
+    font-size: 21px;
+}
+
+p {
+    color: #56616b;
+}
+
+.contact-option {
+    border: 1px solid #e1e5e9;
+    border-radius: 7px;
+    padding: 18px;
+    margin: 15px 0;
+    background: #ffffff;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 18px;
+    margin-top: 8px;
+    background: #278447;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #1e6d38;
+}
+
+.email-button {
+    background: #0879e8;
+}
+
+.email-button:hover {
+    background: #0664c2;
+}
+
+footer {
+    background: #ffffff;
+    border-top: 1px solid #e1e5e9;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+footer a {
+    color: #278447;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.small {
+    font-size: 13px;
+    color: #77818a;
+}
+
+@media (max-width: 600px) {
     h1 {
-      font-size: 36px;
-      text-align: center;
+        font-size: 25px;
     }
 
-    .intro {
-      text-align: center;
-      color: #cbd5e1;
-      margin-bottom: 30px;
-    }
-
-    .box {
-      background: #111827;
-      padding: 25px;
-      margin-bottom: 22px;
-      border-radius: 14px;
-      border: 1px solid #263449;
-    }
-
-    .contact-item {
-      background: #080b14;
-      padding: 18px;
-      margin: 15px 0;
-      border-radius: 10px;
-      border: 1px solid #263449;
-    }
-
-    .contact-item h3 {
-      margin-top: 0;
-      color: #ffffff;
-    }
-
-    .contact-link {
-      display: inline-block;
-      background: #0284c7;
-      color: #ffffff;
-      padding: 10px 18px;
-      border-radius: 7px;
-      text-decoration: none;
-      margin-top: 8px;
-      overflow-wrap: anywhere;
-    }
-
-    .whatsapp {
-      background: #15803d;
-    }
-
-    .contact-link:hover {
-      opacity: 0.85;
-    }
-
-    footer {
-      background: #111827;
-      text-align: center;
-      padding: 25px 15px;
-      border-top: 1px solid #263449;
-    }
-
-    footer a {
-      color: #38bdf8;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-
-    .small {
-      color: #94a3b8;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 29px;
-      }
-
-      main {
-        padding: 15px;
-      }
-
-      .box {
+    .card {
         padding: 18px;
-      }
     }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <a class="logo" href="index.html">MediaHub</a>
+<header>
+    <div class="container">
+        <a class="logo" href="index.html">MediaHub</a>
+        <p class="tagline">Games, Movies, Software, Apps & AI Tools</p>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="movies.html">Movies</a>
+            <a href="software.html">Software</a>
+            <a href="apps.html">Apps</a>
+            <a href="ai-tools.html">AI Tools</a>
+            <a href="trending.html">Trending</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </div>
+</header>
 
-  <main>
+<main>
 
-    <h1>Contact Us</h1>
-
-    <p class="intro">
-      Have a question, suggestion or business inquiry?
-      We would love to hear from you!
-    </p>
-
-    <section class="box">
-      <h2>How Can We Help?</h2>
-
-      <p>
-        MediaHub welcomes your feedback and suggestions.
-        Contact us regarding:
-      </p>
-
-      <ul>
-        <li>Website feedback and suggestions</li>
-        <li>Incorrect or outdated information</li>
-        <li>Copyright concerns</li>
-        <li>Business and partnership inquiries</li>
-        <li>Technical problems with our website</li>
-      </ul>
-    </section>
-
-    <section class="box">
-
-      <h2>Get in Touch</h2>
-
-      <div class="contact-item">
-        <h3>📧 Email Us</h3>
+    <section class="card">
+        <h1>Contact Us</h1>
 
         <p>
-          Send your questions and feedback directly to our email.
+            Welcome to MediaHub! If you have a question, suggestion,
+            correction, or feedback about our website, we would like
+            to hear from you.
         </p>
-
-        <a class="contact-link"
-           href="mailto:M.amir7300@gmail.com">
-          M.amir7300@gmail.com
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <h3>💬 WhatsApp</h3>
 
         <p>
-          Contact MediaHub on WhatsApp for questions and inquiries.
+            Choose one of the contact options below to get in touch
+            with the MediaHub website team.
         </p>
-
-        <a class="contact-link whatsapp"
-           href="https://wa.me/923014963043"
-           target="_blank"
-           rel="noopener noreferrer">
-          Message Us on WhatsApp
-        </a>
-      </div>
-
     </section>
 
-    <p class="intro">
-      We will review your messages and respond when possible.
-      Thank you for visiting MediaHub!
-    </p>
+    <section class="card">
+        <h2>Email Us</h2>
 
-  </main>
+        <p>
+            For general questions, feedback, corrections, or
+            website-related inquiries, contact us by email.
+        </p>
 
-  <footer>
+        <div class="contact-option">
+            <strong>Email Address</strong>
+            <p>M.amir7300@gmail.com</p>
 
-    <p>&copy; 2026 MediaHub. All rights reserved.</p>
+            <a class="button email-button"
+               href="mailto:M.amir7300@gmail.com?subject=MediaHub%20Inquiry">
+               Send an Email
+            </a>
+        </div>
 
-    <p>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Us</a> |
-      <a href="contact.html">Contact Us</a> |
-      <a href="privacy.html">Privacy Policy</a>
-    </p>
+        <h2>Contact Us on WhatsApp</h2>
 
-    <p class="small">
-      MediaHub — Games, Movies, Software, Apps, AI Tools and Technology.
-    </p>
+        <p>
+            You can also contact us through WhatsApp for website-related
+            questions and feedback.
+        </p>
 
-  </footer>
+        <div class="contact-option">
+            <strong>WhatsApp Support</strong>
+            <p>Message the MediaHub team on WhatsApp.</p>
+
+            <a class="button"
+               href="https://wa.me/923014963043"
+               target="_blank"
+               rel="noopener noreferrer">
+               Message on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Corrections and Feedback</h2>
+
+        <p>
+            If you find incorrect information, a broken link, or an
+            issue on MediaHub, please email us with the page address
+            and a brief explanation of the problem.
+        </p>
+
+        <p>
+            We will review your message and make corrections when
+            appropriate.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Important Information</h2>
+
+        <p>
+            MediaHub provides links to external websites and resources.
+            External websites have their own content, terms, and privacy
+            policies. Please contact the relevant website for questions
+            about its services or content.
+        </p>
+
+        <p>
+            We aim to keep our website useful and up to date. Thank you
+            for visiting MediaHub.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact Us</a>
+        </p>
+
+        <p class="small">
+            © 2026 MediaHub. All rights reserved.
+        </p>
+    </div>
+</footer>
 
 </body>
 </html>
