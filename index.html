@@ -6,12 +6,29 @@
 
 <title>MediaHub - Games, Movies, Software, Apps & AI Tools</title>
 
-<meta name="description" content="Explore MediaHub for games, movies, software, apps, AI tools, technology news and digital resources.">
+<meta name="description" content="Explore MediaHub for games, movies, software, mobile apps, AI tools, technology news and digital resources.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="MediaHub">
 <meta name="theme-color" content="#ffffff">
 
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+
+<meta property="og:title" content="MediaHub - Games, Movies, Software, Apps & AI Tools">
+<meta property="og:description" content="Discover games, software, mobile apps, AI tools and technology news on MediaHub.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+
+<!-- MediaHub SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MediaHub",
+  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/",
+  "description": "Explore MediaHub for games, movies, software, mobile apps, AI tools, technology news and digital resources.",
+  "inLanguage": "en"
+}
+</script>
 
 <style>
 :root {
@@ -56,8 +73,6 @@ a:hover {
     padding: 0 18px;
 }
 
-/* HEADER */
-
 header {
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -92,7 +107,7 @@ nav {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 17px;
+    gap: 16px;
 }
 
 nav a {
@@ -104,8 +119,6 @@ nav a {
 nav a:hover {
     color: var(--green);
 }
-
-/* HERO */
 
 .hero {
     background: var(--white);
@@ -146,45 +159,32 @@ nav a:hover {
     border: 1px solid #cfd5db;
     border-radius: 5px;
     font-size: 15px;
-    outline: none;
 }
 
-.search-form input:focus {
-    border-color: var(--green);
-    box-shadow: 0 0 0 2px #269b4520;
-}
-
-.search-form button,
+button,
 .button {
     background: var(--green);
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 13px 20px;
+    padding: 12px 18px;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     display: inline-block;
 }
 
-.search-form button:hover,
+button:hover,
 .button:hover {
     background: var(--green-dark);
     color: white;
 }
-
-/* GENERAL SECTIONS */
 
 .section {
     padding: 35px 0;
 }
 
 .section-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -200,8 +200,6 @@ nav a:hover {
     font-size: 14px;
 }
 
-/* CATEGORY CARDS */
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -214,7 +212,6 @@ nav a:hover {
     border-radius: 7px;
     padding: 21px 18px;
     transition: border-color .2s, transform .2s;
-    min-width: 0;
 }
 
 .card:hover {
@@ -242,7 +239,6 @@ nav a:hover {
 
 .card p {
     font-size: 13px;
-    line-height: 1.6;
     color: var(--muted);
     margin: 0 0 15px;
 }
@@ -252,52 +248,30 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* FEATURED */
-
-.featured-grid {
+.featured-grid,
+.news-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 17px;
 }
 
-.featured-card {
+.featured-card,
+.news-card,
+.about-box {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 7px;
     padding: 23px;
 }
 
-.featured-card h3 {
-    margin: 0 0 9px;
-    font-size: 19px;
-}
-
-.featured-card p {
-    margin: 0 0 17px;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* NEWS */
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 17px;
-}
-
-.news-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    padding: 22px;
-}
-
+.featured-card h3,
 .news-card h3 {
-    margin: 0 0 8px;
+    margin-top: 0;
 }
 
-.news-card p {
+.featured-card p,
+.news-card p,
+.about-box p {
     color: var(--muted);
     font-size: 14px;
 }
@@ -308,25 +282,9 @@ nav a:hover {
     gap: 10px;
 }
 
-/* ABOUT */
-
-.about-box {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    padding: 25px;
-}
-
 .about-box h2 {
     margin-top: 0;
 }
-
-.about-box p {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-/* FOOTER */
 
 footer {
     background: var(--white);
@@ -352,7 +310,8 @@ footer {
     font-size: 22px;
 }
 
-.footer-brand p {
+.footer-brand p,
+.footer-contact p {
     font-size: 13px;
     color: var(--muted);
 }
@@ -376,14 +335,13 @@ footer {
     text-align: center;
 }
 
-/* MOBILE */
-
 @media (max-width: 850px) {
     .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .featured-grid {
+    .featured-grid,
+    .news-grid {
         grid-template-columns: 1fr;
     }
 
@@ -430,10 +388,6 @@ footer {
     .section-heading h2 {
         font-size: 22px;
     }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
 }
 </style>
 </head>
@@ -442,6 +396,7 @@ footer {
 
 <header>
     <div class="container header-inner">
+
         <a class="logo" href="index.html">Media<span>Hub</span></a>
 
         <nav aria-label="Main navigation">
@@ -453,193 +408,209 @@ footer {
             <a href="ai-tools.html">AI Tools</a>
             <a href="tech-news.html">Tech News</a>
         </nav>
+
     </div>
 </header>
 
 <main>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to <span>MediaHub</span></h1>
+<section class="hero">
+    <div class="container">
+
+        <h1>Welcome to <span>MediaHub</span></h1>
+
+        <p>
+            Discover games, movies, software, mobile apps, AI tools
+            and the latest technology news — all in one place.
+        </p>
+
+        <form class="search-form" id="siteSearch">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search games, software, apps, AI tools..."
+                aria-label="Search MediaHub"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="searchMessage" aria-live="polite"></p>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Explore MediaHub</h2>
+            <p>Browse categories and discover digital resources.</p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Games</h3>
+                <p>Explore PC games, mobile games, racing, action and adventure.</p>
+                <a class="card-link" href="games.html">Explore Games →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🎬</div>
+                <h3>Movies</h3>
+                <p>Discover movie information, entertainment and film updates.</p>
+                <a class="card-link" href="movies.html">Explore Movies →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">💻</div>
+                <h3>Software</h3>
+                <p>Find useful computer software and productivity tools.</p>
+                <a class="card-link" href="software.html">Explore Software →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📱</div>
+                <h3>Mobile Apps</h3>
+                <p>Discover useful Android apps and mobile applications.</p>
+                <a class="card-link" href="apps.html">Explore Apps →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🤖</div>
+                <h3>AI Tools</h3>
+                <p>Explore artificial intelligence tools for work and creativity.</p>
+                <a class="card-link" href="ai-tools.html">Explore AI Tools →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📰</div>
+                <h3>Tech News</h3>
+                <p>Read about technology, digital products and new developments.</p>
+                <a class="card-link" href="tech-news.html">Read Tech News →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📊</div>
+                <h3>Data & Guides</h3>
+                <p>Explore digital guides, useful information and resources.</p>
+                <a class="card-link" href="data-analysis.html">Explore Guides →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🔥</div>
+                <h3>Trending</h3>
+                <p>Discover popular topics and interesting digital content.</p>
+                <a class="card-link" href="trending.html">Explore Trending →</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🇵🇰</div>
+                <h3>Pakistan News</h3>
+                <p>Explore Pakistan news sources and current affairs.</p>
+                <a class="card-link" href="pakistan-news.html">Pakistan News →</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Featured Resources</h2>
+            <p>Discover more topics from MediaHub.</p>
+        </div>
+
+        <div class="featured-grid">
+
+            <article class="featured-card">
+                <h3>🤖 Discover AI Tools</h3>
+                <p>Find AI resources for writing, image creation, video and productivity.</p>
+                <a class="button" href="ai-tools.html">View AI Tools</a>
+            </article>
+
+            <article class="featured-card">
+                <h3>💡 Technology Topics</h3>
+                <p>Explore technology updates, digital guides and useful information.</p>
+                <a class="button" href="tech-news.html">Explore Topics</a>
+            </article>
+
+            <article class="featured-card">
+                <h3>🔥 What's Trending?</h3>
+                <p>Browse popular subjects and discover new content.</p>
+                <a class="button" href="trending.html">View Trending</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Pakistan News & Live Updates</h2>
+            <p>Visit news sources for current headlines and live coverage.</p>
+        </div>
+
+        <div class="news-grid">
+
+            <article class="news-card">
+                <h3>🇵🇰 Pakistan News</h3>
+                <p>Explore news sources covering Pakistan and current affairs.</p>
+                <a class="button" href="pakistan-news.html">Explore Pakistan News</a>
+            </article>
+
+            <article class="news-card">
+                <h3>📺 Geo News Live</h3>
+                <p>Visit the official Geo News live coverage website.</p>
+                <a class="button"
+                   href="https://live.geo.tv/"
+                   target="_blank"
+                   rel="noopener noreferrer">Visit Geo News</a>
+            </article>
+
+            <article class="news-card">
+                <h3>📺 Samaa News Live</h3>
+                <p>Visit the official Samaa live coverage website.</p>
+                <a class="button"
+                   href="https://live.samaa.tv/"
+                   target="_blank"
+                   rel="noopener noreferrer">Visit Samaa</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="about-box">
+            <h2>About MediaHub</h2>
 
             <p>
-                Discover games, movies, software, mobile apps, AI tools
-                and the latest technology news — all in one place.
+                MediaHub is a digital discovery website covering games,
+                movies, software, mobile applications, AI tools,
+                technology news and online resources.
             </p>
 
-            <form class="search-form" id="siteSearch">
-                <input
-                    type="search"
-                    id="searchInput"
-                    placeholder="Search games, software, apps, AI tools..."
-                    aria-label="Search MediaHub categories"
-                    required
-                >
-                <button type="submit">Search</button>
-            </form>
+            <p>
+                Our goal is to help visitors explore useful information
+                and find relevant resources in one convenient place.
+                Always use official websites for software downloads
+                and respect copyright when accessing movies and other media.
+            </p>
+
+            <a class="button" href="about.html">Learn More</a>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="container">
-
-            <div class="section-heading">
-                <div>
-                    <h2>Explore MediaHub</h2>
-                    <p>Browse our categories and discover digital resources.</p>
-                </div>
-            </div>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <div class="card-icon">🎮</div>
-                    <h3>Games</h3>
-                    <p>Explore PC games, mobile games, racing, action and adventure.</p>
-                    <a class="card-link" href="games.html">Explore Games →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🎬</div>
-                    <h3>Movies</h3>
-                    <p>Discover movie information, entertainment and film updates.</p>
-                    <a class="card-link" href="movies.html">Explore Movies →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">💻</div>
-                    <h3>Software</h3>
-                    <p>Find useful computer software and productivity tools.</p>
-                    <a class="card-link" href="software.html">Explore Software →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">📱</div>
-                    <h3>Mobile Apps</h3>
-                    <p>Discover useful Android apps and mobile applications.</p>
-                    <a class="card-link" href="apps.html">Explore Apps →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🤖</div>
-                    <h3>AI Tools</h3>
-                    <p>Explore artificial intelligence tools for work and creativity.</p>
-                    <a class="card-link" href="ai-tools.html">Explore AI Tools →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">📰</div>
-                    <h3>Tech News</h3>
-                    <p>Read about technology, digital products and new developments.</p>
-                    <a class="card-link" href="tech-news.html">Read Tech News →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Data & Guides</h3>
-                    <p>Explore digital guides, useful information and resources.</p>
-                    <a class="card-link" href="data-analysis.html">Explore Guides →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🔥</div>
-                    <h3>Trending</h3>
-                    <p>Discover popular topics and interesting digital content.</p>
-                    <a class="card-link" href="trending.html">Explore Trending →</a>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-
-            <div class="section-heading">
-                <div>
-                    <h2>Featured Resources</h2>
-                    <p>Explore more topics from MediaHub.</p>
-                </div>
-            </div>
-
-            <div class="featured-grid">
-
-                <article class="featured-card">
-                    <h3>🤖 Discover AI Tools</h3>
-                    <p>Find AI resources for writing, image creation, video and productivity.</p>
-                    <a class="button" href="ai-tools.html">View AI Tools</a>
-                </article>
-
-                <article class="featured-card">
-                    <h3>💡 Technology Topics</h3>
-                    <p>Explore technology updates, digital guides and useful information.</p>
-                    <a class="button" href="tech-news.html">Explore Topics</a>
-                </article>
-
-                <article class="featured-card">
-                    <h3>🔥 What's Trending?</h3>
-                    <p>Browse popular subjects and discover new content.</p>
-                    <a class="button" href="trending.html">View Trending</a>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-
-            <div class="section-heading">
-                <div>
-                    <h2>Pakistan News & Live Updates</h2>
-                    <p>Visit news sources for current headlines and live coverage.</p>
-                </div>
-            </div>
-
-            <div class="news-grid">
-
-                <article class="news-card">
-                    <h3>🇵🇰 Pakistan News</h3>
-                    <p>Visit our Pakistan news section for news-related content and updates.</p>
-                    <a class="button" href="pakistan-news.html">Explore Pakistan News</a>
-                </article>
-
-                <article class="news-card">
-                    <h3>📺 Live News</h3>
-                    <p>Visit the official news websites for their latest coverage.</p>
-
-                    <div class="news-links">
-                        <a class="button" href="https://live.geo.tv/" target="_blank" rel="noopener noreferrer">Geo News Live</a>
-                        <a class="button" href="https://live.samaa.tv/" target="_blank" rel="noopener noreferrer">Samaa Live</a>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="about-box">
-                <h2>About MediaHub</h2>
-
-                <p>
-                    MediaHub is a digital discovery website covering games,
-                    movies, software, mobile applications, AI tools,
-                    technology news and online resources.
-                </p>
-
-                <p>
-                    Our goal is to help visitors explore useful information
-                    and find relevant resources in one convenient place.
-                    Always use official websites for software downloads
-                    and respect copyright when accessing movies and other media.
-                </p>
-
-                <a class="button" href="about.html">Learn More</a>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
 </main>
 
@@ -661,17 +632,19 @@ footer {
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+                <a href="disclaimer.html">Disclaimer</a>
             </div>
 
-            <div>
-                <p><strong>Contact Us</strong></p>
+            <div class="footer-contact">
+                <p><strong>Contact MediaHub</strong></p>
                 <p>
-                    <a href="mailto:M.amir7300@gmail.com">Email MediaHub</a>
+                    <a href="mailto:M.amir7300@gmail.com">Email Us</a>
                 </p>
                 <p>
-                    <a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">
-                        WhatsApp
-                    </a>
+                    <a href="https://wa.me/923014963043"
+                       target="_blank"
+                       rel="noopener noreferrer">WhatsApp</a>
                 </p>
             </div>
 
@@ -685,18 +658,14 @@ footer {
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 document.getElementById("siteSearch").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const query = document.getElementById("searchInput").value
-        .trim()
-        .toLowerCase();
-
-    if (!query) {
-        return;
-    }
+    const query = document.getElementById("searchInput")
+        .value.trim().toLowerCase();
 
     const categories = [
         {
@@ -732,7 +701,7 @@ document.getElementById("siteSearch").addEventListener("submit", function(event)
             page: "trending.html"
         },
         {
-            keywords: ["pakistan news", "pakistan", "pakistani news"],
+            keywords: ["pakistan news", "pakistani news"],
             page: "pakistan-news.html"
         }
     ];
@@ -744,7 +713,8 @@ document.getElementById("siteSearch").addEventListener("submit", function(event)
         }
     }
 
-    alert("No matching category found. Try searching for Games, Movies, Software, Apps, AI Tools or Tech News.");
+    document.getElementById("searchMessage").textContent =
+        "Category not found. Try Games, Movies, Software, Apps, AI Tools or Tech News.";
 });
 </script>
 
