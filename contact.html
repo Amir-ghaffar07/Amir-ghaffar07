@@ -1,173 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | MediaHub</title>
+    <title>Contact Us | MediaHub</title>
 
-<meta name="description" content="Contact MediaHub for questions, feedback, corrections and website-related inquiries.">
+    <meta name="description" content="Contact MediaHub for questions, feedback, corrections and website-related inquiries.">
 
-<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/contact.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
 
-<meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/contact.html">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #303840;
-    line-height: 1.6;
-}
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #252525;
+            line-height: 1.6;
+        }
 
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e1e5e9;
-    padding: 18px 15px;
-}
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e5e9;
+            padding: 15px 5%;
+        }
 
-.container {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-}
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-.logo {
-    color: #278447;
-    font-size: 29px;
-    font-weight: bold;
-    text-decoration: none;
-}
+        .logo {
+            color: #16833b;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-.tagline {
-    color: #68737d;
-    font-size: 13px;
-    margin: 2px 0 12px;
-}
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-}
+        nav a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-nav a {
-    color: #333d46;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 7px 10px;
-    border-radius: 4px;
-}
+        nav a:hover {
+            color: #16833b;
+        }
 
-nav a:hover {
-    background: #e8f4eb;
-    color: #278447;
-}
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 16px;
+        }
 
-main {
-    max-width: 850px;
-    margin: 30px auto;
-    padding: 0 15px;
-}
+        .page-heading {
+            background: #ffffff;
+            padding: 25px;
+            border: 1px solid #e2e5e9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-.card {
-    background: #ffffff;
-    border: 1px solid #e1e5e9;
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 20px;
-}
+        h1 {
+            color: #202124;
+            margin-top: 0;
+            font-size: 30px;
+        }
 
-h1 {
-    color: #263746;
-    font-size: 30px;
-    margin-top: 0;
-}
+        h2 {
+            font-size: 21px;
+            margin-top: 0;
+            color: #222222;
+        }
 
-h2 {
-    color: #278447;
-    font-size: 21px;
-}
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border: 1px solid #e2e5e9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-p {
-    color: #56616b;
-}
+        .button {
+            display: inline-block;
+            background: #16833b;
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-.contact-option {
-    border: 1px solid #e1e5e9;
-    border-radius: 7px;
-    padding: 18px;
-    margin: 15px 0;
-    background: #ffffff;
-}
+        .button:hover {
+            background: #116b2e;
+        }
 
-.button {
-    display: inline-block;
-    padding: 11px 18px;
-    margin-top: 8px;
-    background: #278447;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
+        .email-button {
+            background: #0879e8;
+        }
 
-.button:hover {
-    background: #1e6d38;
-}
+        .email-button:hover {
+            background: #0665c4;
+        }
 
-.email-button {
-    background: #0879e8;
-}
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
 
-.email-button:hover {
-    background: #0664c2;
-}
+        form {
+            display: grid;
+            gap: 10px;
+        }
 
-footer {
-    background: #ffffff;
-    border-top: 1px solid #e1e5e9;
-    padding: 25px 15px;
-    text-align: center;
-    margin-top: 35px;
-}
+        label {
+            font-weight: bold;
+            margin-top: 5px;
+        }
 
-footer a {
-    color: #278447;
-    text-decoration: none;
-    margin: 0 8px;
-}
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd0d6;
+            border-radius: 5px;
+            background: #ffffff;
+            color: #222222;
+            font-family: inherit;
+            font-size: 15px;
+        }
 
-.small {
-    font-size: 13px;
-    color: #77818a;
-}
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: 2px solid #16833b;
+            border-color: #16833b;
+        }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 25px;
-    }
+        textarea {
+            resize: vertical;
+        }
 
-    .card {
-        padding: 18px;
-    }
-}
-</style>
+        .small {
+            font-size: 13px;
+            color: #606770;
+        }
+
+        .notice {
+            background: #f0f8f2;
+            border-left: 4px solid #16833b;
+            padding: 12px 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #ffffff;
+            border-top: 1px solid #e2e5e9;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 35px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #333333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #16833b;
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .card,
+            .page-heading {
+                padding: 18px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .contact-links .button {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <div class="container">
-        <a class="logo" href="index.html">MediaHub</a>
-        <p class="tagline">Games, Movies, Software, Apps & AI Tools</p>
+    <div class="header-inner">
 
-        <nav>
+        <a class="logo"
+           href="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+            MediaHub
+        </a>
+
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="games.html">Games</a>
             <a href="movies.html">Movies</a>
@@ -175,113 +252,227 @@ footer a {
             <a href="apps.html">Apps</a>
             <a href="ai-tools.html">AI Tools</a>
             <a href="trending.html">Trending</a>
-            <a href="about.html">About Us</a>
         </nav>
+
     </div>
 </header>
 
-<main>
+<main class="container">
 
-    <section class="card">
+    <section class="page-heading">
         <h1>Contact Us</h1>
 
         <p>
-            Welcome to MediaHub! If you have a question, suggestion,
-            correction, or feedback about our website, we would like
-            to hear from you.
-        </p>
-
-        <p>
-            Choose one of the contact options below to get in touch
-            with the MediaHub website team.
+            Welcome to MediaHub! We value your feedback.
+            If you have a question, suggestion, correction,
+            or website-related inquiry, please contact us.
         </p>
     </section>
 
     <section class="card">
-        <h2>Email Us</h2>
+        <h2>Contact MediaHub</h2>
 
         <p>
-            For general questions, feedback, corrections, or
-            website-related inquiries, contact us by email.
+            You can contact our team by email or WhatsApp.
+            You can also use the message form below.
         </p>
 
-        <div class="contact-option">
-            <strong>Email Address</strong>
-            <p>M.amir7300@gmail.com</p>
+        <div class="contact-links">
 
             <a class="button email-button"
-               href="mailto:M.amir7300@gmail.com?subject=MediaHub%20Inquiry">
-               Send an Email
+               href="mailto:M.amir7300@gmail.com">
+                Email Us
             </a>
-        </div>
-
-        <h2>Contact Us on WhatsApp</h2>
-
-        <p>
-            You can also contact us through WhatsApp for website-related
-            questions and feedback.
-        </p>
-
-        <div class="contact-option">
-            <strong>WhatsApp Support</strong>
-            <p>Message the MediaHub team on WhatsApp.</p>
 
             <a class="button"
                href="https://wa.me/923014963043"
                target="_blank"
                rel="noopener noreferrer">
-               Message on WhatsApp
+                Contact on WhatsApp
             </a>
+
         </div>
-    </section>
-
-    <section class="card">
-        <h2>Corrections and Feedback</h2>
 
         <p>
-            If you find incorrect information, a broken link, or an
-            issue on MediaHub, please email us with the page address
-            and a brief explanation of the problem.
-        </p>
-
-        <p>
-            We will review your message and make corrections when
-            appropriate.
+            <strong>Email:</strong>
+            <a href="mailto:M.amir7300@gmail.com">
+                M.amir7300@gmail.com
+            </a>
         </p>
     </section>
 
     <section class="card">
-        <h2>Important Information</h2>
+
+        <h2>Send Us a Message</h2>
 
         <p>
-            MediaHub provides links to external websites and resources.
-            External websites have their own content, terms, and privacy
-            policies. Please contact the relevant website for questions
-            about its services or content.
+            Fill out the form below. Please enter a valid email
+            address so we can reply to you if necessary.
         </p>
 
+        <form
+            action="https://formsubmit.co/M.amir7300@gmail.com"
+            method="POST">
+
+            <input type="hidden"
+                   name="_subject"
+                   value="New Contact Message - MediaHub">
+
+            <input type="hidden"
+                   name="_template"
+                   value="table">
+
+            <input type="hidden"
+                   name="_captcha"
+                   value="true">
+
+            <input type="hidden"
+                   name="_next"
+                   value="https://amir-ghaffar07.github.io/Amir-ghaffar07/contact.html?submitted=1">
+
+            <!-- Spam honeypot: keep this field hidden -->
+            <input type="text"
+                   name="_honey"
+                   tabindex="-1"
+                   autocomplete="off"
+                   aria-hidden="true"
+                   style="display:none">
+
+            <label for="name">Your Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                maxlength="100"
+                required>
+
+            <label for="email">Your Email</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                maxlength="150"
+                required>
+
+            <label for="subject">Subject</label>
+
+            <select id="subject"
+                    name="subject"
+                    required>
+
+                <option value="">Choose a subject</option>
+                <option value="General Question">General Question</option>
+                <option value="Website Feedback">Website Feedback</option>
+                <option value="Correction Request">Correction Request</option>
+                <option value="Broken Link">Broken Link</option>
+                <option value="Business Inquiry">Business Inquiry</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+            <label for="message">Your Message</label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                maxlength="5000"
+                placeholder="Write your message here..."
+                required></textarea>
+
+            <button class="button"
+                    type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+        <div class="notice">
+            <strong>Spam protection:</strong>
+            The contact form uses FormSubmit's spam-protection
+            features. A CAPTCHA verification may appear when required.
+        </div>
+
+        <p class="small">
+            Please do not submit passwords, payment details,
+            or other sensitive personal information through this form.
+        </p>
+
+    </section>
+
+    <section class="card">
+        <h2>Feedback and Corrections</h2>
+
         <p>
-            We aim to keep our website useful and up to date. Thank you
-            for visiting MediaHub.
+            If you notice incorrect information, a broken link,
+            or a problem on MediaHub, please tell us the page name
+            and describe the issue. This helps us review it.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Response Time</h2>
+
+        <p>
+            We will review messages as soon as possible.
+            Response times may vary depending on the nature
+            of your inquiry.
         </p>
     </section>
 
 </main>
 
 <footer>
-    <div class="container">
-        <p>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="contact.html">Contact Us</a>
-        </p>
 
-        <p class="small">
-            © 2026 MediaHub. All rights reserved.
-        </p>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="sitemap.xml">Sitemap</a>
     </div>
+
+    <p>
+        &copy; <span id="year"></span> MediaHub.
+        All rights reserved.
+    </p>
+
+    <p class="small">
+        MediaHub provides information and links to digital resources.
+    </p>
+
 </footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("submitted") === "1") {
+        const message = document.createElement("div");
+
+        message.className = "notice";
+        message.setAttribute("role", "status");
+        message.textContent =
+            "Thank you for contacting MediaHub. If your message was submitted successfully, we will review it.";
+
+        const main = document.querySelector("main");
+        main.insertBefore(message, main.firstChild);
+
+        window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+        );
+    }
+</script>
 
 </body>
 </html>
