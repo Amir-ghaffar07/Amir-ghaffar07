@@ -2,137 +2,352 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>About Us | MediaHub</title>
-<meta name="description" content="Learn about MediaHub, a digital discovery website featuring games, movies, software, apps, AI tools, technology news and online resources.">
+
+<meta name="description" content="Learn about MediaHub, a digital resource website for discovering games, apps, software, AI tools, movies, technology news and online resources.">
+
 <meta name="robots" content="index, follow">
+<meta name="author" content="MediaHub">
+<meta name="theme-color" content="#ffffff">
+
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/about.html">
 
+<meta property="og:title" content="About Us | MediaHub">
+<meta property="og:description" content="Discover the purpose of MediaHub and explore our digital resource categories.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/about.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About MediaHub",
+  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/about.html",
+  "description": "Learn about MediaHub and its digital resource categories.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "MediaHub",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+  }
+}
+</script>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#252525;line-height:1.7}
-header{background:#fff;padding:18px 5%;border-bottom:1px solid #e5e5e5}
-.logo{font-size:29px;font-weight:bold;color:#269b45;text-decoration:none}
-.tagline{margin:0;color:#666;font-size:14px}
-nav{background:#fff;padding:12px 5%;border-bottom:1px solid #ddd;display:flex;flex-wrap:wrap;gap:17px}
-nav a{color:#333;text-decoration:none;font-size:14px;font-weight:bold}
-nav a:hover{color:#269b45}
-.container{max-width:950px;margin:auto;padding:25px 16px}
-.hero,.section{background:#fff;border:1px solid #e1e1e1;border-radius:7px;padding:25px;margin-bottom:20px}
-.hero h1{margin-top:0;font-size:30px}
-h2{font-size:22px;margin-top:0}
-p{color:#555}
-.btn{display:inline-block;background:#269b45;color:#fff;padding:11px 17px;text-decoration:none;border-radius:4px;font-weight:bold}
-.btn:hover{background:#1d7d37}
-footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:25px 15px;margin-top:25px;font-size:14px}
-footer a{color:#269b45;text-decoration:none;margin:5px}
-@media(max-width:520px){.hero h1{font-size:25px}nav{gap:12px}.hero,.section{padding:19px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #273142;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: #0879d9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe4ea;
+  padding: 16px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.logo {
+  color: #16834a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+nav a {
+  color: #344054;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 16px;
+  margin: 25px auto;
+}
+
+.breadcrumb {
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero,
+.section {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 9px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  color: #202938;
+  font-size: 34px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #202938;
+  font-size: 23px;
+  margin-top: 0;
+}
+
+h3 {
+  color: #263548;
+}
+
+.button {
+  display: inline-block;
+  background: #16834a;
+  color: #ffffff;
+  padding: 11px 17px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #116a3b;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #667085;
+  font-size: 14px;
+}
+
+.notice {
+  background: #f0f7ff;
+  border-left: 4px solid #0879d9;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #dfe4ea;
+  text-align: center;
+  padding: 25px 16px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<a class="logo" href="index.html">MediaHub</a>
-<p class="tagline">Discover Digital Content and Online Resources</p>
-</header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">MediaHub</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-<a href="pakistan-news.html">Pakistan News</a>
-</nav>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="games.html">Games</a>
+      <a href="software.html">Software</a>
+      <a href="movies.html">Movies</a>
+      <a href="ai-tools.html">AI Tools</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
 
-<section class="hero">
-<h1>About MediaHub</h1>
-<p>
-Welcome to MediaHub, a digital discovery website designed to help
-visitors explore useful online resources, software, apps, games,
-AI tools, entertainment information and technology news.
-</p>
-<a class="btn" href="index.html">Explore MediaHub</a>
-</section>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; About Us
+  </div>
 
-<section class="section">
-<h2>Our Mission</h2>
-<p>
-Our aim is to make it easier for visitors to discover digital tools
-and online resources through a simple, organized and mobile-friendly
-website.
-</p>
-</section>
+  <section class="hero">
+    <h1>About MediaHub</h1>
 
-<section class="section">
-<h2>What You Can Find on MediaHub</h2>
-<p><strong>Games:</strong> Discover gaming resources and official game websites.</p>
-<p><strong>Movies:</strong> Explore movie information, trailers and entertainment resources.</p>
-<p><strong>Software:</strong> Find software information and links to official websites.</p>
-<p><strong>Apps:</strong> Explore useful applications and their official websites.</p>
-<p><strong>AI Tools:</strong> Discover artificial intelligence tools for writing, research, images and productivity.</p>
-<p><strong>Technology News:</strong> Visit technology news sources and explore digital developments.</p>
-<p><strong>Data & Guides:</strong> Find data analysis tools, educational resources and online guides.</p>
-<p><strong>Pakistan News:</strong> Explore links to news publishers and official information sources.</p>
-</section>
+    <p>
+      Welcome to MediaHub, a digital resource website designed
+      to help visitors discover useful online resources across
+      technology, software, applications, games, entertainment
+      and artificial intelligence.
+    </p>
 
-<section class="section">
-<h2>Third-Party Websites</h2>
-<p>
-MediaHub may link to external websites operated by other organizations.
-Those websites have their own terms, privacy policies, content and
-availability. Visitors should review the information on each external
-website before using its services or downloading software.
-</p>
-<p>
-Unless specifically stated otherwise, MediaHub does not own or operate
-the external services linked from this website.
-</p>
-</section>
+    <p>
+      Our goal is to make it easier for visitors to explore
+      different categories and find relevant information through
+      organized pages and links to external resources.
+    </p>
 
-<section class="section">
-<h2>Accuracy and Updates</h2>
-<p>
-We aim to provide helpful descriptions and relevant links. However,
-external websites can change their content, prices, features and
-availability at any time. Please check the official source for the
-latest information.
-</p>
-</section>
+    <a class="button" href="index.html">Explore MediaHub</a>
+  </section>
 
-<section class="section">
-<h2>Contact Us</h2>
-<p>
-Have a question, suggestion or correction? We welcome feedback about
-MediaHub and its content.
-</p>
-<p>
-Email:
-<a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a>
-</p>
-<p>
-<a class="btn" href="contact.html">Contact MediaHub</a>
-</p>
-</section>
+  <section class="section">
+    <h2>What You Can Explore</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>Apps</h3>
+        <p>Explore mobile applications and useful digital services.</p>
+        <a href="apps.html">Explore Apps &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Games</h3>
+        <p>Discover gaming resources for PC and mobile platforms.</p>
+        <a href="games.html">Explore Games &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Software</h3>
+        <p>Find computer software, productivity tools and utilities.</p>
+        <a href="software.html">Explore Software &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>AI Tools</h3>
+        <p>Explore artificial intelligence tools and online resources.</p>
+        <a href="ai-tools.html">Explore AI Tools &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Movies</h3>
+        <p>Find movie information, reviews, trailers and entertainment resources.</p>
+        <a href="movies.html">Explore Movies &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Technology News</h3>
+        <p>Explore technology topics and links to news sources.</p>
+        <a href="tech-news.html">Read Tech News &rarr;</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Approach</h2>
+
+    <p>
+      MediaHub aims to present information in a clear and organized
+      format. We encourage visitors to review external websites
+      carefully and use official sources whenever possible.
+    </p>
+
+    <p>
+      External services, products and websites are operated by
+      their respective owners. Their availability, terms and
+      privacy practices may change independently of MediaHub.
+    </p>
+
+    <div class="notice">
+      <strong>Transparency:</strong>
+      MediaHub is an independent digital resource website.
+      A link to an external service does not automatically mean
+      that MediaHub owns, operates or endorses that service.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contact MediaHub</h2>
+
+    <p>
+      Have a question, suggestion, correction or feedback about
+      our website? We welcome visitors to contact us.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a>
+    </p>
+
+    <a class="button" href="contact.html">Contact Us</a>
+  </section>
 
 </main>
 
 <footer>
-<p><strong>MediaHub</strong> — Your digital discovery hub.</p>
-<p>
-<a href="index.html">Home</a> |
-<a href="about.html">About Us</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a>
-</p>
-<p>© 2026 MediaHub. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+
+  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
