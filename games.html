@@ -1,750 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Free PC and Android Games | MediaHub</title>
+  <title>Free PC & Android Games | MediaHub</title>
 
-<meta name="description" content="Discover popular PC and mobile games on MediaHub. Explore action, racing, adventure, sports and puzzle games with official game links.">
+  <meta name="description" content="Discover PC and Android games on MediaHub. Explore action, racing, adventure, sports and strategy games with links to official game websites.">
 
-<meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="MediaHub">
+  <meta name="theme-color" content="#ffffff">
 
-<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/games.html">
+  <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/games.html">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+  <meta property="og:title" content="Free PC & Android Games | MediaHub">
+  <meta property="og:description" content="Explore PC and Android games, popular gaming categories and official game websites on MediaHub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/games.html">
 
-:root {
-    --green: #4caf50;
-    --green-dark: #388e3c;
-    --text: #252525;
-    --muted: #666666;
-    --border: #e3e3e3;
-    --background: #f5f6f7;
-    --white: #ffffff;
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Free PC and Android Games",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/games.html",
+    "description": "Explore PC and Android games, gaming categories and official game websites on MediaHub.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "MediaHub",
+      "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+    }
+  }
+  </script>
 
-body {
-    margin: 0;
-    background: var(--background);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-}
-
-a {
-    color: var(--green-dark);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
-
-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-}
-
-.nav-container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.logo {
-    color: var(--green-dark);
-    font-size: 27px;
-    font-weight: bold;
-    margin-right: auto;
-}
-
-.logo:hover {
-    text-decoration: none;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-nav a {
-    color: #333333;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-nav a:hover,
-nav a.current {
-    color: var(--green-dark);
-}
-
-/* Hero */
-
-.hero {
-    background: var(--white);
-    text-align: center;
-    padding: 35px 18px;
-    border-bottom: 1px solid var(--border);
-}
-
-.hero h1 {
-    font-size: 34px;
-    margin: 0 0 8px;
-}
-
-.hero p {
-    color: var(--muted);
-    margin: 0 0 20px;
-}
-
-.search-box {
-    max-width: 600px;
-    margin: auto;
-}
-
-.search {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background: white;
-    color: var(--text);
-}
-
-.search:focus {
-    outline: 2px solid #b9dfbb;
-    border-color: var(--green);
-}
-
-/* Main container */
-
-.container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 25px 18px;
-}
-
-.section-title {
-    font-size: 23px;
-    margin: 0 0 16px;
-}
-
-/* Categories */
-
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 30px;
-}
-
-.category {
-    padding: 9px 15px;
-    background: var(--white);
-    color: #333333;
-    border: 1px solid #d7d7d7;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.category:hover,
-.category.active {
-    background: var(--green);
-    border-color: var(--green);
-    color: white;
-}
-
-/* Games grid */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-    transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.card:hover {
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-}
-
-.cover {
-    height: 125px;
-    background: #edf5ed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 55px;
-    border-bottom: 1px solid var(--border);
-}
-
-.info {
-    padding: 17px;
-}
-
-.tag {
-    display: inline-block;
-    color: var(--green-dark);
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.info h3 {
-    font-size: 20px;
-    margin: 0 0 8px;
-}
-
-.info p {
-    color: var(--muted);
-    font-size: 14px;
-    min-height: 45px;
-    margin: 0 0 15px;
-}
-
-.download {
-    display: inline-block;
-    background: var(--green);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.download:hover {
-    background: var(--green-dark);
-    color: white;
-    text-decoration: none;
-}
-
-/* About */
-
-.about {
-    margin-top: 32px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 22px;
-}
-
-.about h2 {
-    margin-top: 0;
-}
-
-.about p {
-    color: var(--muted);
-}
-
-/* No results */
-
-#noResults {
-    display: none;
-    background: white;
-    border: 1px solid var(--border);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Footer */
-
-footer {
-    background: #ffffff;
-    border-top: 1px solid var(--border);
-    margin-top: 25px;
-    padding: 25px 18px;
-    text-align: center;
-    color: #555555;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-.footer-links {
-    margin-top: 12px;
-}
-
-.footer-links a {
-    margin: 0 7px;
-}
-
-/* Responsive design */
-
-@media (max-width: 750px) {
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    .nav-container {
-        gap: 12px;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #273142;
+      background: #f4f6f8;
+      line-height: 1.6;
     }
 
-    nav {
-        gap: 12px;
+    a {
+      color: #0879d9;
+      text-decoration: none;
     }
-}
 
-@media (max-width: 500px) {
-    .grid {
-        grid-template-columns: 1fr;
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #dfe4ea;
+      padding: 18px 16px;
+    }
+
+    .topbar-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .logo {
-        width: 100%;
-        margin-bottom: 5px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #16834a;
     }
 
-    .hero h1 {
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #344054;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .breadcrumb {
+      color: #667085;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      background: #ffffff;
+      border: 1px solid #e0e5eb;
+      border-radius: 10px;
+      padding: 30px 24px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      color: #202938;
+      font-size: 32px;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      color: #202938;
+      font-size: 23px;
+      margin-top: 0;
+    }
+
+    .hero p {
+      margin-bottom: 0;
+      color: #596579;
+    }
+
+    .search-box {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-box input {
+      flex: 1;
+      min-width: 180px;
+      padding: 13px;
+      border: 1px solid #cfd6df;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .search-box button {
+      border: 0;
+      border-radius: 6px;
+      background: #16834a;
+      color: #ffffff;
+      padding: 12px 22px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .section {
+      background: #ffffff;
+      border: 1px solid #e0e5eb;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      border: 1px solid #e0e5eb;
+      border-radius: 8px;
+      padding: 18px;
+      background: #ffffff;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 0 0 8px;
+      color: #263548;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #667085;
+      margin: 0 0 12px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #16834a;
+      color: white;
+      border-radius: 5px;
+      padding: 9px 13px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #116a3b;
+      text-decoration: none;
+    }
+
+    .note {
+      background: #f0f7ff;
+      border-left: 4px solid #0879d9;
+      padding: 14px;
+      border-radius: 4px;
+      color: #344054;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 35px;
+      background: #ffffff;
+      border-top: 1px solid #dfe4ea;
+      padding: 25px 16px;
+      text-align: center;
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
         font-size: 27px;
-    }
+      }
 
-    .cover {
-        height: 115px;
-    }
+      .hero,
+      .section {
+        padding: 20px 16px;
+      }
 
-    .info p {
-        min-height: auto;
+      .logo {
+        font-size: 25px;
+      }
     }
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="nav-container">
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="logo" href="index.html">MediaHub</a>
 
-        <a class="logo" href="index.html">MediaHub</a>
-
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a class="current" href="games.html">Games</a>
-            <a href="movies.html">Movies</a>
-            <a href="software.html">Software</a>
-            <a href="apps.html">Apps</a>
-            <a href="ai-tools.html">AI Tools</a>
-        </nav>
-
-    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="apps.html">Apps</a>
+      <a href="software.html">Software</a>
+      <a href="movies.html">Movies</a>
+      <a href="ai-tools.html">AI Tools</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main class="container">
 
-<section class="hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Games
+  </div>
 
-    <h1>🎮 MediaHub Games</h1>
+  <section class="hero">
+    <h1>Free PC &amp; Android Games</h1>
 
     <p>
-        Discover popular PC and mobile games
-        through their official websites.
+      Welcome to MediaHub Games. Explore popular gaming categories,
+      discover games for different devices, and visit official game
+      websites for information, availability and downloads.
     </p>
 
     <div class="search-box">
-        <input
-            class="search"
-            id="search"
-            type="search"
-            placeholder="Search games..."
-            aria-label="Search games">
+      <input
+        type="search"
+        id="gameSearch"
+        placeholder="Search game categories..."
+        aria-label="Search game categories"
+      >
+      <button type="button" onclick="searchGames()">Search</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Explore Game Categories</h2>
+
+    <div class="grid" id="gameGrid">
+
+      <article class="card" data-search="action fighting adventure">
+        <h3>Action &amp; Adventure Games</h3>
+        <p>Explore action, fighting, exploration and adventure games for different devices.</p>
+        <a class="button" href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Explore Games</a>
+      </article>
+
+      <article class="card" data-search="racing cars driving">
+        <h3>Racing Games</h3>
+        <p>Discover car racing, driving and motorsport games for PC and mobile.</p>
+        <a class="button" href="https://www.ea.com/games" target="_blank" rel="noopener noreferrer">Explore Games</a>
+      </article>
+
+      <article class="card" data-search="sports football cricket">
+        <h3>Sports Games</h3>
+        <p>Find football, cricket, basketball and other sports gaming experiences.</p>
+        <a class="button" href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Explore Games</a>
+      </article>
+
+      <article class="card" data-search="strategy puzzle brain">
+        <h3>Strategy &amp; Puzzle Games</h3>
+        <p>Discover strategy challenges, brain games, puzzles and planning games.</p>
+        <a class="button" href="https://play.google.com/store/games" target="_blank" rel="noopener noreferrer">Explore Games</a>
+      </article>
+
+      <article class="card" data-search="android mobile games">
+        <h3>Android Games</h3>
+        <p>Browse Android games and check availability, reviews and device requirements.</p>
+        <a class="button" href="https://play.google.com/store/games" target="_blank" rel="noopener noreferrer">Google Play Games</a>
+      </article>
+
+      <article class="card" data-search="pc windows computer games">
+        <h3>PC Games</h3>
+        <p>Explore computer games, system requirements and official PC game stores.</p>
+        <a class="button" href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Steam Store</a>
+      </article>
+
     </div>
 
-</section>
-
-<div class="container">
-
-    <section aria-labelledby="categories-title">
-
-        <h2 class="section-title" id="categories-title">
-            Browse Categories
-        </h2>
-
-        <div class="categories">
-
-            <button class="category active" data-category="all">
-                All Games
-            </button>
-
-            <button class="category" data-category="action">
-                Action
-            </button>
-
-            <button class="category" data-category="adventure">
-                Adventure
-            </button>
-
-            <button class="category" data-category="racing">
-                Racing
-            </button>
-
-            <button class="category" data-category="sports">
-                Sports
-            </button>
-
-            <button class="category" data-category="mobile">
-                Mobile
-            </button>
-
-            <button class="category" data-category="sandbox">
-                Sandbox
-            </button>
-
-        </div>
-
-    </section>
-
-    <section aria-labelledby="games-title">
-
-        <h2 class="section-title" id="games-title">
-            Popular Games
-        </h2>
-
-        <div class="grid" id="games">
-
-            <article class="card" data-category="sandbox adventure">
-
-                <div class="cover">⛏️</div>
-
-                <div class="info">
-                    <span class="tag">Sandbox · Adventure</span>
-
-                    <h3>Minecraft</h3>
-
-                    <p>
-                        Build, explore and create in a world
-                        made of blocks.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.minecraft.net/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="action adventure">
-
-                <div class="cover">🚗</div>
-
-                <div class="info">
-                    <span class="tag">Action · Adventure</span>
-
-                    <h3>Grand Theft Auto V</h3>
-
-                    <p>
-                        Explore an open-world action game
-                        and official store options.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.rockstargames.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Rockstar Games ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="action mobile">
-
-                <div class="cover">🎯</div>
-
-                <div class="info">
-                    <span class="tag">Action · Mobile</span>
-
-                    <h3>PUBG MOBILE</h3>
-
-                    <p>
-                        Explore the mobile battle royale game
-                        and official updates.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.pubgmobile.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="action">
-
-                <div class="cover">🪂</div>
-
-                <div class="info">
-                    <span class="tag">Action · Battle Royale</span>
-
-                    <h3>Fortnite</h3>
-
-                    <p>
-                        Find official game information
-                        and supported downloads.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.fortnite.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="racing">
-
-                <div class="cover">🏎️</div>
-
-                <div class="info">
-                    <span class="tag">Racing</span>
-
-                    <h3>Forza Horizon 5</h3>
-
-                    <p>
-                        Discover open-world racing
-                        and official store options.
-                    </p>
-
-                    <a class="download"
-                       href="https://forza.net/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Forza Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="sports">
-
-                <div class="cover">⚽</div>
-
-                <div class="info">
-                    <span class="tag">Sports · Football</span>
-
-                    <h3>EA SPORTS FC</h3>
-
-                    <p>
-                        Discover football gaming
-                        and official platform information.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.ea.com/games/ea-sports-fc"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        EA Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="adventure">
-
-                <div class="cover">🧙</div>
-
-                <div class="info">
-                    <span class="tag">Adventure · RPG</span>
-
-                    <h3>Genshin Impact</h3>
-
-                    <p>
-                        Explore a fantasy adventure
-                        and its official downloads.
-                    </p>
-
-                    <a class="download"
-                       href="https://genshin.hoyoverse.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="mobile action">
-
-                <div class="cover">📱</div>
-
-                <div class="info">
-                    <span class="tag">Mobile · Action</span>
-
-                    <h3>Call of Duty: Mobile</h3>
-
-                    <p>
-                        Discover mobile multiplayer
-                        and battle royale modes.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.callofduty.com/mobile"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="card" data-category="sandbox adventure">
-
-                <div class="cover">🧱</div>
-
-                <div class="info">
-                    <span class="tag">Sandbox · Adventure</span>
-
-                    <h3>Roblox</h3>
-
-                    <p>
-                        Discover user-created games
-                        and interactive experiences.
-                    </p>
-
-                    <a class="download"
-                       href="https://www.roblox.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Official Website ↗
-                    </a>
-                </div>
-
-            </article>
-
-        </div>
-
-        <p id="noResults">
-            No games found. Try another search or category.
-        </p>
-
-    </section>
-
-    <section class="about">
-
-        <h2>About MediaHub Games</h2>
-
-        <p>
-            Explore popular PC and mobile games through MediaHub.
-            Availability, age ratings, system requirements and prices
-            may vary by region and platform.
-        </p>
-
-        <p>
-            MediaHub is an independent website and is not affiliated
-            with the game publishers listed here. All trademarks
-            belong to their respective owners.
-        </p>
-
-    </section>
-
-</div>
+    <p id="noResults" hidden>No matching categories found. Try another search.</p>
+  </section>
+
+  <section class="section">
+    <h2>How to Choose a Game</h2>
+
+    <p>
+      Before installing a game, check whether it supports your device,
+      operating system and available storage. Review its age rating,
+      system requirements, in-app purchases and internet requirements.
+    </p>
+
+    <p>
+      For safety, use official game publishers and trusted app stores.
+      Some games are free to play, while others may require payment or
+      offer optional in-game purchases.
+    </p>
+
+    <div class="note">
+      <strong>Safety tip:</strong> MediaHub provides discovery links.
+      Always review the destination website before downloading or
+      installing any game.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>More on MediaHub</h2>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Mobile Apps</h3>
+        <p>Explore useful apps for phones and tablets.</p>
+        <a href="apps.html">Visit Apps &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>PC Software</h3>
+        <p>Discover computer programs and productivity tools.</p>
+        <a href="software.html">Visit Software &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>AI Tools</h3>
+        <p>Explore artificial intelligence tools and resources.</p>
+        <a href="ai-tools.html">Visit AI Tools &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Technology News</h3>
+        <p>Read about technology, gaming and digital trends.</p>
+        <a href="tech-news.html">Read Tech News &rarr;</a>
+      </article>
+    </div>
+  </section>
 
 </main>
 
 <footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
 
-    <p>© 2026 MediaHub — All Rights Reserved</p>
-
-    <p>
-        Game links lead to their respective official websites.
-    </p>
-
-    <div class="footer-links">
-        <a href="index.html">Home</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="games.html">Games</a>
-    </div>
-
+  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
+  <p>Game names and external websites belong to their respective owners.</p>
 </footer>
 
 <script>
-const search = document.getElementById("search");
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-const cards = Array.from(
-    document.querySelectorAll(".card")
-);
+  function searchGames() {
+    const input = document.getElementById("gameSearch");
+    const query = input.value.trim().toLowerCase();
+    const cards = document.querySelectorAll("#gameGrid .card");
+    let visibleCount = 0;
 
-const buttons = document.querySelectorAll(".category");
+    cards.forEach(function(card) {
+      const text = (
+        card.innerText + " " + (card.dataset.search || "")
+      ).toLowerCase();
 
-let selected = "all";
+      const match = text.includes(query);
+      card.style.display = match ? "" : "none";
 
-function filterGames() {
-
-    const query = search.value.toLowerCase().trim();
-
-    let count = 0;
-
-    cards.forEach(card => {
-
-        const text = card.innerText.toLowerCase();
-
-        const categories =
-            card.dataset.category.split(" ");
-
-        const matchesText = text.includes(query);
-
-        const matchesCategory =
-            selected === "all" ||
-            categories.includes(selected);
-
-        const show = matchesText && matchesCategory;
-
-        card.style.display = show ? "" : "none";
-
-        if (show) {
-            count++;
-        }
-
+      if (match) {
+        visibleCount++;
+      }
     });
 
-    document.getElementById("noResults").style.display =
-        count ? "none" : "block";
-}
+    document.getElementById("noResults").hidden = visibleCount !== 0;
+  }
 
-search.addEventListener("input", filterGames);
-
-buttons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        selected = button.dataset.category;
-
-        buttons.forEach(item => {
-            item.classList.toggle("active", item === button);
-        });
-
-        filterGames();
-
-    });
-
-});
+  document.getElementById("gameSearch").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      searchGames();
+    }
+  });
 </script>
 
 </body>
