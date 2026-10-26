@@ -2,204 +2,426 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Trending Digital Resources | MediaHub</title>
-<meta name="description" content="Explore popular digital resources, AI tools, apps, software, games and technology websites on MediaHub.">
+<title>Trending Topics & Digital Trends | MediaHub</title>
+
+<meta name="description" content="Explore trending technology, AI tools, apps, games, entertainment and digital topics on MediaHub. Discover useful resources and trusted sources.">
+
 <meta name="robots" content="index, follow">
+<meta name="author" content="MediaHub">
+<meta name="theme-color" content="#ffffff">
+
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/trending.html">
 
+<meta property="og:title" content="Trending Topics & Digital Trends | MediaHub">
+<meta property="og:description" content="Discover trending technology, AI, apps, games and digital topics on MediaHub.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/trending.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Trending Topics | MediaHub",
+  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/trending.html",
+  "description": "Explore trending technology, AI tools, apps, games and digital resources.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "MediaHub",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+  }
+}
+</script>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#252525;line-height:1.6}
-header{background:#fff;padding:18px 5%;border-bottom:1px solid #e5e5e5}
-.logo{font-size:29px;font-weight:bold;color:#269b45;text-decoration:none}
-.tagline{margin:0;color:#666;font-size:14px}
-nav{background:#fff;padding:12px 5%;border-bottom:1px solid #ddd;display:flex;flex-wrap:wrap;gap:17px}
-nav a{color:#333;text-decoration:none;font-size:14px;font-weight:bold}
-nav a:hover{color:#269b45}
-.container{max-width:1150px;margin:auto;padding:25px 16px}
-.hero,.card,.info{background:#fff;border:1px solid #e1e1e1;border-radius:7px}
-.hero{padding:28px 22px;margin-bottom:25px}
-.hero h1{margin-top:0;font-size:30px}
-.hero p,.card p,.info p{color:#666}
-.search{width:100%;padding:14px;border:1px solid #ccc;border-radius:5px;font-size:16px;margin-top:10px}
-h2{font-size:23px;margin-bottom:15px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.filters button{background:#fff;border:1px solid #ccc;padding:9px 14px;border-radius:4px;cursor:pointer}
-.filters button.active,.filters button:hover{background:#269b45;color:#fff;border-color:#269b45}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.card{padding:20px;display:flex;flex-direction:column}
-.card h3{margin:0 0 8px;font-size:19px}
-.card p{font-size:14px;flex-grow:1}
-.badge{display:inline-block;background:#e9f6ed;color:#21863a;padding:4px 8px;border-radius:4px;font-size:12px;margin-bottom:12px;align-self:flex-start}
-.btn{display:inline-block;background:#269b45;color:#fff;padding:10px 14px;text-decoration:none;border-radius:4px;text-align:center;font-weight:bold;font-size:14px}
-.btn:hover{background:#1d7d37}
-.info{padding:22px;margin-top:25px}
-footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:25px 15px;margin-top:25px;font-size:14px}
-footer a{color:#269b45;text-decoration:none;margin:5px}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}nav{gap:12px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #273142;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #0879d9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe4ea;
+  padding: 16px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.logo {
+  color: #16834a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+nav a {
+  color: #344054;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 16px;
+  margin: 25px auto;
+}
+
+.breadcrumb {
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero,
+.section {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 9px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  color: #202938;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #202938;
+  font-size: 23px;
+  margin-top: 0;
+}
+
+.hero p {
+  color: #596579;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 180px;
+  padding: 13px;
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.search button,
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: #16834a;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover,
+.button:hover {
+  background: #116a3b;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.card h3 {
+  color: #263548;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.card p {
+  color: #667085;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.notice {
+  background: #f0f7ff;
+  border-left: 4px solid #0879d9;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #dfe4ea;
+  text-align: center;
+  padding: 25px 16px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<a class="logo" href="index.html">MediaHub</a>
-<p class="tagline">Discover Popular Digital Resources</p>
-</header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">MediaHub</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-</nav>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="games.html">Games</a>
+      <a href="software.html">Software</a>
+      <a href="movies.html">Movies</a>
+      <a href="ai-tools.html">AI Tools</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
 
-<section class="hero">
-<h1>Trending Digital Resources</h1>
-<p>Discover useful AI tools, popular apps, software, games and online learning resources. Search the collection or choose a category to explore.</p>
-<input class="search" id="search" type="search" placeholder="Search trending resources..." aria-label="Search resources">
-</section>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Trending Topics
+  </div>
 
-<h2>Explore Popular Resources</h2>
+  <section class="hero">
+    <h1>Trending Topics &amp; Digital Trends</h1>
 
-<div class="filters">
-<button class="active" data-filter="all">All Resources</button>
-<button data-filter="ai">AI Tools</button>
-<button data-filter="apps">Apps</button>
-<button data-filter="software">Software</button>
-<button data-filter="games">Games</button>
-<button data-filter="learning">Learning</button>
-</div>
+    <p>
+      Welcome to MediaHub Trending. Explore popular digital topics,
+      artificial intelligence, mobile applications, games, software
+      and entertainment. Use these resources to discover subjects
+      worth learning more about.
+    </p>
 
-<section class="grid">
+    <div class="search">
+      <input
+        type="search"
+        id="trendSearch"
+        placeholder="Search trending categories..."
+        aria-label="Search trending categories"
+      >
+      <button type="button" onclick="searchTrends()">Search</button>
+    </div>
+  </section>
 
-<article class="card" data-category="ai">
-<span class="badge">AI Tool</span>
-<h3>ChatGPT</h3>
-<p>Explore an AI assistant for writing, learning, brainstorming and everyday tasks.</p>
-<a class="btn" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
-</article>
+  <section class="section">
+    <h2>Explore Popular Topics</h2>
 
-<article class="card" data-category="ai">
-<span class="badge">AI Tool</span>
-<h3>Google Gemini</h3>
-<p>Discover Google's AI assistant for questions, ideas and creative work.</p>
-<a class="btn" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
-</article>
+    <div class="grid" id="trendGrid">
 
-<article class="card" data-category="apps">
-<span class="badge">App</span>
-<h3>WhatsApp</h3>
-<p>Explore the official messaging service for chats, calls and sharing information.</p>
-<a class="btn" href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
-</article>
+      <article class="card" data-search="artificial intelligence AI chatbots">
+        <h3>Artificial Intelligence</h3>
+        <p>Discover AI tools, assistants, creative applications and new developments.</p>
+        <a class="button" href="ai-tools.html">Explore AI Tools</a>
+      </article>
 
-<article class="card" data-category="apps">
-<span class="badge">Video Platform</span>
-<h3>YouTube</h3>
-<p>Discover videos, tutorials, entertainment and educational content.</p>
-<a class="btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Visit Official Website</a>
-</article>
+      <article class="card" data-search="mobile applications android apps">
+        <h3>Mobile Apps</h3>
+        <p>Explore mobile applications for communication, learning and productivity.</p>
+        <a class="button" href="apps.html">Explore Apps</a>
+      </article>
 
-<article class="card" data-category="software">
-<span class="badge">Software</span>
-<h3>VLC Media Player</h3>
-<p>Get information about a media player that supports many audio and video formats.</p>
-<a class="btn" href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">Official Download Page</a>
-</article>
+      <article class="card" data-search="PC games android gaming">
+        <h3>Gaming Trends</h3>
+        <p>Discover PC and mobile games and gaming resources.</p>
+        <a class="button" href="games.html">Explore Games</a>
+      </article>
 
-<article class="card" data-category="software">
-<span class="badge">Software</span>
-<h3>7-Zip</h3>
-<p>Explore a free file archiver for creating and opening compressed files.</p>
-<a class="btn" href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">Official Download Page</a>
-</article>
+      <article class="card" data-search="software computer Windows tools">
+        <h3>Software &amp; Tools</h3>
+        <p>Find computer software, productivity tools and digital resources.</p>
+        <a class="button" href="software.html">Explore Software</a>
+      </article>
 
-<article class="card" data-category="games">
-<span class="badge">Games</span>
-<h3>Epic Games Store</h3>
-<p>Explore PC games, game releases and the official store's available offers.</p>
-<a class="btn" href="https://store.epicgames.com/" target="_blank" rel="noopener noreferrer">Visit Game Store</a>
-</article>
+      <article class="card" data-search="technology news innovations">
+        <h3>Technology Updates</h3>
+        <p>Follow technology developments and read updates from established sources.</p>
+        <a class="button" href="tech-news.html">Read Tech News</a>
+      </article>
 
-<article class="card" data-category="games">
-<span class="badge">Games</span>
-<h3>Steam</h3>
-<p>Discover PC games, software and gaming community features on Steam.</p>
-<a class="btn" href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Visit Game Store</a>
-</article>
+      <article class="card" data-search="movies films trailers entertainment">
+        <h3>Movies &amp; Entertainment</h3>
+        <p>Explore film information, trailers, reviews and entertainment resources.</p>
+        <a class="button" href="movies.html">Explore Movies</a>
+      </article>
 
-<article class="card" data-category="learning">
-<span class="badge">Learning</span>
-<h3>Khan Academy</h3>
-<p>Find educational lessons and practice materials across many subjects.</p>
-<a class="btn" href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Start Learning</a>
-</article>
+      <article class="card" data-search="data analysis science statistics">
+        <h3>Data &amp; Analytics</h3>
+        <p>Discover resources for data analysis, statistics and visualization.</p>
+        <a class="button" href="data-analysis.html">Explore Data Tools</a>
+      </article>
 
-</section>
+      <article class="card" data-search="digital learning education online skills">
+        <h3>Digital Learning</h3>
+        <p>Explore online learning resources and tools for developing new skills.</p>
+        <a class="button" href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Start Learning</a>
+      </article>
 
-<section class="info">
-<h2>About Trending on MediaHub</h2>
-<p>This page is a curated collection of useful digital resources. The items are not a live popularity ranking and are not automatically updated.</p>
-<p>MediaHub links to external services and official websites. Availability, pricing and account requirements may vary by service.</p>
-</section>
+    </div>
+
+    <p id="noResults" hidden>No matching topics found. Try another search.</p>
+  </section>
+
+  <section class="section">
+    <h2>How to Identify Genuine Trends</h2>
+
+    <p>
+      A topic appearing frequently online is not always reliable
+      or important. Check the date, original source and supporting
+      evidence before sharing news or following a new trend.
+    </p>
+
+    <div class="notice">
+      <strong>Important:</strong>
+      Trending topics change frequently. This page provides topic
+      categories and discovery resources; it does not automatically
+      display live trend rankings.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Explore MediaHub</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>Home</h3>
+        <p>Visit the main MediaHub website.</p>
+        <a href="index.html">Visit Homepage &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Technology News</h3>
+        <p>Explore technology news and digital updates.</p>
+        <a href="tech-news.html">Visit Tech News &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>AI Tools</h3>
+        <p>Discover useful AI resources.</p>
+        <a href="ai-tools.html">Visit AI Tools &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Apps</h3>
+        <p>Find mobile apps and resources.</p>
+        <a href="apps.html">Visit Apps &rarr;</a>
+      </article>
+
+    </div>
+  </section>
 
 </main>
 
 <footer>
-<p><strong>MediaHub</strong> — Your digital discovery hub.</p>
-<p>
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a>
-</p>
-<p>Contact: <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a></p>
-<p><a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-<p>© 2026 MediaHub. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+
+  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
 </footer>
 
 <script>
-const searchInput=document.getElementById("search");
-const cards=document.querySelectorAll(".card");
-const buttons=document.querySelectorAll(".filters button");
-let selectedCategory="all";
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function filterResources(){
-    const query=searchInput.value.toLowerCase().trim();
+function searchTrends() {
+  const query = document.getElementById("trendSearch").value.trim().toLowerCase();
+  const cards = document.querySelectorAll("#trendGrid .card");
+  let visibleCount = 0;
 
-    cards.forEach(function(card){
-        const text=card.innerText.toLowerCase();
-        const matchesSearch=text.includes(query);
-        const matchesCategory=
-            selectedCategory==="all" ||
-            card.dataset.category===selectedCategory;
+  cards.forEach(function(card) {
+    const text = (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
+    const match = text.includes(query);
 
-        card.style.display=
-            matchesSearch && matchesCategory ? "flex" : "none";
-    });
+    card.style.display = match ? "" : "none";
+
+    if (match) {
+      visibleCount++;
+    }
+  });
+
+  document.getElementById("noResults").hidden = visibleCount !== 0;
 }
 
-searchInput.addEventListener("input",filterResources);
-
-buttons.forEach(function(button){
-    button.addEventListener("click",function(){
-        buttons.forEach(function(item){
-            item.classList.remove("active");
-        });
-
-        button.classList.add("active");
-        selectedCategory=button.dataset.filter;
-        filterResources();
-    });
+document.getElementById("trendSearch").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    searchTrends();
+  }
 });
 </script>
 
