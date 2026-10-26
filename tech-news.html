@@ -2,197 +2,426 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Latest Technology News | MediaHub</title>
-<meta name="description" content="Explore technology news, artificial intelligence updates, cybersecurity, smartphones, gaming and software news on MediaHub.">
+<title>Technology News & Updates | MediaHub</title>
+
+<meta name="description" content="Explore technology news, AI updates, cybersecurity, smartphones, software and gaming news on MediaHub. Discover technology information from trusted sources.">
+
 <meta name="robots" content="index, follow">
+<meta name="author" content="MediaHub">
+<meta name="theme-color" content="#ffffff">
+
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/tech-news.html">
 
+<meta property="og:title" content="Technology News & Updates | MediaHub">
+<meta property="og:description" content="Explore AI, technology, smartphones, cybersecurity, software and gaming updates on MediaHub.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/tech-news.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Technology News | MediaHub",
+  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/tech-news.html",
+  "description": "Technology news and updates about AI, smartphones, software, cybersecurity and gaming.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "MediaHub",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+  }
+}
+</script>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#252525;line-height:1.6}
-header{background:#fff;padding:18px 5%;border-bottom:1px solid #e5e5e5}
-.logo{font-size:29px;font-weight:bold;color:#269b45;text-decoration:none}
-.tagline{margin:0;color:#666;font-size:14px}
-nav{background:#fff;padding:12px 5%;border-bottom:1px solid #ddd;display:flex;flex-wrap:wrap;gap:17px}
-nav a{color:#333;text-decoration:none;font-size:14px;font-weight:bold}
-nav a:hover,footer a:hover{color:#269b45}
-.container{max-width:1150px;margin:auto;padding:25px 16px}
-.hero,.card,.info{background:#fff;border:1px solid #e1e1e1;border-radius:7px}
-.hero{padding:28px 22px;margin-bottom:25px}
-.hero h1{margin-top:0;font-size:30px}
-.hero p,.card p,.info p{color:#666}
-.search{width:100%;padding:14px;border:1px solid #ccc;border-radius:5px;font-size:16px;margin-top:10px}
-h2{font-size:23px;margin-bottom:15px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.filters button{background:#fff;border:1px solid #ccc;padding:9px 14px;border-radius:4px;cursor:pointer}
-.filters button.active,.filters button:hover{background:#269b45;color:white;border-color:#269b45}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.card{padding:20px;display:flex;flex-direction:column}
-.card h3{margin:0 0 8px;font-size:19px}
-.card p{font-size:14px;flex-grow:1}
-.badge{display:inline-block;background:#e9f6ed;color:#21863a;padding:4px 8px;border-radius:4px;font-size:12px;margin-bottom:12px;align-self:flex-start}
-.btn{display:inline-block;background:#269b45;color:white;padding:10px 14px;text-decoration:none;border-radius:4px;text-align:center;font-weight:bold;font-size:14px}
-.btn:hover{background:#1d7d37}
-.info{padding:22px;margin-top:25px}
-footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:25px 15px;margin-top:25px;font-size:14px}
-footer a{color:#269b45;text-decoration:none;margin:5px}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}nav{gap:12px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #273142;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #0879d9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe4ea;
+  padding: 16px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.logo {
+  color: #16834a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+nav a {
+  color: #344054;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 16px;
+  margin: 25px auto;
+}
+
+.breadcrumb {
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero,
+.section {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 9px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  color: #202938;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #202938;
+  font-size: 23px;
+  margin-top: 0;
+}
+
+.hero p {
+  color: #596579;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 180px;
+  padding: 13px;
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.search button,
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: #16834a;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover,
+.button:hover {
+  background: #116a3b;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.card h3 {
+  color: #263548;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.card p {
+  color: #667085;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.notice {
+  background: #f0f7ff;
+  border-left: 4px solid #0879d9;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #dfe4ea;
+  text-align: center;
+  padding: 25px 16px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<a class="logo" href="index.html">MediaHub</a>
-<p class="tagline">Technology News, Trends and Digital Updates</p>
-</header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">MediaHub</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-</nav>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="games.html">Games</a>
+      <a href="software.html">Software</a>
+      <a href="movies.html">Movies</a>
+      <a href="ai-tools.html">AI Tools</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
 
-<section class="hero">
-<h1>Latest Technology News</h1>
-<p>Explore technology updates, artificial intelligence, smartphones, gaming, software and cybersecurity news. Use the search box to find a topic.</p>
-<input class="search" type="search" id="search" placeholder="Search technology topics..." aria-label="Search technology topics">
-</section>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Technology News
+  </div>
 
-<h2>Explore Technology Topics</h2>
+  <section class="hero">
+    <h1>Technology News &amp; Updates</h1>
 
-<div class="filters">
-<button class="active" data-filter="all">All Topics</button>
-<button data-filter="ai">Artificial Intelligence</button>
-<button data-filter="mobile">Mobile & Devices</button>
-<button data-filter="gaming">Gaming</button>
-<button data-filter="security">Cybersecurity</button>
-<button data-filter="software">Software</button>
-</div>
+    <p>
+      Welcome to MediaHub Technology News. Explore technology trends,
+      artificial intelligence, cybersecurity, smartphones, software,
+      gaming and digital innovation. Visit trusted technology sources
+      to read the latest reports and announcements.
+    </p>
 
-<section class="grid" id="newsGrid">
+    <div class="search">
+      <input
+        type="search"
+        id="newsSearch"
+        placeholder="Search technology categories..."
+        aria-label="Search technology categories"
+      >
+      <button type="button" onclick="searchNews()">Search</button>
+    </div>
+  </section>
 
-<article class="card" data-category="ai">
-<span class="badge">AI News</span>
-<h3>Artificial Intelligence</h3>
-<p>Explore AI developments, new AI assistants, creative tools and practical uses of artificial intelligence.</p>
-<a class="btn" href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Read AI News</a>
-</article>
+  <section class="section">
+    <h2>Explore Technology Topics</h2>
 
-<article class="card" data-category="mobile">
-<span class="badge">Mobile News</span>
-<h3>Smartphones & Devices</h3>
-<p>Discover smartphone launches, mobile technology, device features and industry updates.</p>
-<a class="btn" href="https://www.gsmarena.com/news.php3" target="_blank" rel="noopener noreferrer">Read Mobile News</a>
-</article>
+    <div class="grid" id="newsGrid">
 
-<article class="card" data-category="gaming">
-<span class="badge">Gaming News</span>
-<h3>Video Games</h3>
-<p>Follow gaming announcements, new releases, gaming platforms and industry news.</p>
-<a class="btn" href="https://www.ign.com/news" target="_blank" rel="noopener noreferrer">Read Gaming News</a>
-</article>
+      <article class="card" data-search="artificial intelligence AI machine learning">
+        <h3>Artificial Intelligence</h3>
+        <p>Explore AI developments, intelligent tools and machine-learning news.</p>
+        <a class="button" href="https://blog.google/technology/ai/" target="_blank" rel="noopener noreferrer">Read AI Updates</a>
+      </article>
 
-<article class="card" data-category="security">
-<span class="badge">Security News</span>
-<h3>Cybersecurity</h3>
-<p>Learn about online safety, security threats, privacy and ways to protect digital accounts.</p>
-<a class="btn" href="https://www.cisa.gov/news-events" target="_blank" rel="noopener noreferrer">Read Security News</a>
-</article>
+      <article class="card" data-search="smartphones android iphone mobile">
+        <h3>Smartphones &amp; Mobile</h3>
+        <p>Discover smartphone announcements, mobile features and device updates.</p>
+        <a class="button" href="https://blog.google/products/android/" target="_blank" rel="noopener noreferrer">Explore Android</a>
+      </article>
 
-<article class="card" data-category="software">
-<span class="badge">Software News</span>
-<h3>Software & Updates</h3>
-<p>Explore software releases, operating system updates, productivity tools and developer news.</p>
-<a class="btn" href="https://www.techradar.com/news" target="_blank" rel="noopener noreferrer">Read Software News</a>
-</article>
+      <article class="card" data-search="cybersecurity online privacy security">
+        <h3>Cybersecurity</h3>
+        <p>Learn about online security, privacy and safer internet practices.</p>
+        <a class="button" href="https://www.cisa.gov/news-events" target="_blank" rel="noopener noreferrer">Security Updates</a>
+      </article>
 
-<article class="card" data-category="ai">
-<span class="badge">AI Research</span>
-<h3>Google AI Updates</h3>
-<p>Read announcements and research updates from Google's artificial intelligence teams.</p>
-<a class="btn" href="https://blog.google/technology/ai/" target="_blank" rel="noopener noreferrer">Visit Google AI Blog</a>
-</article>
+      <article class="card" data-search="software windows apps updates">
+        <h3>Software &amp; Apps</h3>
+        <p>Explore software announcements, application features and useful updates.</p>
+        <a class="button" href="https://blogs.windows.com/" target="_blank" rel="noopener noreferrer">Windows News</a>
+      </article>
 
-<article class="card" data-category="software">
-<span class="badge">Microsoft News</span>
-<h3>Microsoft Technology</h3>
-<p>Find official news about Microsoft products, Windows, cloud services and AI.</p>
-<a class="btn" href="https://blogs.microsoft.com/" target="_blank" rel="noopener noreferrer">Read Microsoft News</a>
-</article>
+      <article class="card" data-search="gaming PC games console">
+        <h3>Gaming Technology</h3>
+        <p>Discover gaming technology, platform announcements and industry developments.</p>
+        <a class="button" href="https://news.xbox.com/" target="_blank" rel="noopener noreferrer">Gaming Updates</a>
+      </article>
 
-<article class="card" data-category="security">
-<span class="badge">Security Tips</span>
-<h3>Google Security</h3>
-<p>Explore security announcements and advice for protecting your online information.</p>
-<a class="btn" href="https://safety.google/" target="_blank" rel="noopener noreferrer">Explore Safety Tips</a>
-</article>
+      <article class="card" data-search="computers laptops hardware processors">
+        <h3>Computers &amp; Hardware</h3>
+        <p>Explore computer hardware, laptops, processors and technology innovations.</p>
+        <a class="button" href="https://www.intel.com/content/www/us/en/newsroom/home.html" target="_blank" rel="noopener noreferrer">Hardware News</a>
+      </article>
 
-<article class="card" data-category="gaming">
-<span class="badge">Gaming Updates</span>
-<h3>Xbox News</h3>
-<p>Read official updates about Xbox games, services and gaming announcements.</p>
-<a class="btn" href="https://news.xbox.com/" target="_blank" rel="noopener noreferrer">Read Xbox News</a>
-</article>
+      <article class="card" data-search="science innovation future technology">
+        <h3>Science &amp; Innovation</h3>
+        <p>Read about scientific discoveries and emerging technology research.</p>
+        <a class="button" href="https://www.technologyreview.com/" target="_blank" rel="noopener noreferrer">Explore Innovation</a>
+      </article>
 
-</section>
+      <article class="card" data-search="technology industry business digital">
+        <h3>Technology Industry</h3>
+        <p>Follow technology companies, digital products and industry trends.</p>
+        <a class="button" href="https://techcrunch.com/" target="_blank" rel="noopener noreferrer">Industry News</a>
+      </article>
 
-<section class="info">
-<h2>About MediaHub Technology News</h2>
-<p>MediaHub helps visitors discover technology topics and trusted external news sources in one place. News articles open on their respective publishers' websites.</p>
-<p>External websites are independently operated and may have their own advertising, terms and privacy policies. MediaHub does not claim ownership of their articles.</p>
-</section>
+    </div>
+
+    <p id="noResults" hidden>No matching topics found. Try another search.</p>
+  </section>
+
+  <section class="section">
+    <h2>How to Stay Informed</h2>
+
+    <p>
+      Check the publication date and original source before sharing
+      a technology story. Compare important claims with official
+      announcements or multiple reliable news organizations.
+    </p>
+
+    <div class="notice">
+      <strong>Editorial note:</strong>
+      This page provides links to external technology resources.
+      External websites publish and update their own content.
+      MediaHub does not claim ownership of third-party articles.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Explore More on MediaHub</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>AI Tools</h3>
+        <p>Discover artificial intelligence tools and resources.</p>
+        <a href="ai-tools.html">Visit AI Tools &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Software</h3>
+        <p>Explore computer software and productivity tools.</p>
+        <a href="software.html">Visit Software &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Apps</h3>
+        <p>Find useful mobile applications.</p>
+        <a href="apps.html">Visit Apps &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Games</h3>
+        <p>Explore PC and Android gaming resources.</p>
+        <a href="games.html">Visit Games &rarr;</a>
+      </article>
+
+    </div>
+  </section>
 
 </main>
 
 <footer>
-<p><strong>MediaHub</strong> — Your digital discovery hub.</p>
-<p>
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a>
-</p>
-<p>Contact: <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a></p>
-<p><a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-<p>© 2026 MediaHub. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+
+  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
 </footer>
 
 <script>
-const searchInput=document.getElementById("search");
-const cards=document.querySelectorAll(".card");
-const buttons=document.querySelectorAll(".filters button");
-let selectedCategory="all";
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function filterNews(){
-const query=searchInput.value.toLowerCase().trim();
+function searchNews() {
+  const query = document.getElementById("newsSearch").value.trim().toLowerCase();
+  const cards = document.querySelectorAll("#newsGrid .card");
+  let visibleCount = 0;
 
-cards.forEach(function(card){
-const text=card.innerText.toLowerCase();
-const matchesSearch=text.includes(query);
-const matchesCategory=selectedCategory==="all"||card.dataset.category===selectedCategory;
-card.style.display=matchesSearch&&matchesCategory?"flex":"none";
-});
+  cards.forEach(function(card) {
+    const text = (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
+    const match = text.includes(query);
+
+    card.style.display = match ? "" : "none";
+
+    if (match) {
+      visibleCount++;
+    }
+  });
+
+  document.getElementById("noResults").hidden = visibleCount !== 0;
 }
 
-searchInput.addEventListener("input",filterNews);
-
-buttons.forEach(function(button){
-button.addEventListener("click",function(){
-buttons.forEach(function(item){item.classList.remove("active");});
-button.classList.add("active");
-selectedCategory=button.dataset.filter;
-filterNews();
-});
+document.getElementById("newsSearch").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    searchNews();
+  }
 });
 </script>
 
