@@ -2,211 +2,426 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Data Analysis Tools & Guides | MediaHub</title>
-<meta name="description" content="Explore data analysis tools, spreadsheets, charts, statistics, data visualization and learning resources on MediaHub.">
+<title>Data Analysis Tools & Resources | MediaHub</title>
+
+<meta name="description" content="Explore data analysis tools, spreadsheets, data visualization, statistics, Python, business intelligence and data science resources on MediaHub.">
+
 <meta name="robots" content="index, follow">
+<meta name="author" content="MediaHub">
+<meta name="theme-color" content="#ffffff">
+
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/data-analysis.html">
 
+<meta property="og:title" content="Data Analysis Tools & Resources | MediaHub">
+<meta property="og:description" content="Discover data analysis, visualization, spreadsheets, statistics and data science tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/data-analysis.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Data Analysis Tools and Resources | MediaHub",
+  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/data-analysis.html",
+  "description": "Explore data analysis, spreadsheets, visualization, statistics and data science resources.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "MediaHub",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+  }
+}
+</script>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#252525;line-height:1.6}
-header{background:#fff;padding:18px 5%;border-bottom:1px solid #e5e5e5}
-.logo{font-size:29px;font-weight:bold;color:#269b45;text-decoration:none}
-.tagline{margin:0;color:#666;font-size:14px}
-nav{background:#fff;padding:12px 5%;border-bottom:1px solid #ddd;display:flex;flex-wrap:wrap;gap:17px}
-nav a{color:#333;text-decoration:none;font-size:14px;font-weight:bold}
-nav a:hover{color:#269b45}
-.container{max-width:1150px;margin:auto;padding:25px 16px}
-.hero,.card,.info{background:#fff;border:1px solid #e1e1e1;border-radius:7px}
-.hero{padding:28px 22px;margin-bottom:25px}
-.hero h1{margin-top:0;font-size:30px}
-.hero p,.card p,.info p{color:#666}
-.search{width:100%;padding:14px;border:1px solid #ccc;border-radius:5px;font-size:16px;margin-top:10px}
-h2{font-size:23px;margin-bottom:15px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.filters button{background:#fff;border:1px solid #ccc;padding:9px 14px;border-radius:4px;cursor:pointer}
-.filters button.active,.filters button:hover{background:#269b45;color:#fff;border-color:#269b45}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.card{padding:20px;display:flex;flex-direction:column}
-.card h3{margin:0 0 8px;font-size:19px}
-.card p{font-size:14px;flex-grow:1}
-.badge{display:inline-block;background:#e9f6ed;color:#21863a;padding:4px 8px;border-radius:4px;font-size:12px;margin-bottom:12px;align-self:flex-start}
-.btn{display:inline-block;background:#269b45;color:#fff;padding:10px 14px;text-decoration:none;border-radius:4px;text-align:center;font-weight:bold;font-size:14px}
-.btn:hover{background:#1d7d37}
-.info{padding:22px;margin-top:25px}
-footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:25px 15px;margin-top:25px;font-size:14px}
-footer a{color:#269b45;text-decoration:none;margin:5px}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}nav{gap:12px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #273142;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #0879d9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe4ea;
+  padding: 16px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.logo {
+  color: #16834a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+nav a {
+  color: #344054;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 16px;
+  margin: 25px auto;
+}
+
+.breadcrumb {
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero,
+.section {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 9px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  color: #202938;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #202938;
+  font-size: 23px;
+  margin-top: 0;
+}
+
+.hero p {
+  color: #596579;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 180px;
+  padding: 13px;
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.search button,
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: #16834a;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover,
+.button:hover {
+  background: #116a3b;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.card h3 {
+  color: #263548;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.card p {
+  color: #667085;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.notice {
+  background: #f0f7ff;
+  border-left: 4px solid #0879d9;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #dfe4ea;
+  text-align: center;
+  padding: 25px 16px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<a class="logo" href="index.html">MediaHub</a>
-<p class="tagline">Data Tools, Learning Resources and Digital Guides</p>
-</header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">MediaHub</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-</nav>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="games.html">Games</a>
+      <a href="software.html">Software</a>
+      <a href="movies.html">Movies</a>
+      <a href="ai-tools.html">AI Tools</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
 
-<section class="hero">
-<h1>Data Analysis Tools & Guides</h1>
-<p>Discover useful tools for spreadsheets, data visualization, statistics, charts and data analysis. Find resources for beginners, students and professionals.</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Data Analysis
+  </div>
 
-<input class="search" type="search" id="search" placeholder="Search data tools and guides..." aria-label="Search data tools">
-</section>
+  <section class="hero">
+    <h1>Data Analysis Tools &amp; Resources</h1>
 
-<h2>Explore Data Resources</h2>
+    <p>
+      Welcome to MediaHub Data Analysis. Discover useful resources
+      for spreadsheets, data visualization, statistics, Python,
+      business intelligence and data science. Find tools that can
+      help you organize data, understand results and make informed decisions.
+    </p>
 
-<div class="filters">
-<button class="active" data-filter="all">All Resources</button>
-<button data-filter="spreadsheet">Spreadsheets</button>
-<button data-filter="visualization">Charts & Visualization</button>
-<button data-filter="programming">Programming</button>
-<button data-filter="learning">Learning</button>
-</div>
+    <div class="search">
+      <input
+        type="search"
+        id="dataSearch"
+        placeholder="Search data analysis tools..."
+        aria-label="Search data analysis tools"
+      >
+      <button type="button" onclick="searchData()">Search</button>
+    </div>
+  </section>
 
-<section class="grid">
+  <section class="section">
+    <h2>Explore Data Analysis Tools</h2>
 
-<article class="card" data-category="spreadsheet">
-<span class="badge">Spreadsheets</span>
-<h3>Google Sheets</h3>
-<p>Create spreadsheets, organize information, use formulas and collaborate online.</p>
-<a class="btn" href="https://sheets.google.com/" target="_blank" rel="noopener noreferrer">Open Google Sheets</a>
-</article>
+    <div class="grid" id="dataGrid">
 
-<article class="card" data-category="spreadsheet">
-<span class="badge">Spreadsheets</span>
-<h3>Microsoft Excel</h3>
-<p>Explore spreadsheet features for calculations, tables, reports and data analysis.</p>
-<a class="btn" href="https://www.microsoft.com/microsoft-365/excel" target="_blank" rel="noopener noreferrer">Explore Excel</a>
-</article>
+      <article class="card" data-search="spreadsheets excel tables calculations">
+        <h3>Spreadsheets &amp; Data Tables</h3>
+        <p>Organize information, create formulas and analyze data in spreadsheets.</p>
+        <a class="button" href="https://www.libreoffice.org/" target="_blank" rel="noopener noreferrer">Explore LibreOffice</a>
+      </article>
 
-<article class="card" data-category="visualization">
-<span class="badge">Visualization</span>
-<h3>Looker Studio</h3>
-<p>Build interactive reports and dashboards using charts and connected data sources.</p>
-<a class="btn" href="https://lookerstudio.google.com/" target="_blank" rel="noopener noreferrer">Open Looker Studio</a>
-</article>
+      <article class="card" data-search="python programming data science automation">
+        <h3>Python &amp; Data Science</h3>
+        <p>Learn about Python tools used for data processing and analysis.</p>
+        <a class="button" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Visit Python</a>
+      </article>
 
-<article class="card" data-category="programming">
-<span class="badge">Programming</span>
-<h3>Python</h3>
-<p>Learn a popular programming language used in automation, statistics and data analysis.</p>
-<a class="btn" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Explore Python</a>
-</article>
+      <article class="card" data-search="visualization charts graphs dashboards">
+        <h3>Data Visualization</h3>
+        <p>Explore charts, graphs and visual methods for presenting data.</p>
+        <a class="button" href="https://public.tableau.com/" target="_blank" rel="noopener noreferrer">Explore Tableau Public</a>
+      </article>
 
-<article class="card" data-category="programming">
-<span class="badge">Data Analysis</span>
-<h3>pandas</h3>
-<p>Explore Python tools for working with tables, cleaning datasets and analyzing information.</p>
-<a class="btn" href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">Visit pandas</a>
-</article>
+      <article class="card" data-search="business intelligence reports dashboards">
+        <h3>Business Intelligence</h3>
+        <p>Discover reporting and business data visualization resources.</p>
+        <a class="button" href="https://powerbi.microsoft.com/" target="_blank" rel="noopener noreferrer">Explore Power BI</a>
+      </article>
 
-<article class="card" data-category="visualization">
-<span class="badge">Charts</span>
-<h3>Datawrapper</h3>
-<p>Create charts, maps and tables to present information visually.</p>
-<a class="btn" href="https://www.datawrapper.de/" target="_blank" rel="noopener noreferrer">Explore Datawrapper</a>
-</article>
+      <article class="card" data-search="statistics probability mathematics">
+        <h3>Statistics &amp; Mathematics</h3>
+        <p>Learn statistical concepts and mathematical methods for understanding data.</p>
+        <a class="button" href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener noreferrer">Learn Statistics</a>
+      </article>
 
-<article class="card" data-category="learning">
-<span class="badge">Learning</span>
-<h3>Khan Academy Statistics</h3>
-<p>Learn statistics, probability and other mathematical concepts through lessons.</p>
-<a class="btn" href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener noreferrer">Start Learning</a>
-</article>
+      <article class="card" data-search="notebooks coding experiments python">
+        <h3>Interactive Notebooks</h3>
+        <p>Experiment with code and explore data in interactive notebook environments.</p>
+        <a class="button" href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Visit Jupyter</a>
+      </article>
 
-<article class="card" data-category="learning">
-<span class="badge">Learning</span>
-<h3>freeCodeCamp</h3>
-<p>Find free programming and data analysis learning materials and practical tutorials.</p>
-<a class="btn" href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Explore Tutorials</a>
-</article>
+      <article class="card" data-search="open data datasets research">
+        <h3>Open Datasets</h3>
+        <p>Find public datasets for research, learning and analysis projects.</p>
+        <a class="button" href="https://datasetsearch.research.google.com/" target="_blank" rel="noopener noreferrer">Find Datasets</a>
+      </article>
 
-<article class="card" data-category="visualization">
-<span class="badge">Visualization</span>
-<h3>Tableau</h3>
-<p>Discover data visualization software for charts, dashboards and interactive reports.</p>
-<a class="btn" href="https://www.tableau.com/" target="_blank" rel="noopener noreferrer">Explore Tableau</a>
-</article>
+      <article class="card" data-search="machine learning artificial intelligence">
+        <h3>Machine Learning</h3>
+        <p>Explore machine learning concepts and practical data science resources.</p>
+        <a class="button" href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer">Explore Scikit-learn</a>
+      </article>
 
-</section>
+    </div>
 
-<section class="info">
-<h2>Why Use Data Analysis Tools?</h2>
-<p>Data analysis tools help people organize information, identify patterns, create charts and communicate results. Beginners can start with spreadsheets before learning programming or advanced visualization.</p>
+    <p id="noResults" hidden>No matching tools found. Try another search.</p>
+  </section>
 
-<p>Some resources offer free features, while others require an account or paid subscription. Check each official website for current terms and pricing.</p>
-</section>
+  <section class="section">
+    <h2>How to Start Analyzing Data</h2>
+
+    <p>
+      Start by defining a question, collecting relevant data and
+      checking it for errors. Choose an appropriate tool, analyze
+      the results and use clear charts or tables to communicate findings.
+    </p>
+
+    <div class="notice">
+      <strong>Helpful tip:</strong>
+      Avoid sharing passwords, personal information or confidential
+      business data with online tools unless you understand their
+      privacy and security policies.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Explore More on MediaHub</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>Software</h3>
+        <p>Discover computer software and productivity applications.</p>
+        <a href="software.html">Visit Software &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>AI Tools</h3>
+        <p>Explore artificial intelligence tools and resources.</p>
+        <a href="ai-tools.html">Visit AI Tools &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Technology News</h3>
+        <p>Explore technology topics and updates.</p>
+        <a href="tech-news.html">Visit Tech News &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Mobile Apps</h3>
+        <p>Find useful apps and digital resources.</p>
+        <a href="apps.html">Visit Apps &rarr;</a>
+      </article>
+
+    </div>
+  </section>
 
 </main>
 
 <footer>
-<p><strong>MediaHub</strong> — Your digital discovery hub.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
 
-<p>
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a>
-</p>
-
-<p>Contact: <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a></p>
-
-<p>
-<a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-</p>
-
-<p>© 2026 MediaHub. All rights reserved.</p>
+  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
 </footer>
 
 <script>
-const searchInput=document.getElementById("search");
-const cards=document.querySelectorAll(".card");
-const buttons=document.querySelectorAll(".filters button");
-let selectedCategory="all";
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function filterResources(){
-    const query=searchInput.value.toLowerCase().trim();
+function searchData() {
+  const query = document.getElementById("dataSearch").value.trim().toLowerCase();
+  const cards = document.querySelectorAll("#dataGrid .card");
+  let visibleCount = 0;
 
-    cards.forEach(function(card){
-        const text=card.innerText.toLowerCase();
-        const matchesSearch=text.includes(query);
-        const matchesCategory=
-            selectedCategory==="all" ||
-            card.dataset.category===selectedCategory;
+  cards.forEach(function(card) {
+    const text = (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
+    const match = text.includes(query);
 
-        card.style.display=
-            matchesSearch && matchesCategory ? "flex" : "none";
-    });
+    card.style.display = match ? "" : "none";
+
+    if (match) {
+      visibleCount++;
+    }
+  });
+
+  document.getElementById("noResults").hidden = visibleCount !== 0;
 }
 
-searchInput.addEventListener("input",filterResources);
-
-buttons.forEach(function(button){
-    button.addEventListener("click",function(){
-        buttons.forEach(function(item){
-            item.classList.remove("active");
-        });
-
-        button.classList.add("active");
-        selectedCategory=button.dataset.filter;
-        filterResources();
-    });
+document.getElementById("dataSearch").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    searchData();
+  }
 });
 </script>
 
