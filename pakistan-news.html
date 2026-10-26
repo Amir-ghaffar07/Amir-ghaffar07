@@ -2,205 +2,428 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pakistan News & Updates | MediaHub</title>
-<meta name="description" content="Explore Pakistan news sources covering national affairs, business, sports, technology and current events on MediaHub.">
+
+<meta name="description" content="Explore Pakistan news, current affairs, business, economy, sports, technology and regional updates on MediaHub. Find news and reports from established sources.">
+
 <meta name="robots" content="index, follow">
+<meta name="author" content="MediaHub">
+<meta name="theme-color" content="#ffffff">
+
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/pakistan-news.html">
 
+<meta property="og:title" content="Pakistan News & Updates | MediaHub">
+<meta property="og:description" content="Explore Pakistan current affairs, business, economy, sports and technology news resources.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/pakistan-news.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Pakistan News | MediaHub",
+  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/pakistan-news.html",
+  "description": "Explore Pakistan news and current affairs from established news sources.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "MediaHub",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+  }
+}
+</script>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#252525;line-height:1.6}
-header{background:#fff;padding:18px 5%;border-bottom:1px solid #e5e5e5}
-.logo{font-size:29px;font-weight:bold;color:#269b45;text-decoration:none}
-.tagline{margin:0;color:#666;font-size:14px}
-nav{background:#fff;padding:12px 5%;border-bottom:1px solid #ddd;display:flex;flex-wrap:wrap;gap:17px}
-nav a{color:#333;text-decoration:none;font-size:14px;font-weight:bold}
-nav a:hover{color:#269b45}
-.container{max-width:1150px;margin:auto;padding:25px 16px}
-.hero,.card,.info{background:#fff;border:1px solid #e1e1e1;border-radius:7px}
-.hero{padding:28px 22px;margin-bottom:25px}
-.hero h1{margin-top:0;font-size:30px}
-.hero p,.card p,.info p{color:#666}
-.search{width:100%;padding:14px;border:1px solid #ccc;border-radius:5px;font-size:16px;margin-top:10px}
-h2{font-size:23px;margin-bottom:15px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.filters button{background:#fff;border:1px solid #ccc;padding:9px 14px;border-radius:4px;cursor:pointer}
-.filters button.active,.filters button:hover{background:#269b45;color:#fff;border-color:#269b45}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.card{padding:20px;display:flex;flex-direction:column}
-.card h3{margin:0 0 8px;font-size:19px}
-.card p{font-size:14px;flex-grow:1}
-.badge{display:inline-block;background:#e9f6ed;color:#21863a;padding:4px 8px;border-radius:4px;font-size:12px;margin-bottom:12px;align-self:flex-start}
-.btn{display:inline-block;background:#269b45;color:#fff;padding:10px 14px;text-decoration:none;border-radius:4px;text-align:center;font-weight:bold;font-size:14px}
-.btn:hover{background:#1d7d37}
-.info{padding:22px;margin-top:25px}
-footer{background:#fff;border-top:1px solid #ddd;text-align:center;padding:25px 15px;margin-top:25px;font-size:14px}
-footer a{color:#269b45;text-decoration:none;margin:5px}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}nav{gap:12px}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #273142;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #0879d9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe4ea;
+  padding: 16px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.logo {
+  color: #16834a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+nav a {
+  color: #344054;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 16px;
+  margin: 25px auto;
+}
+
+.breadcrumb {
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero,
+.section {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 9px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  color: #202938;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #202938;
+  font-size: 23px;
+  margin-top: 0;
+}
+
+.hero p {
+  color: #596579;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 180px;
+  padding: 13px;
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.search button,
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: #16834a;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover,
+.button:hover {
+  background: #116a3b;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.card h3 {
+  color: #263548;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.card p {
+  color: #667085;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.notice {
+  background: #f0f7ff;
+  border-left: 4px solid #0879d9;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #dfe4ea;
+  text-align: center;
+  padding: 25px 16px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<a class="logo" href="index.html">MediaHub</a>
-<p class="tagline">Pakistan News, Current Affairs and Updates</p>
-</header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">MediaHub</a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="movies.html">Movies</a>
-<a href="software.html">Software</a>
-<a href="apps.html">Apps</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="tech-news.html">Tech News</a>
-<a href="pakistan-news.html">Pakistan News</a>
-</nav>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="games.html">Games</a>
+      <a href="software.html">Software</a>
+      <a href="movies.html">Movies</a>
+      <a href="ai-tools.html">AI Tools</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
 
-<section class="hero">
-<h1>Pakistan News & Updates</h1>
-<p>Explore Pakistani news sources covering national affairs, business, sports, technology and current events. Select a category or search for a news source.</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Pakistan News
+  </div>
 
-<input class="search" id="search" type="search" placeholder="Search news sources..." aria-label="Search news sources">
-</section>
+  <section class="hero">
+    <h1>Pakistan News &amp; Current Affairs</h1>
 
-<h2>Explore Pakistan News Sources</h2>
+    <p>
+      Welcome to MediaHub Pakistan News. Explore resources covering
+      Pakistan's current affairs, business, economy, sports,
+      technology and regional developments. Visit established
+      news organizations for their latest reports.
+    </p>
 
-<div class="filters">
-<button class="active" data-filter="all">All News</button>
-<button data-filter="national">National News</button>
-<button data-filter="business">Business</button>
-<button data-filter="sports">Sports</button>
-<button data-filter="technology">Technology</button>
-</div>
+    <div class="search">
+      <input
+        type="search"
+        id="newsSearch"
+        placeholder="Search news categories..."
+        aria-label="Search Pakistan news categories"
+      >
+      <button type="button" onclick="searchNews()">Search</button>
+    </div>
+  </section>
 
-<section class="grid">
+  <section class="section">
+    <h2>Explore Pakistan News Categories</h2>
 
-<article class="card" data-category="national">
-<span class="badge">National News</span>
-<h3>BBC News Urdu</h3>
-<p>Read Urdu-language news and reporting about Pakistan and international events.</p>
-<a class="btn" href="https://www.bbc.com/urdu" target="_blank" rel="noopener noreferrer">Read BBC Urdu</a>
-</article>
+    <div class="grid" id="newsGrid">
 
-<article class="card" data-category="national">
-<span class="badge">National News</span>
-<h3>DAWN</h3>
-<p>Explore news, analysis and reports covering Pakistan and world affairs.</p>
-<a class="btn" href="https://www.dawn.com/" target="_blank" rel="noopener noreferrer">Visit DAWN</a>
-</article>
+      <article class="card" data-search="national politics government parliament">
+        <h3>National News</h3>
+        <p>Explore national developments, government announcements and public affairs.</p>
+        <a class="button" href="https://www.radio.gov.pk/" target="_blank" rel="noopener noreferrer">Radio Pakistan</a>
+      </article>
 
-<article class="card" data-category="national">
-<span class="badge">National News</span>
-<h3>Geo News</h3>
-<p>Find Pakistani news coverage, current affairs and video news.</p>
-<a class="btn" href="https://www.geo.tv/" target="_blank" rel="noopener noreferrer">Visit Geo News</a>
-</article>
+      <article class="card" data-search="business economy finance markets">
+        <h3>Business &amp; Economy</h3>
+        <p>Follow economic reports, business developments and financial news.</p>
+        <a class="button" href="https://www.dawn.com/business" target="_blank" rel="noopener noreferrer">Business News</a>
+      </article>
 
-<article class="card" data-category="national">
-<span class="badge">Urdu News</span>
-<h3>Express News</h3>
-<p>Explore Urdu news, current affairs and reports about Pakistan.</p>
-<a class="btn" href="https://www.express.pk/" target="_blank" rel="noopener noreferrer">Visit Express</a>
-</article>
+      <article class="card" data-search="sports cricket football pakistan">
+        <h3>Sports News</h3>
+        <p>Discover cricket, football and other sports updates.</p>
+        <a class="button" href="https://www.espncricinfo.com/" target="_blank" rel="noopener noreferrer">Cricket Updates</a>
+      </article>
 
-<article class="card" data-category="business">
-<span class="badge">Business News</span>
-<h3>Business Recorder</h3>
-<p>Follow business, finance, markets and economic news related to Pakistan.</p>
-<a class="btn" href="https://www.brecorder.com/" target="_blank" rel="noopener noreferrer">Read Business News</a>
-</article>
+      <article class="card" data-search="technology science digital pakistan">
+        <h3>Technology News</h3>
+        <p>Explore technology developments, digital services and innovation.</p>
+        <a class="button" href="tech-news.html">MediaHub Tech News</a>
+      </article>
 
-<article class="card" data-category="business">
-<span class="badge">Economic Updates</span>
-<h3>State Bank of Pakistan</h3>
-<p>Find official monetary policy announcements, statistics and banking information.</p>
-<a class="btn" href="https://www.sbp.org.pk/" target="_blank" rel="noopener noreferrer">Visit SBP</a>
-</article>
+      <article class="card" data-search="education universities schools">
+        <h3>Education News</h3>
+        <p>Find education announcements, learning resources and academic updates.</p>
+        <a class="button" href="https://www.hec.gov.pk/" target="_blank" rel="noopener noreferrer">HEC Pakistan</a>
+      </article>
 
-<article class="card" data-category="sports">
-<span class="badge">Sports News</span>
-<h3>ESPNcricinfo</h3>
-<p>Explore cricket scores, match reports, team news and cricket statistics.</p>
-<a class="btn" href="https://www.espncricinfo.com/" target="_blank" rel="noopener noreferrer">Read Cricket News</a>
-</article>
+      <article class="card" data-search="weather climate environment">
+        <h3>Weather &amp; Environment</h3>
+        <p>Check weather information and environmental updates from official sources.</p>
+        <a class="button" href="https://www.pmd.gov.pk/" target="_blank" rel="noopener noreferrer">Pakistan Meteorological Department</a>
+      </article>
 
-<article class="card" data-category="sports">
-<span class="badge">Official Sports</span>
-<h3>Pakistan Cricket Board</h3>
-<p>Find official Pakistan cricket announcements, fixtures and team information.</p>
-<a class="btn" href="https://www.pcb.com.pk/" target="_blank" rel="noopener noreferrer">Visit PCB</a>
-</article>
+      <article class="card" data-search="regional city local news">
+        <h3>Regional News</h3>
+        <p>Explore reports about cities, provinces and regional developments.</p>
+        <a class="button" href="https://www.dawn.com/" target="_blank" rel="noopener noreferrer">Read Dawn</a>
+      </article>
 
-<article class="card" data-category="technology">
-<span class="badge">Technology News</span>
-<h3>ProPakistani</h3>
-<p>Explore Pakistani technology, telecom, business and digital industry news.</p>
-<a class="btn" href="https://propakistani.pk/" target="_blank" rel="noopener noreferrer">Visit ProPakistani</a>
-</article>
+      <article class="card" data-search="official government announcements">
+        <h3>Official Announcements</h3>
+        <p>Check government information and official public announcements.</p>
+        <a class="button" href="https://www.pakistan.gov.pk/" target="_blank" rel="noopener noreferrer">Government of Pakistan</a>
+      </article>
 
-</section>
+    </div>
 
-<section class="info">
-<h2>About Pakistan News on MediaHub</h2>
-<p>MediaHub brings together links to news publishers and official information sources so visitors can explore different topics in one place.</p>
-<p>This page links to external sources; news articles are not automatically copied or updated on MediaHub. Please check publication dates and compare important reports across reliable sources.</p>
-</section>
+    <p id="noResults" hidden>No matching categories found. Try another search.</p>
+  </section>
+
+  <section class="section">
+    <h2>Read and Share News Responsibly</h2>
+
+    <p>
+      Check the publication date, source and supporting evidence
+      before sharing a news story. For important claims, compare
+      reports from multiple reliable organizations and consult
+      official announcements where appropriate.
+    </p>
+
+    <div class="notice">
+      <strong>Editorial notice:</strong>
+      MediaHub provides links to external news resources.
+      The linked organizations are responsible for their own
+      reporting and updates. This page does not automatically
+      display live news or verify every external report.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Explore More on MediaHub</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>Technology News</h3>
+        <p>Discover technology news and digital updates.</p>
+        <a href="tech-news.html">Visit Tech News &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Trending Topics</h3>
+        <p>Explore popular digital topics and resources.</p>
+        <a href="trending.html">Visit Trending &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>AI Tools</h3>
+        <p>Discover useful artificial intelligence resources.</p>
+        <a href="ai-tools.html">Visit AI Tools &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Homepage</h3>
+        <p>Explore all MediaHub categories.</p>
+        <a href="index.html">Visit Home &rarr;</a>
+      </article>
+
+    </div>
+  </section>
 
 </main>
 
 <footer>
-<p><strong>MediaHub</strong> — Your digital discovery hub.</p>
-<p>
-<a href="index.html">Home</a> |
-<a href="about.html">About</a> |
-<a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a>
-</p>
-<p>Contact: <a href="mailto:M.amir7300@gmail.com">M.amir7300@gmail.com</a></p>
-<p><a href="https://wa.me/923014963043" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-<p>© 2026 MediaHub. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+
+  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
 </footer>
 
 <script>
-const searchInput=document.getElementById("search");
-const cards=document.querySelectorAll(".card");
-const buttons=document.querySelectorAll(".filters button");
-let selectedCategory="all";
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function filterNews(){
-    const query=searchInput.value.toLowerCase().trim();
+function searchNews() {
+  const query = document.getElementById("newsSearch").value.trim().toLowerCase();
+  const cards = document.querySelectorAll("#newsGrid .card");
+  let visibleCount = 0;
 
-    cards.forEach(function(card){
-        const text=card.innerText.toLowerCase();
-        const matchesSearch=text.includes(query);
-        const matchesCategory=
-            selectedCategory==="all" ||
-            card.dataset.category===selectedCategory;
+  cards.forEach(function(card) {
+    const text = (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
+    const match = text.includes(query);
 
-        card.style.display=
-            matchesSearch && matchesCategory ? "flex" : "none";
-    });
+    card.style.display = match ? "" : "none";
+
+    if (match) {
+      visibleCount++;
+    }
+  });
+
+  document.getElementById("noResults").hidden = visibleCount !== 0;
 }
 
-searchInput.addEventListener("input",filterNews);
-
-buttons.forEach(function(button){
-    button.addEventListener("click",function(){
-        buttons.forEach(function(item){
-            item.classList.remove("active");
-        });
-
-        button.classList.add("active");
-        selectedCategory=button.dataset.filter;
-        filterNews();
-    });
+document.getElementById("newsSearch").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    searchNews();
+  }
 });
 </script>
 
