@@ -1,435 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Movies & Entertainment Guide | MediaHub</title>
+  <title>Watch Movies Online | MediaHub PK</title>
 
-<meta name="description" content="Explore movies, film information, trailers, reviews and entertainment resources on MediaHub. Discover films and visit official movie websites for details.">
+  <meta name="description" content="Explore movies and entertainment videos on MediaHub PK. Watch embedded videos and discover official movie sources.">
+  <meta name="keywords" content="MediaHub PK, Bollywood movies, watch movies online, movie videos, entertainment">
+  <meta name="author" content="MediaHub PK">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0879e8">
 
-<meta name="robots" content="index, follow">
-<meta name="author" content="MediaHub">
-<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
-<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
+  <meta property="og:title" content="Watch Movies Online | MediaHub PK">
+  <meta property="og:description" content="Explore movies and entertainment videos on MediaHub PK.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
-<meta property="og:title" content="Movies & Entertainment Guide | MediaHub">
-<meta property="og:description" content="Discover movie information, film trailers, reviews and entertainment resources on MediaHub.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Movies and Entertainment | MediaHub",
-  "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html",
-  "description": "Discover movie information, film trailers, reviews and entertainment resources.",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MediaHub",
-    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/"
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f9;
+      color: #252a34;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e1e6ed;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0879e8;
+    }
+
+    .logo span {
+      color: #252a34;
+    }
+
+    .search {
+      display: flex;
+      max-width: 380px;
+      width: 100%;
+    }
+
+    .search input {
+      width: 100%;
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid #ccd3dd;
+      border-radius: 5px 0 0 5px;
+      font-size: 15px;
+    }
+
+    .search button {
+      background: #0879e8;
+      color: white;
+      border: none;
+      padding: 0 16px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #e1e6ed;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      padding: 13px 0;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0879e8;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 25px auto;
+      padding: 0 16px;
+    }
+
+    .hero {
+      background: #fff;
+      padding: 30px 22px;
+      border: 1px solid #e1e6ed;
+      border-radius: 9px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #616b79;
+    }
+
+    .movie-card {
+      background: #fff;
+      padding: 22px;
+      border: 1px solid #e1e6ed;
+      border-radius: 9px;
+      margin-bottom: 25px;
+    }
+
+    .movie-card h2 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .movie-card p {
+      margin: 12px 0;
+      color: #596270;
+    }
+
+    .video-container {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #697382;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .category {
+      display: block;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid #e1e6ed;
+      border-radius: 8px;
+    }
+
+    .category h3 {
+      color: #0879e8;
+      margin-bottom: 5px;
+    }
+
+    .category p {
+      color: #68717e;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #202a38;
+      color: #fff;
+      padding: 30px 16px;
+      margin-top: 35px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-inner p {
+      color: #d5dbe4;
+      margin: 10px 0;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 15px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+    }
+
+    .copyright {
+      border-top: 1px solid #46505e;
+      margin-top: 20px;
+      padding-top: 15px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .movie-card {
+        padding: 14px;
+      }
+
+      .nav-inner {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .categories {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Movies | MediaHub PK",
+    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html",
+    "description": "Explore movie and entertainment videos on MediaHub PK."
   }
-}
-</script>
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: #f4f6f8;
-  color: #273142;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: #0879d9;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #dfe4ea;
-  padding: 16px;
-}
-
-.header-inner {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.logo {
-  color: #16834a;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-nav a {
-  color: #344054;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 1100px;
-  padding: 0 16px;
-  margin: 25px auto;
-}
-
-.breadcrumb {
-  color: #667085;
-  font-size: 13px;
-  margin-bottom: 18px;
-}
-
-.hero,
-.section {
-  background: #ffffff;
-  border: 1px solid #e0e5eb;
-  border-radius: 9px;
-  padding: 25px;
-  margin-bottom: 22px;
-}
-
-h1 {
-  color: #202938;
-  font-size: 32px;
-  line-height: 1.3;
-  margin-top: 0;
-}
-
-h2 {
-  color: #202938;
-  font-size: 23px;
-  margin-top: 0;
-}
-
-.hero p {
-  color: #596579;
-}
-
-.search {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.search input {
-  flex: 1;
-  min-width: 180px;
-  padding: 13px;
-  border: 1px solid #cfd6df;
-  border-radius: 6px;
-  font-size: 15px;
-}
-
-.search button,
-.button {
-  display: inline-block;
-  border: none;
-  border-radius: 5px;
-  background: #16834a;
-  color: #ffffff;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.search button:hover,
-.button:hover {
-  background: #116a3b;
-  text-decoration: none;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: #ffffff;
-  border: 1px solid #e0e5eb;
-  border-radius: 8px;
-  padding: 18px;
-}
-
-.card h3 {
-  color: #263548;
-  font-size: 18px;
-  margin: 0 0 8px;
-}
-
-.card p {
-  color: #667085;
-  font-size: 14px;
-  margin: 0 0 14px;
-}
-
-.notice {
-  background: #f0f7ff;
-  border-left: 4px solid #0879d9;
-  padding: 14px;
-  font-size: 14px;
-  border-radius: 4px;
-}
-
-footer {
-  background: #ffffff;
-  border-top: 1px solid #dfe4ea;
-  text-align: center;
-  padding: 25px 16px;
-  color: #667085;
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 12px;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 27px;
-  }
-
-  .hero,
-  .section {
-    padding: 20px 16px;
-  }
-
-  .logo {
-    font-size: 25px;
-  }
-}
-</style>
+  </script>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <a class="logo" href="index.html">MediaHub</a>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="./">MediaHub <span>PK</span></a>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="apps.html">Apps</a>
+      <form class="search" id="searchForm">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search movies..."
+          aria-label="Search Google for movies"
+          required
+        >
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="./">Home</a>
       <a href="games.html">Games</a>
+      <a href="apps.html">Apps</a>
       <a href="software.html">Software</a>
       <a href="movies.html">Movies</a>
       <a href="ai-tools.html">AI Tools</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &rsaquo; Movies &amp; Entertainment
-  </div>
-
-  <section class="hero">
-    <h1>Movies &amp; Entertainment Guide</h1>
-
-    <p>
-      Welcome to MediaHub Movies. Explore movie information,
-      film genres, trailers, reviews and entertainment resources.
-      Find official sources for movie details and check where films
-      are legally available to watch.
-    </p>
-
-    <div class="search">
-      <input
-        type="search"
-        id="movieSearch"
-        placeholder="Search movie categories..."
-        aria-label="Search movie categories"
-      >
-      <button type="button" onclick="searchMovies()">Search</button>
+      <a href="tech-news.html">Tech News</a>
+      <a href="pakistan-news.html">Pakistan News</a>
+      <a href="trending.html">Trending</a>
     </div>
-  </section>
+  </nav>
 
-  <section class="section">
-    <h2>Explore Movie Categories</h2>
+  <main>
 
-    <div class="grid" id="movieGrid">
+    <section class="hero">
+      <h1>Movies & Entertainment</h1>
 
-      <article class="card" data-search="action adventure thriller">
-        <h3>Action &amp; Adventure</h3>
-        <p>Explore action films, adventure stories and movie information.</p>
-        <a class="button" href="https://www.imdb.com/" target="_blank" rel="noopener noreferrer">Explore Movies</a>
-      </article>
+      <p>
+        Welcome to MediaHub PK. Explore entertainment videos and
+        discover movies available through official video sources.
+      </p>
+    </section>
 
-      <article class="card" data-search="comedy family entertainment">
-        <h3>Comedy &amp; Family Films</h3>
-        <p>Discover comedy films and entertainment suitable for different audiences.</p>
-        <a class="button" href="https://www.rottentomatoes.com/" target="_blank" rel="noopener noreferrer">Explore Reviews</a>
-      </article>
+    <section class="movie-card">
+      <h2>Featured Movie Video</h2>
 
-      <article class="card" data-search="science fiction fantasy">
-        <h3>Sci-Fi &amp; Fantasy</h3>
-        <p>Explore science-fiction, fantasy worlds and imaginative film stories.</p>
-        <a class="button" href="https://www.imdb.com/" target="_blank" rel="noopener noreferrer">Explore Films</a>
-      </article>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/4ZNagizZW8k"
+          title="Featured Movie Video - MediaHub PK"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-      <article class="card" data-search="drama romance">
-        <h3>Drama &amp; Romance</h3>
-        <p>Find information about drama films, romantic stories and cast members.</p>
-        <a class="button" href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">Discover Films</a>
-      </article>
+      <p>
+        Watch the featured video directly on this page when embedding
+        is available.
+      </p>
 
-      <article class="card" data-search="trailers previews videos">
-        <h3>Movie Trailers</h3>
-        <p>Look for official trailers, previews and film announcements.</p>
-        <a class="button" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Explore YouTube</a>
-      </article>
+      <p class="note">
+        Video hosted by YouTube. Playback depends on the video's
+        availability and the owner's embedding settings.
+      </p>
 
-      <article class="card" data-search="reviews ratings critics">
-        <h3>Movie Reviews &amp; Ratings</h3>
-        <p>Research film ratings, audience opinions and reviews before watching.</p>
-        <a class="button" href="https://www.rottentomatoes.com/" target="_blank" rel="noopener noreferrer">Read Reviews</a>
-      </article>
+      <p>
+        <a
+          href="https://youtu.be/4ZNagizZW8k"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color:#0879e8;font-weight:bold;">
+          Open video on YouTube
+        </a>
+      </p>
+    </section>
 
-      <article class="card" data-search="streaming legal watch movies">
-        <h3>Streaming Information</h3>
-        <p>Explore streaming services and check official movie availability.</p>
-        <a class="button" href="https://www.justwatch.com/" target="_blank" rel="noopener noreferrer">Find Streaming</a>
-      </article>
+    <section>
+      <h2>Explore More Categories</h2>
 
-      <article class="card" data-search="film database cast directors">
-        <h3>Film Database</h3>
-        <p>Find film details, cast information, directors and release information.</p>
-        <a class="button" href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">Explore Database</a>
-      </article>
+      <div class="categories">
 
-    </div>
+        <a class="category" href="games.html">
+          <h3>🎮 Games</h3>
+          <p>Explore PC and mobile games.</p>
+        </a>
 
-    <p id="noResults" hidden>No matching categories found. Try another search.</p>
-  </section>
+        <a class="category" href="apps.html">
+          <h3>📱 Apps</h3>
+          <p>Discover mobile applications.</p>
+        </a>
 
-  <section class="section">
-    <h2>How to Find Movies Safely</h2>
+        <a class="category" href="software.html">
+          <h3>💻 Software</h3>
+          <p>Explore computer software and tools.</p>
+        </a>
 
-    <p>
-      Before watching a film online, check whether the streaming
-      service is legitimate and available in your region. Review
-      subscription costs, age ratings and content information.
-    </p>
+        <a class="category" href="ai-tools.html">
+          <h3>🤖 AI Tools</h3>
+          <p>Discover artificial intelligence tools.</p>
+        </a>
 
-    <p>
-      MediaHub provides discovery links to external services.
-      Movie availability and streaming prices may vary by country
-      and can change over time.
-    </p>
+        <a class="category" href="tech-news.html">
+          <h3>📰 Technology News</h3>
+          <p>Explore technology updates.</p>
+        </a>
 
-    <div class="notice">
-      <strong>Copyright notice:</strong> Use authorized streaming
-      services and official sources. MediaHub does not provide
-      unauthorized copies of copyrighted movies.
-    </div>
-  </section>
+        <a class="category" href="trending.html">
+          <h3>🔥 Trending</h3>
+          <p>Discover trending digital topics.</p>
+        </a>
 
-  <section class="section">
-    <h2>Explore More on MediaHub</h2>
+      </div>
+    </section>
 
-    <div class="grid">
+  </main>
 
-      <article class="card">
-        <h3>Mobile Apps</h3>
-        <p>Discover useful apps for phones and tablets.</p>
-        <a href="apps.html">Visit Apps &rarr;</a>
-      </article>
+  <footer>
+    <div class="footer-inner">
 
-      <article class="card">
-        <h3>PC Software</h3>
-        <p>Explore computer software and productivity tools.</p>
-        <a href="software.html">Visit Software &rarr;</a>
-      </article>
+      <h2>MediaHub PK</h2>
 
-      <article class="card">
-        <h3>Games</h3>
-        <p>Discover PC and Android games.</p>
-        <a href="games.html">Visit Games &rarr;</a>
-      </article>
+      <p>
+        Explore digital resources, entertainment and technology
+        information on MediaHub PK.
+      </p>
 
-      <article class="card">
-        <h3>AI Tools</h3>
-        <p>Explore artificial intelligence resources.</p>
-        <a href="ai-tools.html">Visit AI Tools &rarr;</a>
-      </article>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> MediaHub PK. All rights reserved.
+      </div>
 
     </div>
-  </section>
+  </footer>
 
-</main>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-<footer>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </div>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      event.preventDefault();
 
-  <p>&copy; <span id="year"></span> MediaHub. All rights reserved.</p>
-  <p>Movie titles and external websites belong to their respective owners.</p>
-</footer>
+      const query = document.getElementById("searchInput").value.trim();
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
+      if (query) {
+        const url =
+          "https://www.google.com/search?q=" +
+          encodeURIComponent(query + " site:amir-ghaffar07.github.io/Amir-ghaffar07/");
 
-function searchMovies() {
-  const query = document.getElementById("movieSearch").value.trim().toLowerCase();
-  const cards = document.querySelectorAll("#movieGrid .card");
-  let visibleCount = 0;
-
-  cards.forEach(function(card) {
-    const text = (card.innerText + " " + (card.dataset.search || "")).toLowerCase();
-    const match = text.includes(query);
-
-    card.style.display = match ? "" : "none";
-
-    if (match) {
-      visibleCount++;
-    }
-  });
-
-  document.getElementById("noResults").hidden = visibleCount !== 0;
-}
-
-document.getElementById("movieSearch").addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    searchMovies();
-  }
-});
-</script>
+        window.open(url, "_blank", "noopener");
+      }
+    });
+  </script>
 
 </body>
 </html>
