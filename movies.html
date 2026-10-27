@@ -4,13 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bollywood Movies Online | MediaHub PK</title>
+<title>Bollywood Movies | MediaHub PK</title>
+<meta name="description" content="Explore Bollywood movies on MediaHub PK and watch available videos on the website.">
 
-<meta name="description"
-content="Explore Bollywood movies on MediaHub PK and watch available movies using the embedded video player.">
-
-<link rel="canonical"
-href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
+<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
 <style>
 * {
@@ -25,15 +22,15 @@ body {
 }
 
 header {
-  background: white;
+  background: #fff;
   padding: 22px 12px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
 header h1 {
-  margin: 0;
   color: #0879e8;
+  margin: 0;
   font-size: 30px;
 }
 
@@ -43,7 +40,7 @@ header p {
 
 nav {
   background: white;
-  padding: 13px 5px;
+  padding: 12px 5px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
@@ -63,8 +60,8 @@ nav a {
 }
 
 .notice {
-  padding: 14px;
   background: white;
+  padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
   line-height: 1.6;
@@ -78,13 +75,15 @@ nav a {
 }
 
 .movie {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  text-align: left;
+  font-size: 16px;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 18px;
-  text-align: left;
   cursor: pointer;
-  font-size: 16px;
   color: #222;
 }
 
@@ -101,24 +100,31 @@ nav a {
 }
 
 .player-box {
-  margin-top: 28px;
-  padding: 16px;
   background: white;
+  padding: 16px;
+  margin-top: 28px;
   border: 1px solid #ddd;
   border-radius: 8px;
+  scroll-margin-top: 15px;
 }
 
 #youtubePlayer {
-  display: none;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 0;
+  border: none;
+  display: none;
   background: #000;
 }
 
 #playerMessage {
-  line-height: 1.6;
   color: #555;
+  line-height: 1.6;
+}
+
+.watch-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0879e8;
 }
 
 footer {
@@ -157,15 +163,15 @@ footer a {
   <h2>🎬 Bollywood Movies</h2>
 
   <div class="notice">
-    اپنی پسند کی فلم کے نام پر کلک کریں۔
-    ویڈیو اسی صفحے کے نیچے پلیئر میں کھلے گی۔
+    فلم کے نام پر کلک کریں۔ اگر ویڈیو دستیاب ہو اور
+    embedding کی اجازت ہو تو وہ اسی صفحے پر چلے گی۔
   </div>
 
   <div class="movie-list">
 
     <button class="movie"
-      onclick="playMovie('Veerana (ویرانہ)', 'h2fi7BNA3OM')">
-      1. Veerana (ویرانہ)
+      onclick="playMovie('Veerana', 'h2fi7BNA3OM')">
+      1. Veerana
       <span>▶ Watch Movie</span>
     </button>
 
@@ -230,18 +236,27 @@ footer a {
     <h2 id="movieTitle">Movie Player</h2>
 
     <p id="playerMessage">
-      فلم چلانے کے لیے اوپر اس کے نام پر کلک کریں۔
+      فلم چلانے کے لیے اوپر کسی نام پر کلک کریں۔
     </p>
 
     <iframe
       id="youtubePlayer"
       src=""
-      title="MediaHub PK - Movie Player"
-      loading="lazy"
+      title="MediaHub PK Movie Player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
     </iframe>
+
+    <a
+      id="watchOnYoutube"
+      class="watch-link"
+      href="https://youtu.be/h2fi7BNA3OM"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="display:none">
+      Video YouTube par dekhein
+    </a>
 
   </section>
 
@@ -258,6 +273,7 @@ function playMovie(title, videoId) {
 
   const player = document.getElementById("youtubePlayer");
   const message = document.getElementById("playerMessage");
+  const watchLink = document.getElementById("watchOnYoutube");
 
   document.getElementById("movieTitle").textContent = title;
 
@@ -270,19 +286,21 @@ function playMovie(title, videoId) {
     player.src = "";
     player.style.display = "none";
     message.style.display = "block";
+    watchLink.style.display = "none";
 
     message.textContent =
-      "Is movie ki YouTube video abhi add nahi ki gayi. Baad mein iska official video link add kiya ja sakta hai.";
+      "Is movie ki video abhi add nahi ki gayi.";
 
     return;
   }
 
-  message.style.display = "none";
-  player.style.display = "block";
-
-  player.src =
-    "https://www.youtube.com/embed/" +
+  player.src = "https://www.youtube.com/embed/" +
     encodeURIComponent(videoId);
+
+  player.style.display = "block";
+  message.style.display = "none";
+  watchLink.href = "https://youtu.be/" + videoId;
+  watchLink.style.display = "inline-block";
 }
 </script>
 
