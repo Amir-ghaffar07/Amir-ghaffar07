@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bollywood Movies | MediaHub PK</title>
-<meta name="description" content="Explore Bollywood and classic horror movies on MediaHub PK. Select a movie to watch available YouTube videos directly on our website.">
+<title>Movies | MediaHub PK</title>
+<meta name="description" content="Explore classic movies on MediaHub PK and watch available YouTube videos directly on the website.">
 
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
@@ -146,7 +146,7 @@ footer a {
 
 <header>
   <h1>MediaHub PK</h1>
-  <p>Bollywood & Classic Movies</p>
+  <p>Classic Movies Collection</p>
 </header>
 
 <nav>
@@ -163,81 +163,30 @@ footer a {
   <h2>🎬 Movies Collection</h2>
 
   <div class="notice">
-    Select a movie below to play it on this page.
-    Video playback depends on YouTube availability and embedding permissions.
+    اپنی پسند کی فلم منتخب کریں۔ ویڈیو اسی صفحے پر چلانے کی کوشش کی جائے گی۔
+    Playback depends on YouTube availability and embedding permissions.
   </div>
 
   <div class="movie-list">
 
+    <!-- Movie 1 -->
     <button class="movie"
       onclick="playMovie('Veerana', 'h2fi7BNA3OM')">
       1. Veerana
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 2 -->
     <button class="movie"
       onclick="playMovie('Purani Haveli', 'kMOOK_X3eeA')">
       2. Purani Haveli
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 3 -->
     <button class="movie"
       onclick="playMovie('Purana Mandar', '5qnwJT7dJlQ')">
       3. Purana Mandar
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Aashiqui 2', '')">
-      4. Aashiqui 2
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Aaja Meri Jaan', '')">
-      5. Aaja Meri Jaan
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Tum Bin', '')">
-      6. Tum Bin
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Ready', '')">
-      7. Ready
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Nautanki Saala', '')">
-      8. Nautanki Saala
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Bhoothnath Returns', '')">
-      9. Bhoothnath Returns
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Patiala House', '')">
-      10. Patiala House
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Shor in the City', '')">
-      11. Shor in the City
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Jodi Breakers', '')">
-      12. Jodi Breakers
       <span>▶ Watch Movie</span>
     </button>
 
@@ -248,7 +197,7 @@ footer a {
     <h2 id="movieTitle">Movie Player</h2>
 
     <p id="playerMessage">
-      Select a movie above to start playback.
+      اوپر کسی فلم کے نام پر کلک کریں تاکہ ویڈیو پلیئر کھل جائے۔
     </p>
 
     <iframe
@@ -268,7 +217,7 @@ footer a {
       target="_blank"
       rel="noopener noreferrer"
       style="display:none">
-      Open video on YouTube
+      YouTube پر ویڈیو کھولیں
     </a>
 
   </section>
@@ -300,15 +249,13 @@ function playMovie(title, videoId) {
     player.style.display = "none";
 
     message.style.display = "block";
-    message.textContent =
-      "Video link has not been added for this movie yet.";
+    message.textContent = "اس فلم کا ویڈیو لنک موجود نہیں ہے۔";
 
     watchLink.style.display = "none";
     return;
   }
 
-  player.src =
-    "https://www.youtube.com/embed/" +
+  player.src = "https://www.youtube.com/embed/" +
     encodeURIComponent(videoId);
 
   player.style.display = "block";
