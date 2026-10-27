@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bollywood Movies | MediaHub PK</title>
-<meta name="description" content="Explore Bollywood movies on MediaHub PK. Select a movie and watch available YouTube videos directly on our website.">
+<meta name="description" content="Explore Bollywood and classic horror movies on MediaHub PK. Select a movie to watch available YouTube videos directly on our website.">
 
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
@@ -29,8 +29,8 @@ header {
 }
 
 header h1 {
-  color: #0879e8;
   margin: 0;
+  color: #0879e8;
   font-size: 30px;
 }
 
@@ -146,7 +146,7 @@ footer a {
 
 <header>
   <h1>MediaHub PK</h1>
-  <p>Bollywood Movies Collection</p>
+  <p>Bollywood & Classic Movies</p>
 </header>
 
 <nav>
@@ -160,82 +160,84 @@ footer a {
 
 <main class="container">
 
-  <h2>🎬 Bollywood Movies</h2>
+  <h2>🎬 Movies Collection</h2>
 
   <div class="notice">
-    اپنی پسند کی فلم کے نام پر کلک کریں۔
-    دستیاب ویڈیو اسی صفحے پر نیچے پلیئر میں چلے گی۔
+    Select a movie below to play it on this page.
+    Video playback depends on YouTube availability and embedding permissions.
   </div>
 
   <div class="movie-list">
 
-    <!-- Movie 1 -->
     <button class="movie"
       onclick="playMovie('Veerana', 'h2fi7BNA3OM')">
       1. Veerana
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 2 -->
     <button class="movie"
       onclick="playMovie('Purani Haveli', 'kMOOK_X3eeA')">
       2. Purani Haveli
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 3 -->
+    <button class="movie"
+      onclick="playMovie('Purana Mandar', '5qnwJT7dJlQ')">
+      3. Purana Mandar
+      <span>▶ Watch Movie</span>
+    </button>
+
     <button class="movie"
       onclick="playMovie('Aashiqui 2', '')">
-      3. Aashiqui 2
+      4. Aashiqui 2
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 4 -->
     <button class="movie"
       onclick="playMovie('Aaja Meri Jaan', '')">
-      4. Aaja Meri Jaan
+      5. Aaja Meri Jaan
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 5 -->
     <button class="movie"
       onclick="playMovie('Tum Bin', '')">
-      5. Tum Bin
+      6. Tum Bin
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 6 -->
     <button class="movie"
       onclick="playMovie('Ready', '')">
-      6. Ready
+      7. Ready
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 7 -->
     <button class="movie"
       onclick="playMovie('Nautanki Saala', '')">
-      7. Nautanki Saala
+      8. Nautanki Saala
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 8 -->
     <button class="movie"
       onclick="playMovie('Bhoothnath Returns', '')">
-      8. Bhoothnath Returns
+      9. Bhoothnath Returns
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 9 -->
     <button class="movie"
       onclick="playMovie('Patiala House', '')">
-      9. Patiala House
+      10. Patiala House
       <span>▶ Watch Movie</span>
     </button>
 
-    <!-- Movie 10 -->
     <button class="movie"
       onclick="playMovie('Shor in the City', '')">
-      10. Shor in the City
+      11. Shor in the City
+      <span>▶ Watch Movie</span>
+    </button>
+
+    <button class="movie"
+      onclick="playMovie('Jodi Breakers', '')">
+      12. Jodi Breakers
       <span>▶ Watch Movie</span>
     </button>
 
@@ -246,7 +248,7 @@ footer a {
     <h2 id="movieTitle">Movie Player</h2>
 
     <p id="playerMessage">
-      فلم چلانے کے لیے اوپر کسی فلم کے نام پر کلک کریں۔
+      Select a movie above to start playback.
     </p>
 
     <iframe
@@ -266,7 +268,7 @@ footer a {
       target="_blank"
       rel="noopener noreferrer"
       style="display:none">
-      YouTube پر ویڈیو کھولیں
+      Open video on YouTube
     </a>
 
   </section>
@@ -299,7 +301,7 @@ function playMovie(title, videoId) {
 
     message.style.display = "block";
     message.textContent =
-      "Is movie ki video abhi add nahi ki gayi.";
+      "Video link has not been added for this movie yet.";
 
     watchLink.style.display = "none";
     return;
