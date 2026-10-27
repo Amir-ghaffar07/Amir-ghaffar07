@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bollywood Movies | MediaHub PK</title>
-<meta name="description" content="Explore Bollywood movies on MediaHub PK and watch available videos on the website.">
+<meta name="description" content="Explore Bollywood movies on MediaHub PK and watch available videos directly on our website.">
 
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
@@ -39,7 +39,7 @@ header p {
 }
 
 nav {
-  background: white;
+  background: #fff;
   padding: 12px 5px;
   text-align: center;
   border-bottom: 1px solid #ddd;
@@ -60,7 +60,7 @@ nav a {
 }
 
 .notice {
-  background: white;
+  background: #fff;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -80,7 +80,7 @@ nav a {
   padding: 18px;
   text-align: left;
   font-size: 16px;
-  background: white;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
@@ -100,7 +100,7 @@ nav a {
 }
 
 .player-box {
-  background: white;
+  background: #fff;
   padding: 16px;
   margin-top: 28px;
   border: 1px solid #ddd;
@@ -123,14 +123,14 @@ nav a {
 
 .watch-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   color: #0879e8;
 }
 
 footer {
   margin-top: 35px;
   padding: 22px 12px;
-  background: white;
+  background: #fff;
   text-align: center;
   border-top: 1px solid #ddd;
 }
@@ -163,8 +163,8 @@ footer a {
   <h2>🎬 Bollywood Movies</h2>
 
   <div class="notice">
-    فلم کے نام پر کلک کریں۔ اگر ویڈیو دستیاب ہو اور
-    embedding کی اجازت ہو تو وہ اسی صفحے پر چلے گی۔
+    اپنی پسند کی فلم کے نام پر کلک کریں۔
+    ویڈیو اسی صفحے پر نیچے پلیئر میں کھلے گی۔
   </div>
 
   <div class="movie-list">
@@ -176,56 +176,56 @@ footer a {
     </button>
 
     <button class="movie"
+      onclick="playMovie('Purani Haveli', 'kMOOK_X3eeA')">
+      2. Purani Haveli
+      <span>▶ Watch Movie</span>
+    </button>
+
+    <button class="movie"
       onclick="playMovie('Aashiqui 2', '')">
-      2. Aashiqui 2
+      3. Aashiqui 2
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Aaja Meri Jaan', '')">
-      3. Aaja Meri Jaan
+      4. Aaja Meri Jaan
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Tum Bin', '')">
-      4. Tum Bin
+      5. Tum Bin
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Ready', '')">
-      5. Ready
+      6. Ready
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Nautanki Saala', '')">
-      6. Nautanki Saala
+      7. Nautanki Saala
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Bhoothnath Returns', '')">
-      7. Bhoothnath Returns
+      8. Bhoothnath Returns
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Patiala House', '')">
-      8. Patiala House
+      9. Patiala House
       <span>▶ Watch Movie</span>
     </button>
 
     <button class="movie"
       onclick="playMovie('Shor in the City', '')">
-      9. Shor in the City
-      <span>▶ Watch Movie</span>
-    </button>
-
-    <button class="movie"
-      onclick="playMovie('Jodi Breakers', '')">
-      10. Jodi Breakers
+      10. Shor in the City
       <span>▶ Watch Movie</span>
     </button>
 
@@ -236,13 +236,14 @@ footer a {
     <h2 id="movieTitle">Movie Player</h2>
 
     <p id="playerMessage">
-      فلم چلانے کے لیے اوپر کسی نام پر کلک کریں۔
+      فلم چلانے کے لیے اوپر اس کے نام پر کلک کریں۔
     </p>
 
     <iframe
       id="youtubePlayer"
       src=""
       title="MediaHub PK Movie Player"
+      loading="lazy"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
@@ -251,11 +252,11 @@ footer a {
     <a
       id="watchOnYoutube"
       class="watch-link"
-      href="https://youtu.be/h2fi7BNA3OM"
+      href="#"
       target="_blank"
       rel="noopener noreferrer"
       style="display:none">
-      Video YouTube par dekhein
+      YouTube پر ویڈیو کھولیں
     </a>
 
   </section>
@@ -294,11 +295,13 @@ function playMovie(title, videoId) {
     return;
   }
 
-  player.src = "https://www.youtube.com/embed/" +
+  player.src =
+    "https://www.youtube.com/embed/" +
     encodeURIComponent(videoId);
 
   player.style.display = "block";
   message.style.display = "none";
+
   watchLink.href = "https://youtu.be/" + videoId;
   watchLink.style.display = "inline-block";
 }
