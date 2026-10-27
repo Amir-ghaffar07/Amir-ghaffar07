@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bollywood Movies | MediaHub PK</title>
-<meta name="description" content="Explore Bollywood movies on MediaHub PK and watch available videos directly on our website.">
+<meta name="description" content="Explore Bollywood movies on MediaHub PK. Select a movie and watch available YouTube videos directly on our website.">
 
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
@@ -164,65 +164,75 @@ footer a {
 
   <div class="notice">
     اپنی پسند کی فلم کے نام پر کلک کریں۔
-    ویڈیو اسی صفحے پر نیچے پلیئر میں کھلے گی۔
+    دستیاب ویڈیو اسی صفحے پر نیچے پلیئر میں چلے گی۔
   </div>
 
   <div class="movie-list">
 
+    <!-- Movie 1 -->
     <button class="movie"
       onclick="playMovie('Veerana', 'h2fi7BNA3OM')">
       1. Veerana
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 2 -->
     <button class="movie"
       onclick="playMovie('Purani Haveli', 'kMOOK_X3eeA')">
       2. Purani Haveli
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 3 -->
     <button class="movie"
       onclick="playMovie('Aashiqui 2', '')">
       3. Aashiqui 2
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 4 -->
     <button class="movie"
       onclick="playMovie('Aaja Meri Jaan', '')">
       4. Aaja Meri Jaan
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 5 -->
     <button class="movie"
       onclick="playMovie('Tum Bin', '')">
       5. Tum Bin
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 6 -->
     <button class="movie"
       onclick="playMovie('Ready', '')">
       6. Ready
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 7 -->
     <button class="movie"
       onclick="playMovie('Nautanki Saala', '')">
       7. Nautanki Saala
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 8 -->
     <button class="movie"
       onclick="playMovie('Bhoothnath Returns', '')">
       8. Bhoothnath Returns
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 9 -->
     <button class="movie"
       onclick="playMovie('Patiala House', '')">
       9. Patiala House
       <span>▶ Watch Movie</span>
     </button>
 
+    <!-- Movie 10 -->
     <button class="movie"
       onclick="playMovie('Shor in the City', '')">
       10. Shor in the City
@@ -236,7 +246,7 @@ footer a {
     <h2 id="movieTitle">Movie Player</h2>
 
     <p id="playerMessage">
-      فلم چلانے کے لیے اوپر اس کے نام پر کلک کریں۔
+      فلم چلانے کے لیے اوپر کسی فلم کے نام پر کلک کریں۔
     </p>
 
     <iframe
@@ -286,12 +296,12 @@ function playMovie(title, videoId) {
   if (!videoId) {
     player.src = "";
     player.style.display = "none";
-    message.style.display = "block";
-    watchLink.style.display = "none";
 
+    message.style.display = "block";
     message.textContent =
       "Is movie ki video abhi add nahi ki gayi.";
 
+    watchLink.style.display = "none";
     return;
   }
 
