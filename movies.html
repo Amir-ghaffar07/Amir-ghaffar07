@@ -4,15 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Movies | MediaHub PK</title>
-<meta name="description" content="Watch movies and explore Bollywood, Hollywood, South Indian, Pakistani, classic and animated movies on MediaHub PK.">
+<title>Movies Collection | MediaHub PK</title>
+<meta name="description" content="Explore Bollywood, Hollywood, South Indian, Pakistani, classic and animated movies on MediaHub PK.">
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f6fa;color:#222}
-header{background:#fff;padding:18px 14px;border-bottom:1px solid #ddd}
+body{margin:0;background:#f3f5f8;color:#222;font-family:Arial,sans-serif}
+header{background:#fff;border-bottom:1px solid #ddd;padding:16px}
 .wrap{max-width:1100px;margin:auto}
 .logo{font-size:27px;font-weight:bold;color:#0879e8}
 nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
@@ -20,186 +19,204 @@ nav a{color:#333;text-decoration:none;font-size:14px}
 nav a:hover{color:#0879e8}
 main{max-width:1100px;margin:22px auto;padding:0 14px}
 h1{font-size:26px;margin-bottom:8px}
-.search{width:100%;padding:13px;border:1px solid #ccc;border-radius:6px;font-size:16px;margin:12px 0 18px}
+.search{width:100%;padding:13px;border:1px solid #ccc;border-radius:6px;font-size:16px;margin:12px 0}
 .categories{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 22px}
-.categories button{padding:10px 13px;background:#fff;border:1px solid #ddd;border-radius:5px;cursor:pointer}
-.categories button.active,.categories button:hover{background:#0879e8;color:#fff;border-color:#0879e8}
-.player-box{background:#fff;border:1px solid #ddd;border-radius:8px;padding:14px;margin-bottom:24px}
-.player-box h2{font-size:21px;margin:0 0 12px}
-.video{position:relative;width:100%;aspect-ratio:16/9;background:#111;border-radius:5px;overflow:hidden}
+.categories button{padding:10px 12px;background:white;border:1px solid #ddd;border-radius:5px;cursor:pointer}
+.categories button.active,.categories button:hover{background:#0879e8;color:white}
+.player{background:white;border:1px solid #ddd;border-radius:8px;padding:14px;margin:20px 0}
+.player h2{font-size:20px;margin:0 0 12px}
+.video{position:relative;width:100%;aspect-ratio:16/9;background:#111}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.hint{font-size:14px;line-height:1.6;color:#555}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
-.card{background:#fff;border:1px solid #ddd;border-radius:7px;overflow:hidden}
-.poster{height:130px;background:#e6f0ff;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;color:#075bb0;font-weight:bold;font-size:18px}
+.note{font-size:13px;color:#666;line-height:1.6}
+.section-title{font-size:22px;margin:24px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:white;border:1px solid #ddd;border-radius:7px;overflow:hidden}
+.poster{height:155px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;color:white;font-size:20px;font-weight:bold;background:linear-gradient(135deg,#163c70,#0879e8)}
+.p2{background:linear-gradient(135deg,#541b3d,#d04c65)}
+.p3{background:linear-gradient(135deg,#164d44,#3e9b76)}
+.p4{background:linear-gradient(135deg,#542b18,#d58a39)}
+.p5{background:linear-gradient(135deg,#38265f,#8964cf)}
+.p6{background:linear-gradient(135deg,#343434,#777)}
 .card-content{padding:12px}
-.card h3{font-size:16px;margin:0 0 10px}
-.card button{width:100%;border:0;background:#0879e8;color:white;padding:10px;border-radius:5px;cursor:pointer}
+.card h3{font-size:16px;margin:0 0 8px}
+.tag{font-size:12px;color:#666;margin-bottom:12px}
+.card button{width:100%;padding:10px;border:0;border-radius:5px;background:#0879e8;color:white;cursor:pointer}
 .card button:hover{background:#005fbd}
-.tag{font-size:12px;color:#666;margin-bottom:10px}
-footer{text-align:center;padding:24px 12px;color:#666;font-size:13px}
-@media(max-width:500px){h1{font-size:23px}.logo{font-size:24px}}
+footer{text-align:center;color:#666;font-size:13px;padding:24px 12px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.poster{height:190px}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
 </head>
 
 <body>
 <header>
-  <div class="wrap">
-    <div class="logo">MediaHub PK</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="movies.html">Movies</a>
-      <a href="games.html">Games</a>
-      <a href="apps.html">Apps</a>
-      <a href="software.html">Software</a>
-      <a href="ai-tools.html">AI Tools</a>
-    </nav>
-  </div>
+ <div class="wrap">
+  <div class="logo">MediaHub PK</div>
+  <nav>
+   <a href="index.html">Home</a>
+   <a href="movies.html">Movies</a>
+   <a href="games.html">Games</a>
+   <a href="apps.html">Apps</a>
+   <a href="software.html">Software</a>
+   <a href="ai-tools.html">AI Tools</a>
+  </nav>
+ </div>
 </header>
 
 <main>
-  <h1>Welcome to MediaHub PK!</h1>
-  <p>Choose a movie below to play it on this page.</p>
+ <h1>Welcome to MediaHub PK!</h1>
+ <p>Explore movies and play available videos directly on this page.</p>
 
-  <div class="categories">
-    <button class="active" onclick="filterMovies('all',this)">All Movies</button>
-    <button onclick="filterMovies('bollywood',this)">Bollywood</button>
-    <button onclick="filterMovies('hollywood',this)">Hollywood</button>
-    <button onclick="filterMovies('south',this)">South Indian</button>
-    <button onclick="filterMovies('pakistani',this)">Pakistani</button>
-    <button onclick="filterMovies('old',this)">Old Movies</button>
-    <button onclick="filterMovies('animated',this)">Animated</button>
+ <div class="categories">
+  <button class="active" onclick="chooseCategory('all',this)">All Movies</button>
+  <button onclick="chooseCategory('bollywood',this)">Bollywood</button>
+  <button onclick="chooseCategory('hollywood',this)">Hollywood</button>
+  <button onclick="chooseCategory('south',this)">South Indian</button>
+  <button onclick="chooseCategory('pakistani',this)">Pakistani</button>
+  <button onclick="chooseCategory('old',this)">Old Movies</button>
+  <button onclick="chooseCategory('animated',this)">Animated</button>
+  <button onclick="chooseCategory('free',this)">Legal Free Movies</button>
+ </div>
+
+ <input id="search" class="search" type="search"
+ placeholder="Search movie name..." oninput="filterCards()">
+
+ <section class="player" id="player">
+  <h2 id="playerTitle">MediaHub PK Movie Player</h2>
+  <div class="video">
+   <iframe id="videoFrame" src="about:blank"
+    title="Movie player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
   </div>
+  <p class="note" id="playerNote">
+   Neeche movie ke Play button par click karein. Video yahan play hogi agar YouTube embedding allow karta ho.
+  </p>
+ </section>
 
-  <input class="search" id="search" type="search"
-  placeholder="Search movie name..." oninput="searchMovies()">
+ <h2 class="section-title">Movies Collection</h2>
+ <div class="grid" id="movieGrid">
 
-  <section class="player-box" id="playerBox">
-    <h2 id="nowPlaying">Movie Player</h2>
-    <div class="video">
-      <iframe id="moviePlayer"
-        src="about:blank"
-        title="MediaHub PK Movie Player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <p class="hint" id="playerMessage">
-      Movie select karne ke liye neeche kisi movie ke Play button par click karein.
-      Video yahan play hogi agar owner ne YouTube embedding allow ki ho.
-    </p>
-  </section>
+  <article class="card" data-cat="old bollywood">
+   <div class="poster p2">Purana Mandar</div>
+   <div class="card-content">
+    <h3>Purana Mandar</h3>
+    <div class="tag">Old Movie</div>
+    <button onclick="playMovie('Purana Mandar','5qnwJT7dJlQ')">Play Movie</button>
+   </div>
+  </article>
 
-  <h2>Movies Collection</h2>
+  <article class="card" data-cat="bollywood">
+   <div class="poster">Bollywood</div>
+   <div class="card-content">
+    <h3>Bollywood Movies</h3>
+    <div class="tag">Hindi Cinema</div>
+    <button onclick="searchYouTube('Official Bollywood movies')">Find Movies</button>
+   </div>
+  </article>
 
-  <div class="grid" id="movieGrid">
+  <article class="card" data-cat="hollywood">
+   <div class="poster p3">Hollywood</div>
+   <div class="card-content">
+    <h3>Hollywood Movies</h3>
+    <div class="tag">English Cinema</div>
+    <button onclick="searchYouTube('official full length Hollywood movies')">Find Movies</button>
+   </div>
+  </article>
 
-    <!-- Apni authorized YouTube movie ka ID yahan add karein -->
-    <article class="card" data-category="old bollywood">
-      <div class="poster">Classic Movie</div>
-      <div class="card-content">
-        <h3>Classic Movie</h3>
-        <div class="tag">Old Movies</div>
-        <button onclick="playMovie('Classic Movie','REPLACE_WITH_VIDEO_ID')">Play Movie</button>
-      </div>
-    </article>
+  <article class="card" data-cat="south">
+   <div class="poster p4">South Indian</div>
+   <div class="card-content">
+    <h3>South Indian Movies</h3>
+    <div class="tag">Tamil • Telugu • Malayalam</div>
+    <button onclick="searchYouTube('official South Indian full movies')">Find Movies</button>
+   </div>
+  </article>
 
-    <article class="card" data-category="bollywood">
-      <div class="poster">Bollywood Movie</div>
-      <div class="card-content">
-        <h3>Bollywood Movie</h3>
-        <div class="tag">Bollywood</div>
-        <button onclick="playMovie('Bollywood Movie','REPLACE_WITH_VIDEO_ID')">Play Movie</button>
-      </div>
-    </article>
+  <article class="card" data-cat="pakistani">
+   <div class="poster p5">Pakistani</div>
+   <div class="card-content">
+    <h3>Pakistani Movies</h3>
+    <div class="tag">Pakistani Cinema</div>
+    <button onclick="searchYouTube('official Pakistani full movies')">Find Movies</button>
+   </div>
+  </article>
 
-    <article class="card" data-category="hollywood">
-      <div class="poster">Hollywood Movie</div>
-      <div class="card-content">
-        <h3>Hollywood Movie</h3>
-        <div class="tag">Hollywood</div>
-        <button onclick="playMovie('Hollywood Movie','REPLACE_WITH_VIDEO_ID')">Play Movie</button>
-      </div>
-    </article>
+  <article class="card" data-cat="old free">
+   <div class="poster p6">Classic Cinema</div>
+   <div class="card-content">
+    <h3>Old & Classic Movies</h3>
+    <div class="tag">Classic Collection</div>
+    <button onclick="searchYouTube('official classic old full movies')">Find Movies</button>
+   </div>
+  </article>
 
-    <article class="card" data-category="south">
-      <div class="poster">South Indian</div>
-      <div class="card-content">
-        <h3>South Indian Movie</h3>
-        <div class="tag">South Indian</div>
-        <button onclick="playMovie('South Indian Movie','REPLACE_WITH_VIDEO_ID')">Play Movie</button>
-      </div>
-    </article>
+  <article class="card" data-cat="animated">
+   <div class="poster p3">Animation</div>
+   <div class="card-content">
+    <h3>Animated Movies</h3>
+    <div class="tag">Animation</div>
+    <button onclick="searchYouTube('official full animated movies')">Find Movies</button>
+   </div>
+  </article>
 
-    <article class="card" data-category="pakistani">
-      <div class="poster">Pakistani Movie</div>
-      <div class="card-content">
-        <h3>Pakistani Movie</h3>
-        <div class="tag">Pakistani</div>
-        <button onclick="playMovie('Pakistani Movie','REPLACE_WITH_VIDEO_ID')">Play Movie</button>
-      </div>
-    </article>
+  <article class="card" data-cat="free old">
+   <div class="poster">Free Classics</div>
+   <div class="card-content">
+    <h3>Legal Free Movies</h3>
+    <div class="tag">Public-domain collection</div>
+    <button onclick="openArchive()">Explore Movies</button>
+   </div>
+  </article>
 
-    <article class="card" data-category="animated">
-      <div class="poster">Animated Movie</div>
-      <div class="card-content">
-        <h3>Animated Movie</h3>
-        <div class="tag">Animated</div>
-        <button onclick="playMovie('Animated Movie','REPLACE_WITH_VIDEO_ID')">Play Movie</button>
-      </div>
-    </article>
-
-  </div>
+ </div>
 </main>
 
 <footer>
-  MediaHub PK — Movie playback depends on YouTube availability and embedding permissions.
-  Only feature videos you have permission to share.
+ MediaHub PK | Videos play subject to availability and owner embedding permissions.
+ Only share movies you are authorized to distribute.
 </footer>
 
 <script>
-function playMovie(title, videoId) {
-  if (!videoId || videoId === 'REPLACE_WITH_VIDEO_ID') {
-    document.getElementById('nowPlaying').textContent = title;
-    document.getElementById('playerMessage').textContent =
-      'Is movie ke button mein abhi YouTube video ID add nahi ki gayi. Neeche diye gaye tareeqe se ID add karein.';
-    document.getElementById('playerBox').scrollIntoView({behavior:'smooth'});
-    return;
-  }
+let selectedCategory = 'all';
 
-  document.getElementById('nowPlaying').textContent = title;
-  document.getElementById('moviePlayer').src =
-    'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId);
-  document.getElementById('playerMessage').textContent =
-    'Agar video play na ho to mumkin hai owner ne embedding band ki ho ya video unavailable ho.';
-  document.getElementById('playerBox').scrollIntoView({behavior:'smooth'});
+function playMovie(title, id) {
+ document.getElementById('playerTitle').textContent = title;
+ document.getElementById('videoFrame').src =
+  'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id);
+ document.getElementById('playerNote').textContent =
+  'Agar video play nahi hoti to owner ne embedding disable ki ho sakti hai ya video unavailable ho.';
+ document.getElementById('player').scrollIntoView({behavior:'smooth'});
 }
 
-function filterMovies(category, button) {
-  document.querySelectorAll('.categories button').forEach(function(b) {
-    b.classList.remove('active');
-  });
-  button.classList.add('active');
-
-  document.querySelectorAll('.card').forEach(function(card) {
-    var categories = card.dataset.category.split(' ');
-    card.style.display = category === 'all' || categories.includes(category) ? '' : 'none';
-  });
-
-  searchMovies();
+function chooseCategory(category, button) {
+ selectedCategory = category;
+ document.querySelectorAll('.categories button').forEach(function(b) {
+  b.classList.remove('active');
+ });
+ button.classList.add('active');
+ filterCards();
 }
 
-function searchMovies() {
-  var query = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('.card').forEach(function(card) {
-    var matches = card.innerText.toLowerCase().includes(query);
-    if (matches) {
-      card.style.display = card.style.display === 'none' ? 'none' : '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
+function filterCards() {
+ const query = document.getElementById('search').value.toLowerCase();
+
+ document.querySelectorAll('.card').forEach(function(card) {
+  const cats = card.dataset.cat.split(' ');
+  const categoryMatch = selectedCategory === 'all' || cats.includes(selectedCategory);
+  const searchMatch = card.innerText.toLowerCase().includes(query);
+  card.style.display = categoryMatch && searchMatch ? '' : 'none';
+ });
+}
+
+function searchYouTube(query) {
+ const url = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(query);
+ window.open(url, '_blank', 'noopener');
+}
+
+function openArchive() {
+ window.open('https://archive.org/details/feature_films', '_blank', 'noopener');
 }
 </script>
 </body>
