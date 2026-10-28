@@ -4,45 +4,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Movies Collection | MediaHub PK</title>
-<meta name="description" content="Browse movie categories and watch available videos on MediaHub PK.">
+<title>Movies Download & Watch | MediaHub PK</title>
+<meta name="description" content="Browse movie categories, official movie links and legally downloadable classic films on MediaHub PK.">
 <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/movies.html">
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f5f5f5;color:#222;font-family:Arial,sans-serif}
-header{background:#fff;border-bottom:1px solid #ddd;padding:14px}
+body{margin:0;background:#f3f4f6;color:#222;font-family:Arial,sans-serif}
+header{background:#fff;border-bottom:1px solid #ddd;padding:15px}
 .wrap,main{max-width:1150px;margin:auto}
 .logo{font-size:28px;font-weight:bold;color:#0879e8}
-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:13px}
+nav{display:flex;gap:15px;flex-wrap:wrap;margin-top:12px}
 nav a{color:#333;text-decoration:none;font-size:14px}
 nav a:hover{color:#0879e8}
 main{padding:18px 12px}
 h1{font-size:25px;margin:8px 0}
-.search{width:100%;padding:13px;border:1px solid #ccc;border-radius:5px;margin:15px 0;font-size:16px}
+.search{width:100%;padding:13px;border:1px solid #ccc;border-radius:5px;margin:14px 0;font-size:16px}
 .categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.categories button{padding:9px 12px;background:#fff;border:1px solid #ccc;border-radius:4px;cursor:pointer}
-.categories button.active{background:#0879e8;color:#fff;border-color:#0879e8}
-.player{background:#fff;border:1px solid #ddd;padding:12px;margin:20px 0}
-.player h2{font-size:20px;margin:4px 0 12px}
-.screen{width:100%;aspect-ratio:16/9;background:#111}
-.screen iframe{width:100%;height:100%;border:0}
-.small{font-size:13px;color:#666;line-height:1.5}
-.section-title{font-size:21px;border-bottom:1px solid #ddd;padding-bottom:10px}
+.categories button{background:#fff;border:1px solid #ccc;border-radius:4px;padding:9px 12px;cursor:pointer}
+.categories button.active{background:#0879e8;color:#fff}
+.heading{font-size:21px;border-bottom:1px solid #ddd;padding-bottom:10px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:#fff;border:1px solid #ddd;border-radius:4px;overflow:hidden}
-.poster{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#e5e5e5}
-.card-body{padding:10px}
+.card{background:#fff;border:1px solid #ddd;border-radius:5px;overflow:hidden}
+.poster{width:100%;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;color:#fff;font-weight:bold;font-size:20px;background:linear-gradient(135deg,#163d70,#0879e8)}
+.p2{background:linear-gradient(135deg,#51254a,#d04d65)}
+.p3{background:linear-gradient(135deg,#154d43,#39a37b)}
+.p4{background:linear-gradient(135deg,#5a3219,#d28a39)}
+.p5{background:linear-gradient(135deg,#36235c,#8c65ce)}
+.p6{background:linear-gradient(135deg,#333,#777)}
+.cardbody{padding:10px}
 .card h3{font-size:15px;line-height:1.4;margin:0 0 8px}
 .tag{font-size:12px;color:#666;margin-bottom:10px}
-.play{display:block;width:100%;border:0;border-radius:4px;background:#0879e8;color:white;padding:10px;cursor:pointer}
-.play:hover{background:#0563bd}
-.official{background:#fff;border:1px solid #ddd;padding:14px;margin-top:24px}
-.official a{display:inline-block;margin:7px 12px 7px 0;color:#0879e8}
-footer{text-align:center;padding:25px;color:#666;font-size:13px}
+.btn{display:block;width:100%;padding:10px;margin-top:7px;text-align:center;text-decoration:none;border:0;border-radius:4px;background:#0879e8;color:#fff;font-size:13px;cursor:pointer}
+.btn:hover{background:#0563bd}
+.download{background:#278447}
+.download:hover{background:#176635}
+.notice{background:#fff;border:1px solid #ddd;padding:14px;margin-top:22px;line-height:1.6;font-size:14px}
+footer{text-align:center;padding:24px;color:#666;font-size:13px}
 @media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:900px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 </style>
 </head>
+
 <body>
 <header>
  <div class="wrap">
@@ -60,10 +63,10 @@ footer{text-align:center;padding:25px;color:#666;font-size:13px}
 
 <main>
  <h1>Movies Collection</h1>
- <p>Explore movie categories and select a title to play it here.</p>
+ <p>Explore movie titles and visit authorized viewing sources.</p>
 
- <input class="search" id="search" placeholder="Search movie title..."
- type="search" oninput="filterCards()">
+ <input class="search" id="search" type="search"
+ placeholder="Search movie name..." oninput="filterMovies()">
 
  <div class="categories">
   <button class="active" onclick="setCategory('all',this)">All Movies</button>
@@ -73,126 +76,114 @@ footer{text-align:center;padding:25px;color:#666;font-size:13px}
   <button onclick="setCategory('pakistani',this)">Pakistani</button>
   <button onclick="setCategory('old',this)">Old Movies</button>
   <button onclick="setCategory('animated',this)">Animated</button>
+  <button onclick="setCategory('free',this)">Free Classics</button>
  </div>
 
- <section class="player" id="player">
-  <h2 id="playingTitle">MediaHub PK Movie Player</h2>
-  <div class="screen">
-   <iframe id="video" src="about:blank" title="Movie player"
-   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
-   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <p class="small" id="message">
-   Movie card par Play Movie dabayein. Video yahan chalegi agar YouTube embedding allow karta ho.
-  </p>
- </section>
-
- <h2 class="section-title">Browse Movies</h2>
- <div class="grid" id="grid">
+ <h2 class="heading">Latest Movie Listings</h2>
+ <div class="grid" id="movies">
 
   <article class="card" data-cat="old bollywood">
-   <img class="poster" src="https://img.youtube.com/vi/5qnwJT7dJlQ/hqdefault.jpg" alt="Purana Mandar video thumbnail">
-   <div class="card-body">
-    <h3>Purana Mandar</h3>
+   <div class="poster p2">Classic Indian Cinema</div>
+   <div class="cardbody">
+    <h3>Classic Indian Movies</h3>
     <div class="tag">Old Movies</div>
-    <button class="play" onclick="playMovie('Purana Mandar','5qnwJT7dJlQ')">Play Movie</button>
+    <a class="btn" href="https://www.youtube.com/results?search_query=official+classic+Indian+full+movies" target="_blank" rel="noopener">Watch Official Videos</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Explore Free Films</a>
    </div>
   </article>
 
   <article class="card" data-cat="bollywood">
-   <img class="poster" src="https://img.youtube.com/vi/4ZNagizZW8k/hqdefault.jpg" alt="Movie video thumbnail">
-   <div class="card-body">
-    <h3>Movie 2</h3>
-    <div class="tag">Bollywood / Check title</div>
-    <button class="play" onclick="playMovie('Movie 2','4ZNagizZW8k')">Play Movie</button>
-   </div>
-  </article>
-
-  <article class="card" data-cat="south">
-   <img class="poster" src="https://img.youtube.com/vi/1W-zZ0-8lDM/hqdefault.jpg" alt="Movie video thumbnail">
-   <div class="card-body">
-    <h3>Movie 3</h3>
-    <div class="tag">Movie / Check title</div>
-    <button class="play" onclick="playMovie('Movie 3','1W-zZ0-8lDM')">Play Movie</button>
+   <div class="poster">Bollywood</div>
+   <div class="cardbody">
+    <h3>Bollywood Movies</h3>
+    <div class="tag">Hindi Cinema</div>
+    <a class="btn" href="https://www.youtube.com/results?search_query=official+Bollywood+full+movies" target="_blank" rel="noopener">Watch Official Videos</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Browse Legal Downloads</a>
    </div>
   </article>
 
   <article class="card" data-cat="hollywood">
-   <div class="poster" style="display:flex;align-items:center;justify-content:center;background:#23364d;color:white;text-align:center;padding:10px">Hollywood Movies</div>
-   <div class="card-body">
-    <h3>Hollywood Collection</h3>
-    <div class="tag">Official listings</div>
-    <button class="play" onclick="findOfficial('official full length Hollywood movies')">Browse Movies</button>
+   <div class="poster p3">Hollywood</div>
+   <div class="cardbody">
+    <h3>Hollywood Movies</h3>
+    <div class="tag">English Cinema</div>
+    <a class="btn" href="https://www.youtube.com/results?search_query=official+Hollywood+full+movies" target="_blank" rel="noopener">Watch Official Videos</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Browse Legal Downloads</a>
+   </div>
+  </article>
+
+  <article class="card" data-cat="south">
+   <div class="poster p4">South Indian</div>
+   <div class="cardbody">
+    <h3>South Indian Movies</h3>
+    <div class="tag">Tamil • Telugu • Malayalam</div>
+    <a class="btn" href="https://www.youtube.com/results?search_query=official+South+Indian+full+movies" target="_blank" rel="noopener">Watch Official Videos</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Browse Legal Downloads</a>
    </div>
   </article>
 
   <article class="card" data-cat="pakistani">
-   <div class="poster" style="display:flex;align-items:center;justify-content:center;background:#176447;color:white;text-align:center;padding:10px">Pakistani Cinema</div>
-   <div class="card-body">
+   <div class="poster p5">Pakistani Cinema</div>
+   <div class="cardbody">
     <h3>Pakistani Movies</h3>
-    <div class="tag">Official listings</div>
-    <button class="play" onclick="findOfficial('official Pakistani full movies')">Browse Movies</button>
+    <div class="tag">Pakistani Cinema</div>
+    <a class="btn" href="https://www.youtube.com/results?search_query=official+Pakistani+full+movies" target="_blank" rel="noopener">Watch Official Videos</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Browse Legal Downloads</a>
    </div>
   </article>
 
   <article class="card" data-cat="animated">
-   <div class="poster" style="display:flex;align-items:center;justify-content:center;background:#784b9d;color:white;text-align:center;padding:10px">Animated Films</div>
-   <div class="card-body">
+   <div class="poster p6">Animation</div>
+   <div class="cardbody">
     <h3>Animated Movies</h3>
-    <div class="tag">Official listings</div>
-    <button class="play" onclick="findOfficial('official full length animated movies')">Browse Movies</button>
+    <div class="tag">Animated Films</div>
+    <a class="btn" href="https://www.youtube.com/results?search_query=official+full+animated+movies" target="_blank" rel="noopener">Watch Official Videos</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Browse Legal Downloads</a>
+   </div>
+  </article>
+
+  <article class="card" data-cat="free old">
+   <div class="poster p3">Public Domain</div>
+   <div class="cardbody">
+    <h3>Free Classic Films</h3>
+    <div class="tag">Check individual film rights</div>
+    <a class="btn" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Explore Films</a>
+    <a class="btn download" href="https://archive.org/details/feature_films" target="_blank" rel="noopener">Find Download Options</a>
    </div>
   </article>
 
  </div>
 
- <section class="official">
-  <h2>Official Movie Channels</h2>
-  <p class="small">Explore movies from official studios and distributors. These links open their YouTube listings.</p>
-  <a href="https://www.youtube.com/@ShemarooMovies" target="_blank" rel="noopener">Shemaroo Movies</a>
-  <a href="https://www.youtube.com/@Rajshri" target="_blank" rel="noopener">Rajshri</a>
-  <a href="https://www.youtube.com/@GoldminesTelefilms" target="_blank" rel="noopener">Goldmines</a>
-  <a href="https://www.youtube.com/results?search_query=official+full+movies" target="_blank" rel="noopener">Find Official Movies</a>
+ <section class="notice">
+  <strong>Important:</strong> These are official-source search links and a public film archive, not verified direct downloads for every title. Before publishing a download button for a particular film, check that its license allows downloading and redistribution. A film appearing in an archive does not automatically mean it is free of copyright restrictions.
  </section>
 </main>
 
 <footer>
- MediaHub PK | Videos are subject to availability, regional restrictions and embedding permissions.
+ MediaHub PK | Movie availability and download permissions vary by title.
 </footer>
 
 <script>
 let selected = 'all';
 
-function playMovie(title,id){
- document.getElementById('playingTitle').textContent=title;
- document.getElementById('video').src=
- 'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id);
- document.getElementById('message').textContent=
- 'Agar video na chale to YouTube owner ne embedding band ki ho sakti hai, ya video unavailable ho.';
- document.getElementById('player').scrollIntoView({behavior:'smooth'});
-}
-
 function setCategory(category,button){
- selected=category;
+ selected = category;
  document.querySelectorAll('.categories button').forEach(function(b){
   b.classList.remove('active');
  });
  button.classList.add('active');
- filterCards();
+ filterMovies();
 }
 
-function filterCards(){
- const q=document.getElementById('search').value.toLowerCase();
- document.querySelectorAll('.card').forEach(function(card){
-  const cats=card.dataset.cat.split(' ');
-  const catMatch=selected==='all'||cats.includes(selected);
-  const searchMatch=card.innerText.toLowerCase().includes(q);
-  card.style.display=catMatch&&searchMatch?'':'none';
+function filterMovies(){
+ const query = document.getElementById('search').value.toLowerCase();
+
+ document.querySelectorAll('#movies .card').forEach(function(card){
+  const categories = card.dataset.cat.split(' ');
+  const categoryMatch = selected === 'all' || categories.includes(selected);
+  const searchMatch = card.innerText.toLowerCase().includes(query);
+  card.style.display = categoryMatch && searchMatch ? '' : 'none';
  });
-}
-
-function findOfficial(query){
- window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(query),'_blank','noopener');
 }
 </script>
 </body>
