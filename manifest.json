@@ -1,0 +1,19 @@
+{
+  "id": "/Amir-ghaffar07/",
+  "name": "MediaHub PK",
+  "short_name": "MediaHub",
+  "description": "MediaHub PK - Movies, Games, Apps, Software and AI Tools",
+  "start_url": "/Amir-ghaffar07/",
+  "scope": "/Amir-ghaffar07/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0879e8",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
