@@ -540,5 +540,16 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register(
+      "/Amir-ghaffar07/service-worker.js"
+    ).catch(function (error) {
+      console.error("Service Worker registration failed:", error);
+    });
+  });
+}
+</script>
 </body>
 </html>
