@@ -1,563 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MediaHub PK - Free Games, Apps, Software & AI Tools</title>
+
+<meta name="description" content="Explore MediaHub PK for free games, apps, software, movies, AI tools and technology news. Discover useful digital resources.">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="MediaHub PK">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BY1FLPYF5B"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BY1FLPYF5B');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-BY1FLPYF5B');
 </script>
-<link rel="manifest" href="/Amir-ghaffar07/manifest.json">
-<meta name="theme-color" content="#0879e8">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MediaHub PK - Games, Apps, Software, Movies & AI Tools</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <meta name="description" content="MediaHub PK helps you explore games, apps, software, movies, AI tools, technology news and digital resources.">
-  <meta name="keywords" content="MediaHub PK, games, Android apps, PC software, AI tools, movies, technology news">
-  <meta name="author" content="MediaHub PK">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0879e8">
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+  line-height: 1.6;
+}
 
-  <link rel="canonical" href="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+header {
+  background: #ffffff;
+  padding: 18px 5%;
+  border-bottom: 1px solid #ddd;
+}
 
-  <meta property="og:title" content="MediaHub PK - Digital World">
-  <meta property="og:description" content="Explore games, apps, software, movies, AI tools and technology news on MediaHub PK.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://amir-ghaffar07.github.io/Amir-ghaffar07/">
+.logo {
+  color: #0879e8;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+.logo span {
+  color: #222;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f9;
-      color: #252a34;
-      line-height: 1.6;
-    }
+nav {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .topbar {
-      background: #075fba;
-      color: white;
-      text-align: center;
-      padding: 8px 12px;
-      font-size: 13px;
-    }
+nav a:hover {
+  color: #0879e8;
+}
 
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #e2e6ec;
-    }
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 25px auto;
+}
 
-    .header-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 20px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.hero {
+  background: #ffffff;
+  padding: 35px 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
 
-    .logo {
-      font-size: 29px;
-      font-weight: 800;
-      color: #0879e8;
-      letter-spacing: -1px;
-    }
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
-    .logo span {
-      color: #252a34;
-    }
+.hero p {
+  color: #666;
+  margin-bottom: 20px;
+}
 
-    .search {
-      display: flex;
-      width: 100%;
-      max-width: 390px;
-    }
+.search-box {
+  max-width: 600px;
+  margin: auto;
+}
 
-    .search input {
-      width: 100%;
-      min-width: 0;
-      padding: 12px;
-      border: 1px solid #ccd3dd;
-      border-radius: 6px 0 0 6px;
-      font-size: 15px;
-      outline: none;
-    }
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
-    .search button {
-      background: #0879e8;
-      color: white;
-      border: 0;
-      padding: 0 17px;
-      border-radius: 0 6px 6px 0;
-      cursor: pointer;
-      font-size: 15px;
-    }
+.section-title {
+  margin: 30px 0 15px;
+  font-size: 23px;
+}
 
-    nav {
-      background: #ffffff;
-      border-bottom: 1px solid #e2e6ec;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
 
-    .nav-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 0 16px;
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
+.card {
+  background: #fff;
+  padding: 22px;
+  border: 1px solid #e2e2e2;
+  border-radius: 7px;
+  text-align: center;
+  transition: 0.2s;
+}
 
-    nav a {
-      display: inline-block;
-      padding: 13px 0;
-      color: #303846;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.card:hover {
+  border-color: #0879e8;
+  transform: translateY(-3px);
+}
 
-    nav a:hover {
-      color: #0879e8;
-    }
+.card h3 {
+  margin-bottom: 8px;
+  color: #0879e8;
+}
 
-    .container {
-      max-width: 1150px;
-      margin: 25px auto;
-      padding: 0 16px;
-    }
+.card p {
+  color: #666;
+  font-size: 14px;
+}
 
-    .hero {
-      background: white;
-      padding: 38px 25px;
-      border: 1px solid #e3e8ef;
-      border-radius: 10px;
-      text-align: center;
-      margin-bottom: 25px;
-    }
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #0879e8;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .hero h1 {
-      font-size: 34px;
-      line-height: 1.25;
-      margin-bottom: 14px;
-      color: #202735;
-    }
+footer {
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 25px 5%;
+  text-align: center;
+  margin-top: 40px;
+}
 
-    .hero p {
-      max-width: 720px;
-      margin: auto;
-      color: #626b78;
-      font-size: 16px;
-    }
+footer a {
+  color: #0879e8;
+  text-decoration: none;
+  margin: 0 8px;
+}
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 22px;
-      background: #0879e8;
-      color: white;
-      padding: 11px 22px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .section {
-      margin: 28px 0;
-    }
-
-    .section-title {
-      font-size: 23px;
-      margin-bottom: 15px;
-      color: #252a34;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      display: block;
-      background: white;
-      border: 1px solid #e1e6ed;
-      border-radius: 8px;
-      padding: 21px;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-
-    .card:hover {
-      box-shadow: 0 5px 18px rgba(20, 40, 70, 0.09);
-      transform: translateY(-2px);
-    }
-
-    .icon {
-      font-size: 32px;
-      margin-bottom: 9px;
-    }
-
-    .card h3 {
-      font-size: 18px;
-      margin-bottom: 7px;
-      color: #0879e8;
-    }
-
-    .card p {
-      color: #68717e;
-      font-size: 14px;
-    }
-
-    .info-box {
-      background: white;
-      padding: 24px;
-      border: 1px solid #e1e6ed;
-      border-radius: 8px;
-      margin-top: 24px;
-    }
-
-    .info-box h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .info-box p {
-      color: #596270;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      margin-top: 40px;
-      background: #202a38;
-      color: white;
-      padding: 30px 16px;
-    }
-
-    .footer-inner {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .footer-inner h2 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .footer-inner p {
-      color: #d4dae3;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 22px;
-      margin: 15px 0;
-    }
-
-    .footer-links a {
-      font-size: 14px;
-      color: white;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    .copyright {
-      border-top: 1px solid #46505e;
-      padding-top: 15px;
-      margin-top: 20px;
-      font-size: 13px;
-      color: #d4dae3;
-    }
-
-    @media (max-width: 700px) {
-      .header-inner {
-        align-items: flex-start;
-      }
-
-      .search {
-        max-width: 100%;
-      }
-
-      .nav-inner {
-        gap: 16px;
-      }
-
-      .hero {
-        padding: 28px 17px;
-      }
-
-      .hero h1 {
-        font-size: 27px;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 11px;
-      }
-
-      .card {
-        padding: 15px;
-      }
-
-      .section-title {
-        font-size: 21px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "MediaHub PK",
-    "url": "https://amir-ghaffar07.github.io/Amir-ghaffar07/",
-    "description": "Explore games, apps, software, movies, AI tools and technology news.",
-    "inLanguage": "en"
+@media(max-width:600px) {
+  .hero h1 {
+    font-size: 24px;
   }
-  </script>
+
+  nav {
+    gap: 12px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    Your Digital World — Games, Apps, Software & AI Tools
-  </div>
-
-  <header>
-    <div class="header-inner">
-
-      <a class="logo" href="./">
-        MediaHub <span>PK</span>
-      </a>
-
-      <form class="search" id="searchForm">
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search MediaHub PK..."
-          aria-label="Search MediaHub PK"
-          required
-        >
-        <button type="submit">Search</button>
-      </form>
-
-    </div>
-  </header>
+<header>
+  <div class="logo">MediaHub <span>PK</span></div>
 
   <nav>
-    <div class="nav-inner">
-      <a href="./">Home</a>
-      <a href="games.html">Games</a>
-      <a href="apps.html">Apps</a>
-      <a href="software.html">Software</a>
-      <a href="movies.html">Movies</a>
-      <a href="ai-tools.html">AI Tools</a>
-      <a href="tech-news.html">Tech News</a>
-      <a href="pakistan-news.html">Pakistan News</a>
-      <a href="trending.html">Trending</a>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="movies.html">Movies</a>
+    <a href="apps.html">Apps</a>
+    <a href="software.html">Software</a>
+    <a href="ai-tools.html">AI Tools</a>
   </nav>
+</header><main class="container">
 
-  <main class="container">
+  <section class="hero">
+    <h1>Welcome to MediaHub PK</h1>
+    <p>
+      Discover free games, apps, software, movies,
+      AI tools and the latest technology resources.
+    </p>
 
-    <section class="hero">
-      <h1>Welcome to MediaHub PK</h1>
-
-      <p>
-        Discover useful apps, PC software, mobile games, movies,
-        AI tools, technology updates and digital resources in one place.
-        Explore our categories and find helpful information.
-      </p>
-
-      <a href="#categories" class="hero-button">
-        Explore Categories
-      </a>
-    </section>
-
-    <section class="section" id="categories">
-      <h2 class="section-title">Explore Our Categories</h2>
-
-      <div class="grid">
-
-        <a class="card" href="games.html">
-          <div class="icon">🎮</div>
-          <h3>Games</h3>
-          <p>Explore PC and mobile games, genres and official game websites.</p>
-        </a>
-
-        <a class="card" href="apps.html">
-          <div class="icon">📱</div>
-          <h3>Mobile Apps</h3>
-          <p>Discover useful Android apps and their official sources.</p>
-        </a>
-
-        <a class="card" href="software.html">
-          <div class="icon">💻</div>
-          <h3>Software</h3>
-          <p>Find computer software, productivity tools and utilities.</p>
-        </a>
-
-        <a class="card" href="movies.html">
-          <div class="icon">🎬</div>
-          <h3>Movies</h3>
-          <p>Explore movie information, entertainment and official platforms.</p>
-        </a>
-
-        <a class="card" href="ai-tools.html">
-          <div class="icon">🤖</div>
-          <h3>AI Tools</h3>
-          <p>Discover AI tools for writing, images, video and productivity.</p>
-        </a>
-
-        <a class="card" href="tech-news.html">
-          <div class="icon">📰</div>
-          <h3>Technology News</h3>
-          <p>Explore technology updates, digital trends and new developments.</p>
-        </a>
-
-        <a class="card" href="data-analysis.html">
-          <div class="icon">📊</div>
-          <h3>Data Analysis</h3>
-          <p>Explore data tools, analysis resources and useful guides.</p>
-        </a>
-
-        <a class="card" href="trending.html">
-          <div class="icon">🔥</div>
-          <h3>Trending</h3>
-          <p>Discover trending topics, digital resources and popular updates.</p>
-        </a>
-
-        <a class="card" href="pakistan-news.html">
-          <div class="icon">🇵🇰</div>
-          <h3>Pakistan News</h3>
-          <p>Explore news updates and information related to Pakistan.</p>
-        </a>
-
-      </div>
-    </section>
-
-    <section class="info-box">
-      <h2>About MediaHub PK</h2>
-
-      <p>
-        MediaHub PK is a digital information website designed to help
-        visitors explore games, mobile apps, computer software, AI tools,
-        entertainment and technology resources.
-      </p>
-
-      <p>
-        We aim to make useful digital information easy to discover.
-        Always use official and trusted sources when downloading software
-        or installing applications.
-      </p>
-
-      <a href="about.html" style="color:#0879e8;font-weight:bold;">
-        Learn More About Us →
-      </a>
-    </section>
-
-    <section class="info-box">
-      <h2>Stay Connected</h2>
-
-      <p>
-        Have a question, suggestion or correction? Visit our Contact page
-        to get in touch with MediaHub PK.
-      </p>
-
-      <a href="contact.html" style="color:#0879e8;font-weight:bold;">
-        Contact Us →
-      </a>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-
-      <h2>MediaHub PK</h2>
-
-      <p>
-        Your digital destination for games, apps, software, AI tools,
-        entertainment and technology information.
-      </p>
-
-      <div class="footer-links">
-        <a href="./">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="disclaimer.html">Disclaimer</a>
-      </div>
-
-      <div class="copyright">
-        © <span id="year"></span> MediaHub PK. All rights reserved.
-      </div>
-
+    <div class="search-box">
+      <input
+        type="search"
+        id="siteSearch"
+        placeholder="Search games, apps, software..."
+        oninput="searchPages()"
+      >
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+  <h2 class="section-title">Explore Categories</h2>
 
-    document.getElementById("searchForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+  <section class="grid" id="categoryGrid">
 
-      const query = document.getElementById("searchInput").value.trim();
+    <div class="card">
+      <h3>Free Games</h3>
+      <p>Explore games for PC and mobile devices.</p>
+      <a href="games.html">Explore Games →</a>
+    </div>
 
-      if (query) {
-        const googleSearch =
-          "https://www.google.com/search?q=" +
-          encodeURIComponent(query + " site:amir-ghaffar07.github.io/Amir-ghaffar07/");
+    <div class="card">
+      <h3>Movies</h3>
+      <p>Discover movies and available video content.</p>
+      <a href="movies.html">Explore Movies →</a>
+    </div>
 
-        window.open(googleSearch, "_blank", "noopener");
-      }
-    });
-  </script>
+    <div class="card">
+      <h3>Mobile Apps</h3>
+      <p>Find useful applications for your devices.</p>
+      <a href="apps.html">Explore Apps →</a>
+    </div>
+
+    <div class="card">
+      <h3>Software</h3>
+      <p>Discover useful PC software and tools.</p>
+      <a href="software.html">Explore Software →</a>
+    </div>
+
+    <div class="card">
+      <h3>AI Tools</h3>
+      <p>Explore artificial intelligence tools and resources.</p>
+      <a href="ai-tools.html">Explore AI Tools →</a>
+    </div>
+
+    <div class="card">
+      <h3>Technology News</h3>
+      <p>Read technology updates and digital news.</p>
+      <a href="tech-news.html">Read News →</a>
+    </div>
+
+    <div class="card">
+      <h3>Pakistan News</h3>
+      <p>Explore Pakistan-related news and updates.</p>
+      <a href="pakistan-news.html">Read More →</a>
+    </div>
+
+    <div class="card">
+      <h3>Trending</h3>
+      <p>Discover trending digital topics and resources.</p>
+      <a href="trending.html">Explore Trending →</a>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="section-title">About MediaHub PK</h2>
+    <div class="card">
+      <p>
+        MediaHub PK is a digital platform where visitors
+        can explore games, movies, apps, software,
+        AI tools and technology resources in one place.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 MediaHub PK. All Rights Reserved.</p>
+
+  <p style="margin-top:12px;">
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
+</footer>
+
 <script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register(
-      "/Amir-ghaffar07/service-worker.js"
-    ).catch(function (error) {
-      console.error("Service Worker registration failed:", error);
-    });
+function searchPages() {
+  const input = document
+    .getElementById("siteSearch")
+    .value.toLowerCase();
+
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(function(card) {
+    const content = card.innerText.toLowerCase();
+
+    if (content.includes(input)) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
   });
 }
 </script>
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register(
-      "/Amir-ghaffar07/service-worker.js"
-    ).catch(function (error) {
-      console.error("Service Worker registration failed:", error);
-    });
-  });
-}
-</script>
+
 </body>
 </html>
